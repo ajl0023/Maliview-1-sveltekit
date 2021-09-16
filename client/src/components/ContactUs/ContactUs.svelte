@@ -29,6 +29,7 @@
           id="name-input"
           class="bu-input"
           type="text"
+          name="name"
           placeholder="Name"
         />
       </div>
@@ -39,6 +40,7 @@
           id="email-input"
           class="bu-input"
           type="email"
+          name="email"
           placeholder="Email"
         />
       </div>
@@ -49,6 +51,7 @@
           id="country-input"
           class="bu-input"
           type="text"
+          name="country"
           placeholder="Country"
         />
       </div>
@@ -77,11 +80,7 @@
     </div>
     <div class="bu-field">
       <div class="bu-control">
-        <input
-          name="submit"
-          type="submit"
-          class="bu-button bu-is-link bu-is-fullwidth"
-        />
+        <input type="submit" class="bu-button bu-is-link bu-is-fullwidth" />
       </div>
     </div>
   </form>
