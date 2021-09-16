@@ -291,6 +291,17 @@ class Router {
 }
 
 /**
+ * @param {unknown} err
+ * @return {Error}
+ */
+function coalesce_to_error(err) {
+	return err instanceof Error ||
+		(err && /** @type {any} */ (err).name && /** @type {any} */ (err).message)
+		? /** @type {Error} */ (err)
+		: new Error(JSON.stringify(err));
+}
+
+/**
  * Hash using djb2
  * @param {import('types/hooks').StrictBody} value
  */
@@ -362,14 +373,6 @@ function normalize(loaded) {
 	}
 
 	return /** @type {import('types/internal').NormalizedLoadOutput} */ (loaded);
-}
-
-/**
- * @param {unknown} err
- * @return {Error}
- */
-function coalesce_to_error(err) {
-	return err instanceof Error ? err : new Error(JSON.stringify(err));
 }
 
 /**
@@ -550,7 +553,7 @@ class Renderer {
 			result = error_args
 				? await this._load_error(error_args)
 				: await this._get_navigation_result_from_branch({ page, branch });
-		} catch (/** @type {unknown} */ e) {
+		} catch (e) {
 			if (error) throw e;
 
 			result = await this._load_error({
@@ -1006,7 +1009,7 @@ class Renderer {
 				}
 			} catch (e) {
 				status = 500;
-				error = e;
+				error = coalesce_to_error(e);
 			}
 
 			if (error) {

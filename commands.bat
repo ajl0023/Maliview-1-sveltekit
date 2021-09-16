@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "untracked files and folders" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "adding email functionality for form" && git push origin main

@@ -71,7 +71,6 @@
     display: flex;
 
     align-items: center;
-    flex-grow: 1;
     .secondary-main-trigger-icon {
       font-size: 18px;
       margin-left: 9px;
@@ -79,7 +78,7 @@
       cursor: pointer;
       line-height: 20px;
       margin-top: -2px;
-      margin-bottom: -10px;
+      margin-bottom: -1px;
       text-transform: uppercase;
       font-family: Orator;
       height: fit-content;

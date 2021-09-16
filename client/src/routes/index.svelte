@@ -31,12 +31,6 @@
 </script>
 
 <div>
-  <button
-    on:click={() => {
-      fetch("/.netlify/functions/hello");
-      console.log(2342342342342342);
-    }}>sadfik;ijosfaiosdd</button
-  >
   <Navbar />
 
   <ScrollContainer />
