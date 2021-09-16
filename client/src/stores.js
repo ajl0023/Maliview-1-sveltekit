@@ -14,7 +14,7 @@ const pagePositionsStore = () => {
 		left: 0,
 		shouldScroll: true,
 		inital: false,
-		right: -900
+		right: -1000
 	};
 	const { subscribe, set, update } = writable(state);
 
@@ -41,7 +41,7 @@ const pagePositionsStore = () => {
 		},
 		scrollCheck(e) {
 			let bool = true;
-			console.log(scrollContainers);
+		
 			if (scrollContainers.includes(e.target.parentElement.parentElement.parentElement)) {
 				return new Promise((res, rej) => {
 					scrollContainers.forEach((ele) => {

@@ -1,12 +1,10 @@
 ﻿<script>
   import CarouselLeft from "../CarouselLeft/CarouselLeft.svelte";
+  import ContactUs from "../ContactUs/ContactUs.svelte";
   import Credits from "../Credits/Credits.svelte";
   import GalleryPreview from "../GalleryPreview/GalleryPreview.svelte";
   import ImagePage from "../ImagePage/ImagePage.svelte";
   import TextPage from "../TextPage/TextPage.svelte";
-
-
-
   let name = "world";
   export let leftPage;
   export let carouselPage;
@@ -14,7 +12,11 @@
 
 <div bind:this={leftPage} class="container">
   <div class="bg-image-container">
-    <img class="bg-image" src="https://res.cloudinary.com/dt4xntymn/image/upload/v1631649512/homebg/HorseLeft_eilqmu.jpg" alt="">
+    <img
+      class="bg-image"
+      src="https://res.cloudinary.com/dt4xntymn/image/upload/v1631649512/homebg/HorseLeft_eilqmu.jpg"
+      alt=""
+    />
   </div>
   <div id="home" class="logo-wrapper">
     <div class="logo-container">
@@ -36,21 +38,20 @@
 
   <TextPage index={7} name="drone footage" />
   <Credits page="left" />
+  <div class="page">
+    <ContactUs />
+  </div>
 </div>
 
 <style lang="scss">
-  .bg-image-container{
+  .bg-image-container {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1
-      ;
-    .bg-image{
+    z-index: 1;
+    .bg-image {
       width: 100%;
       height: 100%;
-   
-      
-     
     }
   }
   .container {
@@ -107,5 +108,4 @@
       justify-content: center;
     }
   }
-
 </style>

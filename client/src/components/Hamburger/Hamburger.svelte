@@ -7,7 +7,7 @@
   function triggerScroll(i) {
     $pagePositions.inital = true;
     $pagePositions.left = i * -100;
-    $pagePositions.right = 100 * (i - 9);
+    $pagePositions.right = 100 * (i - 10);
     $pagePositions.page = i;
     mainInput.checked = false;
   }
@@ -80,7 +80,7 @@
       &::-webkit-scrollbar {
         display: none;
       }
-      li:nth-child(-n + 10) {
+      li:nth-child(-n + 11) {
         font-size: 23px;
         font-weight: 600;
         display: flex;

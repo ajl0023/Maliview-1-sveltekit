@@ -1,0 +1,100 @@
+<script></script>
+
+
+  <div class="container">
+    <h5 class="bu-is-size-1">contact</h5>
+    <form name="email-form" data-netlify="true" class="form-container">
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="name-input"
+            class="bu-input"
+            type="text"
+            placeholder="Name"
+          />
+        </div>
+      </div>
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="email-input"
+            class="bu-input"
+            type="email"
+            placeholder="Email"
+          />
+        </div>
+      </div>
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="country-input"
+            class="bu-input"
+            type="text"
+            placeholder="Country"
+          />
+        </div>
+      </div>
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="phone-input"
+            class="bu-input"
+            type='country'
+            placeholder="Phone"
+          />
+        </div>
+      </div>
+      <div class="bu-field">
+        <div class="bu-control">
+          <textarea
+            id="message-input"
+            class="bu-textarea"
+            type="text"
+            placeholder="Message"
+          />
+        </div>
+      </div>
+      <div class="bu-field">
+        <div class="bu-control">
+          <button
+            on:click|preventDefault={function () {}}
+            class="bu-button bu-is-link bu-is-fullwidth">Submit</button
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+<style lang="scss">
+  .bu-button {
+    background-color: rgb(164, 99, 46);
+  }
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    .bu-field {
+      margin: 15px;
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: black;
+        font-size: 0.8em;
+        opacity: 0.5; /* Firefox */
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+  }
+  h5 {
+    text-transform: uppercase;
+    color: white;
+    font-family: Orator;
+  }
+</style>
