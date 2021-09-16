@@ -1,8 +1,27 @@
-<script></script>
+<script>
+  let form;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let formData = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+</script>
 
 <div class="container">
   <h5 class="bu-is-size-1">contact</h5>
-  <form name="email-form" data-netlify="true" class="form-container">
+  <form
+    bind:this={form}
+    name="email-form"
+    data-netlify="true"
+    class="form-container"
+  >
     <div class="bu-field">
       <div class="bu-control">
         <input
@@ -57,7 +76,7 @@
       <div class="bu-control">
         <input
           type="submit"
-          on:click|preventDefault={function () {}}
+          on:click|preventDefault={handleSubmit}
           class="bu-button bu-is-link bu-is-fullwidth"
         />
       </div>
