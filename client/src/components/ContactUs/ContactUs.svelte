@@ -22,6 +22,8 @@
     data-netlify="true"
     class="form-container"
   >
+    <input type="hidden" name="form-name" value="emailForm" />
+
     <div class="bu-field">
       <div class="bu-control">
         <input
