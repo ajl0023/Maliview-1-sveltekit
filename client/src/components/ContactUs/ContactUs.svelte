@@ -80,7 +80,11 @@
     </div>
     <div class="bu-field">
       <div class="bu-control">
-        <input type="submit" class="bu-button bu-is-link bu-is-fullwidth" />
+        <input
+          on:click={handleSubmit}
+          type="submit"
+          class="bu-button bu-is-link bu-is-fullwidth"
+        />
       </div>
     </div>
   </form>
