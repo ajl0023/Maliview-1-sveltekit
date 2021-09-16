@@ -1,8 +1,8 @@
-node_modules
+**node_modules
 /public/build/
 client/src/images
 .DS_Store
 **bulma.prefixed.css
-
+cloudinary.js
 # Local Netlify folder
 .netlify
