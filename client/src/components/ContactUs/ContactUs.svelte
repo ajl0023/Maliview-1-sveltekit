@@ -1,5 +1,6 @@
 <script>
   let form;
+  let submitted = false;
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -9,89 +10,97 @@
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => {
+        submitted = true;
+      })
       .catch((error) => alert(error));
   };
 </script>
 
 <div class="container">
   <h5 class="bu-is-size-1">contact</h5>
-  <form
-    bind:this={form}
-    name="emailForm"
-    data-netlify="true"
-    class="form-container"
-  >
-    <input type="hidden" name="form-name" value="emailForm" />
+  {#if !submitted}<form
+      bind:this={form}
+      name="emailForm"
+      data-netlify="true"
+      class="form-container"
+    >
+      <input type="hidden" name="form-name" value="emailForm" />
 
-    <div class="bu-field">
-      <div class="bu-control">
-        <input
-          id="name-input"
-          class="bu-input"
-          type="text"
-          name="name"
-          placeholder="Name"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="name-input"
+            class="bu-input"
+            type="text"
+            name="name"
+            placeholder="Name"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bu-field">
-      <div class="bu-control">
-        <input
-          id="email-input"
-          class="bu-input"
-          type="email"
-          name="email"
-          placeholder="Email"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="email-input"
+            class="bu-input"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bu-field">
-      <div class="bu-control">
-        <input
-          id="country-input"
-          class="bu-input"
-          type="text"
-          name="country"
-          placeholder="Country"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="country-input"
+            class="bu-input"
+            type="text"
+            name="country"
+            placeholder="Country"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bu-field">
-      <div class="bu-control">
-        <input
-          id="phone-input"
-          class="bu-input"
-          type="phone"
-          name="phone"
-          placeholder="Phone"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            id="phone-input"
+            class="bu-input"
+            type="phone"
+            name="phone"
+            placeholder="Phone"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bu-field">
-      <div class="bu-control">
-        <textarea
-          id="message-input"
-          class="bu-textarea"
-          type="text"
-          name="message"
-          placeholder="Message"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <textarea
+            id="message-input"
+            class="bu-textarea"
+            type="text"
+            name="message"
+            placeholder="Message"
+          />
+        </div>
       </div>
-    </div>
-    <div class="bu-field">
-      <div class="bu-control">
-        <input
-          on:click={handleSubmit}
-          type="submit"
-          class="bu-button bu-is-link bu-is-fullwidth"
-        />
+      <div class="bu-field">
+        <div class="bu-control">
+          <input
+            on:click={handleSubmit}
+            type="submit"
+            class="bu-button bu-is-link bu-is-fullwidth"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  {:else}
+    <p class="success-message">Thanks! We'll get back to you shortly.</p>
+  {/if}
 </div>
 
 <style lang="scss">
+  .success-message {
+    color: white;
+  }
   .bu-button {
     background-color: rgb(164, 99, 46);
   }
