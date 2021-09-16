@@ -1,70 +1,69 @@
 <script></script>
 
-
-  <div class="container">
-    <h5 class="bu-is-size-1">contact</h5>
-    <form name="email-form" data-netlify="true" class="form-container">
-      <div class="bu-field">
-        <div class="bu-control">
-          <input
-            id="name-input"
-            class="bu-input"
-            type="text"
-            placeholder="Name"
-          />
-        </div>
+<div class="container">
+  <h5 class="bu-is-size-1">contact</h5>
+  <form name="email-form" data-netlify="true" class="form-container">
+    <div class="bu-field">
+      <div class="bu-control">
+        <input
+          id="name-input"
+          class="bu-input"
+          type="text"
+          placeholder="Name"
+        />
       </div>
-      <div class="bu-field">
-        <div class="bu-control">
-          <input
-            id="email-input"
-            class="bu-input"
-            type="email"
-            placeholder="Email"
-          />
-        </div>
+    </div>
+    <div class="bu-field">
+      <div class="bu-control">
+        <input
+          id="email-input"
+          class="bu-input"
+          type="email"
+          placeholder="Email"
+        />
       </div>
-      <div class="bu-field">
-        <div class="bu-control">
-          <input
-            id="country-input"
-            class="bu-input"
-            type="text"
-            placeholder="Country"
-          />
-        </div>
+    </div>
+    <div class="bu-field">
+      <div class="bu-control">
+        <input
+          id="country-input"
+          class="bu-input"
+          type="text"
+          placeholder="Country"
+        />
       </div>
-      <div class="bu-field">
-        <div class="bu-control">
-          <input
-            id="phone-input"
-            class="bu-input"
-            type='country'
-            placeholder="Phone"
-          />
-        </div>
+    </div>
+    <div class="bu-field">
+      <div class="bu-control">
+        <input
+          id="phone-input"
+          class="bu-input"
+          type="country"
+          placeholder="Phone"
+        />
       </div>
-      <div class="bu-field">
-        <div class="bu-control">
-          <textarea
-            id="message-input"
-            class="bu-textarea"
-            type="text"
-            placeholder="Message"
-          />
-        </div>
+    </div>
+    <div class="bu-field">
+      <div class="bu-control">
+        <textarea
+          id="message-input"
+          class="bu-textarea"
+          type="text"
+          placeholder="Message"
+        />
       </div>
-      <div class="bu-field">
-        <div class="bu-control">
-          <button
-            on:click|preventDefault={function () {}}
-            class="bu-button bu-is-link bu-is-fullwidth">Submit</button
-          >
-        </div>
+    </div>
+    <div class="bu-field">
+      <div class="bu-control">
+        <input
+          type="submit"
+          on:click|preventDefault={function () {}}
+          class="bu-button bu-is-link bu-is-fullwidth"
+        />
       </div>
-    </form>
-  </div>
-
+    </div>
+  </form>
+</div>
 
 <style lang="scss">
   .bu-button {
