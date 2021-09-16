@@ -17,6 +17,7 @@
 <div class="container">
   <h5 class="bu-is-size-1">contact</h5>
   <form
+    action="/?success=true"
     bind:this={form}
     name="email-form"
     data-netlify="true"
@@ -58,7 +59,7 @@
           id="phone-input"
           class="bu-input"
           type="phone"
-          name='phone'
+          name="phone"
           placeholder="Phone"
         />
       </div>
@@ -79,7 +80,6 @@
         <input
           name="submit"
           type="submit"
-          on:click|preventDefault={handleSubmit}
           class="bu-button bu-is-link bu-is-fullwidth"
         />
       </div>
