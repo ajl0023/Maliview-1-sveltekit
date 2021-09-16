@@ -57,7 +57,8 @@
         <input
           id="phone-input"
           class="bu-input"
-          type="country"
+          type="phone"
+          name='phone'
           placeholder="Phone"
         />
       </div>
@@ -68,6 +69,7 @@
           id="message-input"
           class="bu-textarea"
           type="text"
+          name="message"
           placeholder="Message"
         />
       </div>
@@ -75,6 +77,7 @@
     <div class="bu-field">
       <div class="bu-control">
         <input
+          name="submit"
           type="submit"
           on:click|preventDefault={handleSubmit}
           class="bu-button bu-is-link bu-is-fullwidth"
