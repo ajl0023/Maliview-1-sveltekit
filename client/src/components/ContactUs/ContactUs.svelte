@@ -17,9 +17,8 @@
 <div class="container">
   <h5 class="bu-is-size-1">contact</h5>
   <form
-    action="/?success=true"
     bind:this={form}
-    name="email-form"
+    name="emailForm"
     data-netlify="true"
     class="form-container"
   >
