@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "email functionality and fixed initial render issues" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "added socials" && git push origin main

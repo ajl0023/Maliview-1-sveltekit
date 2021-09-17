@@ -3,6 +3,7 @@
   import Modal from "../components/Modal/Modal.svelte";
   import Navbar from "../components/Navbar/Navbar.svelte";
   import { browser } from "$app/env";
+  import Socials from "../components/Socials/Socials.svelte";
   import "../global.scss";
 
   import "../bulma.prefixed.css";
@@ -38,6 +39,7 @@
   <CardContainer />
 
   <Modal />
+  <Socials />
 </div>
 
 <style lang="scss">
