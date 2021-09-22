@@ -6,10 +6,7 @@
   import { currentPage } from "../../stores";
 
   export let page;
-  let carouselPage = 0;
-  let oldPage = 0;
-  let initalIndex = 0;
-  let changeVal;
+
   const images = [
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/1_wohazp.jpg",
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/2_ntogjy.jpg",
@@ -26,39 +23,22 @@
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/13_vn65ka.jpg",
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/14_ndznnt.jpg",
   ];
-  let imagesToDisplay = [];
+  let imagesToDisplay = images
+    .map((img, i) => {
+      const obj = {
+        url: img,
+        page: i < 7 ? "left" : "right",
+        index: i,
+      };
+      return obj;
+    })
+    .filter((img) => {
+      return img.page === page;
+    });
+
   onMount(() => {
     lazyLoadInstance();
   });
-  currentPage.subscribe((value) => {
-    carouselPage = value;
-
-    oldPage = value;
-  });
-  $: {
-    changeVal = Math.floor(carouselPage / 10);
-  }
-  $: {
-    changeVal;
-    imageFunc();
-  }
-  function imageFunc() {
-    imagesToDisplay = [];
-    if (carouselPage < oldPage) {
-      initalIndex -= 15;
-    }
-    if (page === "left") {
-      for (let i = initalIndex; i < initalIndex + 5; i++) {
-        imagesToDisplay.push(images[i]);
-      }
-    } else {
-      for (let i = initalIndex + 5; i < initalIndex + 10; i++) {
-        imagesToDisplay.push(images[i]);
-      }
-    }
-
-    initalIndex += 10;
-  }
 </script>
 
 <div
@@ -72,11 +52,16 @@
   {#each imagesToDisplay as img, i}
     {#if img}
       <div
-        class:selected={carouselPage === (page === "right" ? i + 5 : i) ||
-          carouselPage - 10 === (page === "right" ? i + 5 : i)}
+        class:selected={$currentPage.page === img.index}
         class="image-container"
       >
-        <img class="lazy" width="200px" height="200px" data-src={img} alt="" />;
+        <img
+          class="lazy"
+          width="200px"
+          height="200px"
+          data-src={img.url}
+          alt=""
+        />;
       </div>
     {:else}
       <div style="background-color:black" class="image-container" />

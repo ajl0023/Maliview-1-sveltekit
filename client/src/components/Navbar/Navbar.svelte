@@ -1,6 +1,4 @@
 ﻿<script>
-  let name = "world";
-  import Logo from "../../images/svgs/Logo/index.js";
   import Hamburger from "../Hamburger/Hamburger.svelte";
 </script>
 
@@ -16,8 +14,13 @@
     </div>
 
     <div class="logo-container">
-      <a href="https://www.apeldesign.com/">
-        <!-- <Logo fill="white" /> -->
+      <a
+        on:click={(e) => {
+          e.preventDefault();
+          window.open("https://www.apeldesign.com/");
+        }}
+        href="https://www.apeldesign.com/"
+      >
         <img
           class="logo"
           src="https://res.cloudinary.com/dt4xntymn/image/upload/v1631656727/misc/By_Apel_Design_White_hkfvc4.png"

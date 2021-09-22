@@ -18,9 +18,9 @@
   <ImagePage index={3} />
 
   <TextPage index={4} />
-  <CarouselFull />
+  <CarouselFull orient="full" page="right" name="floorplans" />
   <CarouselRight {carouselPage} page="right" />
-  <CarouselFull name="discover" index={1} />
+  <CarouselFull orient="full" page="right" name="discover" index={1} />
   <TextPage index={0} />
   <div class="bg-image-container">
     <img

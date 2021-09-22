@@ -5,36 +5,55 @@
 
   let glider;
   export let name;
-  const images = [
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/2ND_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_xhlvzr.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/1ST_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_ouauck.jpg",
-  ];
-  const outsideRenders = [
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656387/discoverCarousel/9_uzo4x8.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656387/discoverCarousel/8_hfpqwt.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/7_hsa2ug.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656388/discoverCarousel/6_irwxo2.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656384/discoverCarousel/5_uxqh1e.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/4_gbfofj.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/3_dhtxik.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/2_glhk3x.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/1_dcchec.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656385/discoverCarousel/12_ymbo5d.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656385/discoverCarousel/11_jrxcsr.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656386/discoverCarousel/10_cvnxds.jpg",
-  ];
+  export let page;
+  export let orient;
+  const images = {
+    floorplans: [
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/2ND_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_xhlvzr.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/1ST_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_ouauck.jpg",
+    ],
+    discover: [
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656387/discoverCarousel/9_uzo4x8.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656387/discoverCarousel/8_hfpqwt.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/7_hsa2ug.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656388/discoverCarousel/6_irwxo2.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656384/discoverCarousel/5_uxqh1e.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/4_gbfofj.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/3_dhtxik.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/2_glhk3x.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656383/discoverCarousel/1_dcchec.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656385/discoverCarousel/12_ymbo5d.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656385/discoverCarousel/11_jrxcsr.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631656386/discoverCarousel/10_cvnxds.jpg",
+    ],
+  };
 
+  const halfCarousel = {};
+  let glide;
+  let glideIndex = 0;
   onMount(() => {
-    const glide = new Glide(glider);
+    glide = new Glide(glider);
     glide.mount();
+    glide.on("run", function () {
+      glideIndex = glide.index;
+    });
   });
 </script>
 
 <div class="page">
+  <div class="indicator {page}">
+    {#if glide}
+      <p>
+        {glideIndex}/{orient === "half"
+          ? halfCarousel[name].length - 1
+          : images[name].length - 1}
+      </p>
+    {/if}
+  </div>
   <div bind:this={glider} class="glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
-        {#each name === "discover" ? outsideRenders : images as img, i}
+        {#each images[name] as img, i}
           <li class="glide__slide">
             <div class="image-container">
               <img loading="lazy" class="carousel-image" src={img} alt="" />
@@ -69,6 +88,34 @@
 </div>
 
 <style lang="scss">
+  .page {
+    position: relative;
+  }
+  .left {
+    right: 5px;
+  }
+  .right {
+    left: 5px;
+  }
+  .indicator {
+    top: 5px;
+
+    z-index: 4;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    position: absolute;
+    padding: 5px 15px;
+    border-radius: 14px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    p {
+      margin-right: -0.2em;
+    }
+  }
   .glide__arrow--right {
     right: 20px;
     transform: rotate(180deg);
@@ -130,7 +177,7 @@
           width: 100%;
           object-fit: cover;
           height: 100%;
-		  object-position: center center;
+          object-position: center center;
         }
       }
     }

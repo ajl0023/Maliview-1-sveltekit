@@ -1,43 +1,49 @@
 ﻿<script>
+  import { browser } from "$app/env";
   import Glide from "@glidejs/glide";
-  import { lazyLoadInstance } from "../../lazy.js";
-  import { afterUpdate, onDestroy, onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import { navToLink, textPages } from "../../pageContent";
   import Arrow from "../Card/Arrow.svelte";
-  import { browser } from "$app/env";
-  let carousel;
-  let lazyImage;
-  let firstImage;
-  let showMore = false;
-
   export let index;
   export let page;
+  let carousel;
+  let glide;
+  let showMore = false;
+
   let overFlowing;
   let mainText;
-  const images = [
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887731/rendersHighRes/33340_MULHOLLAND_INT_IMG_12A_00-min_ciecgp.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_14A-min_a51cfk.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_16A_00-min_qgp2ne.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_24A-min_hsnpta.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_26A-min_d1dxwf.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_26B-min_jthbj4.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_30A-min_yvenyq.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_31A-min_mo1cj5.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_34A-min_z5fw2h.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_34B-min_ggb1xk.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_34C-min_y3bogv.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_3A_00-min_b0yvdi.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887731/rendersHighRes/33340_MULHOLLAND_INT_IMG_4A-min_ihzxkw.jpg",
-  ];
-  const floorplans = [
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/2ND_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_xhlvzr.jpg",
-    "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/1ST_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_ouauck.jpg",
-  ];
+
+  const images = {
+    renders: [
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887731/rendersHighRes/33340_MULHOLLAND_INT_IMG_12A_00-min_ciecgp.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_14A-min_a51cfk.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_16A_00-min_qgp2ne.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_24A-min_hsnpta.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_26A-min_d1dxwf.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_26B-min_jthbj4.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_30A-min_yvenyq.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887729/rendersHighRes/33340_MULHOLLAND_INT_IMG_31A-min_mo1cj5.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887728/rendersHighRes/33340_MULHOLLAND_INT_IMG_34A-min_z5fw2h.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_34B-min_ggb1xk.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_34C-min_y3bogv.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887730/rendersHighRes/33340_MULHOLLAND_INT_IMG_3A_00-min_b0yvdi.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887731/rendersHighRes/33340_MULHOLLAND_INT_IMG_4A-min_ihzxkw.jpg",
+    ],
+    floorplans: [
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/2ND_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_xhlvzr.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/1ST_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_ouauck.jpg",
+    ],
+  };
+
+  let glideIndex = 0;
+
   onMount(() => {
-    const glide = new Glide(carousel);
+    glide = new Glide(carousel);
 
     glide.mount();
-
+    glide.on("run", function () {
+      glideIndex = glide.index;
+    });
     if (browser) {
       window.addEventListener("resize", checkOverFlow);
     }
@@ -59,16 +65,19 @@
   });
 </script>
 
-<div
-  bind:this={lazyImage}
-  id={navToLink[index + 1]}
-  class="bu-card card-container"
->
+<div id={navToLink[index + 1]} class="bu-card card-container">
   <div class="carousel-container">
     <div bind:this={carousel} class="glide">
+      <div class="indicator">
+        {#if glide}
+          <p>
+            {glideIndex}/{images[page.title].length - 1}
+          </p>
+        {/if}
+      </div>
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          {#each page.title === "renders" ? images : floorplans as img, i}
+          {#each images[page.title] as img, i}
             <li class="glide__slide">
               <div class="glide-image-container">
                 <img loading="lazy" class="carousel-image" src={img} alt="" />
@@ -79,18 +88,18 @@
       </div>
       <div class="glide__arrows" data-glide-el="controls">
         <button data-glide-dir="<" class="page-arrow-container arrow-left">
-          <img
-            class="page-arrow"
-            src="https://res.cloudinary.com/dt4xntymn/image/upload/v1630788553/misc/z-caroArrow_tejk9h.png"
-            alt=""
-          />
+          <div class="page-arrow-relative">
+            <Arrow
+              styleP="object-fit:cover;width:100%;fill:white; transform:rotate(-90deg); height:100%; "
+            />
+          </div>
         </button>
         <button data-glide-dir=">" class="page-arrow-container arrow-right ">
-          <img
-            class="page-arrow"
-            src="https://res.cloudinary.com/dt4xntymn/image/upload/v1630788553/misc/z-caroArrow_tejk9h.png"
-            alt=""
-          />
+          <div class="page-arrow-relative">
+            <Arrow
+              styleP="object-fit:cover;width:100%;fill:white; transform:rotate(-90deg); height:100%; "
+            />
+          </div>
         </button>
       </div>
     </div>
@@ -145,6 +154,45 @@
 </div>
 
 <style lang="scss">
+  .page-arrow-container {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+
+    border-radius: 50%;
+    background-color: rgba(0 0 0 / 0.5);
+    border: none;
+    overflow: hidden;
+
+    .page-arrow-relative {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+
+      right: 0;
+      padding: 5px;
+      margin: auto;
+    }
+  }
+  .indicator {
+    z-index: 4;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2em;
+    bottom: 5px;
+    left: 5px;
+    position: absolute;
+    padding: 5px 15px;
+    border-radius: 14px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    p {
+      margin-right: -0.2em;
+    }
+  }
   .square-place-holder {
     width: 100%;
     height: 100%;
@@ -202,16 +250,17 @@
     height: 30px;
     bottom: 0;
 
-    img {
-      width: 100%;
-    }
+    
   }
   .arrow-left {
     right: 40px;
+    bottom: 5px;
   }
   .arrow-right {
     transform: rotate(180deg);
-    right: 0;
+    right: 5px;
+    bottom: 5px;
+
   }
   .carousel-image {
     object-fit: cover;

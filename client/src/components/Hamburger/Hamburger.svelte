@@ -1,5 +1,4 @@
 ﻿<script>
-  import Logo from "../../images/svgs/Logo/Logo.svelte";
   import { navButtons, navToLink } from "../../pageContent";
   import { pagePositions } from "../../stores";
 
@@ -39,8 +38,13 @@
       {/each}
     </ul>
     <div class="sidebar-logo-container">
-      <a href="https://www.apeldesign.com/">
-        <!-- <Logo className="sidebar-logo" alt="" /> -->
+      <a
+        on:click={(e) => {
+          e.preventDefault();
+          window.open("https://www.apeldesign.com/");
+        }}
+        href="https://www.apeldesign.com/"
+      >
         <img
           src="https://res.cloudinary.com/dt4xntymn/image/upload/v1631656727/misc/By_Apel_Design_Black_z0yd9b.png"
           alt=""
@@ -199,8 +203,8 @@
     padding: 30px;
     img {
       width: 100%;
+
       object-fit: cover;
-	  
     }
   }
 </style>

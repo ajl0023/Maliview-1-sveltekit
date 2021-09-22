@@ -14,9 +14,7 @@ export const images = [
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left11_gikilv.jpg",
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left12_zgracn.jpg",
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left13_gbr1bv.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left14_hrvtbv.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left15_vmgis6.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/left16_qtxlb6.jpg",
+
 
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/right17_f2ptch.jpg",
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804586/renders/right18_ppnbem.jpg",
@@ -32,7 +30,7 @@ export const images = [
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right28_pyuk66.jpg",
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right29_of0d0d.jpg",
   "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right30_oaincf.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right31_bq6wtc.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right32_ajeqik.jpg",
-  "https://res.cloudinary.com/dt4xntymn/image/upload/v1630804585/renders/right33_o4z4s1.jpg",
+
+
+  
 ];
