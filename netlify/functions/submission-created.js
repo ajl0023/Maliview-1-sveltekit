@@ -5,10 +5,10 @@ exports.handler = function (event, context, callback) {
   const payload = body.payload.human_fields;
 
   const transporter = nodemailer.createTransport({
-    service: "yahoo",
+    service: "hotmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASS,
+      user: "Alec@apeldesign.com",
+      pass: "Apel12345",
     },
   });
   var mailOptions = {
