@@ -44,9 +44,9 @@
   <div class="indicator {page}">
     {#if glide}
       <p>
-        {glideIndex}/{orient === "half"
-          ? halfCarousel[name].length - 1
-          : images[name].length - 1}
+        {glideIndex + 1}/{orient === "half"
+          ? halfCarousel[name].length
+          : images[name].length}
       </p>
     {/if}
   </div>

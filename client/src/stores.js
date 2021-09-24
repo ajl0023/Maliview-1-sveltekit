@@ -11,6 +11,10 @@ const currentPageStore = () => {
   const methods = {
     setPage(val) {
       update((state) => {
+        if (val === 1 && state.page === (images.length - 2) / 2) {
+          state.page = 0;
+          return state;
+        }
         if (
           (val === -1 && state.page >= 1) ||
           (val === 1 && state.page < (images.length - 2) / 2)

@@ -71,7 +71,7 @@
       <div class="indicator">
         {#if glide}
           <p>
-            {glideIndex}/{images[page.title].length - 1}
+            {glideIndex + 1}/{images[page.title].length}
           </p>
         {/if}
       </div>
@@ -249,8 +249,6 @@
     overflow: hidden;
     height: 30px;
     bottom: 0;
-
-    
   }
   .arrow-left {
     right: 40px;
@@ -260,7 +258,6 @@
     transform: rotate(180deg);
     right: 5px;
     bottom: 5px;
-
   }
   .carousel-image {
     object-fit: cover;

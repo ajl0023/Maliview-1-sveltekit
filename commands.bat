@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "fixed carousel thumbs and added more appearance fixes" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "fixed carousel indicator" && git push origin main

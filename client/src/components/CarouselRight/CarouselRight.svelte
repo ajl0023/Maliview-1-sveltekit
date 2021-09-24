@@ -15,7 +15,6 @@
       dragThreshold: false,
     });
     glide.mount();
-    glide.on("run", function () {});
   });
 
   afterUpdate(() => {
@@ -34,7 +33,7 @@
         <div class="indicator {page}">
           {#if glide}
             <p>
-              {$currentPage.page}/{images.length / 2 - 1}
+              {$currentPage.page + 1}/{images.length / 2}
             </p>
           {/if}
         </div>
@@ -168,7 +167,7 @@
     align-items: flex-start;
     justify-content: center;
   }
- 
+
   .carousel-container {
     width: 100%;
     height: 65%;
