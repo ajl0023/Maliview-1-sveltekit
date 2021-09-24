@@ -5,10 +5,14 @@ exports.handler = function (event, context, callback) {
   const payload = body.payload.human_fields;
 
   const transporter = nodemailer.createTransport({
-    service: "hotmail",
+    host: "smtp.gmail.com", // hostname
+    // TLS requires secureConnection to be false
+    port: 465, // port for secure SMTP
+    secure: true,
+
     auth: {
-      user: "Alec@apeldesign.com",
-      pass: "Apel12345",
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASS,
     },
   });
   var mailOptions = {

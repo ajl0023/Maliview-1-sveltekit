@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "fixed carousel indicator" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "updated auth for email client" && git push origin main
