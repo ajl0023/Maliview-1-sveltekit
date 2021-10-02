@@ -177,7 +177,7 @@
     }
   }
   .indicator {
-    z-index: 4;
+    z-index: 3;
     font-weight: 600;
     text-align: center;
     letter-spacing: 0.2em;
