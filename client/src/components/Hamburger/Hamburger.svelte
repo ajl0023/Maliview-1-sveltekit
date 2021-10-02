@@ -113,6 +113,8 @@
         display: flex;
         text-transform: uppercase;
         align-items: center;
+        z-index: 2;
+        position: relative;
         color: black;
         cursor: pointer;
         padding: 20px 110px 20px 20px;
@@ -224,6 +226,8 @@
     max-width: 266px;
     margin: auto;
     padding: 30px;
+    z-index: 2;
+    position: relative;
     img {
       width: 100%;
 

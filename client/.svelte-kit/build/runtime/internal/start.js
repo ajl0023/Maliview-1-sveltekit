@@ -179,13 +179,12 @@ class Router {
 		if (this.owns(url)) {
 			const path = url.pathname.slice(this.base.length) || '/';
 
-			const decoded_path = decodeURI(path);
-			const routes = this.routes.filter(([pattern]) => pattern.test(decoded_path));
+			const routes = this.routes.filter(([pattern]) => pattern.test(path));
 
 			const query = new URLSearchParams(url.search);
 			const id = `${path}?${query}`;
 
-			return { id, routes, path, decoded_path, query };
+			return { id, routes, path, query };
 		}
 	}
 
@@ -271,7 +270,23 @@ class Router {
 			query: info.query
 		});
 
-		await this.renderer.update(info, chain, false, { hash, scroll, keepfocus });
+		await this.renderer.update(info, chain, false);
+
+		if (!keepfocus) {
+			document.body.focus();
+		}
+
+		const deep_linked = hash && document.getElementById(hash.slice(1));
+		if (scroll) {
+			scrollTo(scroll.x, scroll.y);
+		} else if (deep_linked) {
+			// Here we use `scrollIntoView` on the element instead of `scrollTo`
+			// because it natively supports the `scroll-margin` and `scroll-behavior`
+			// CSS properties.
+			deep_linked.scrollIntoView();
+		} else {
+			scrollTo(0, 0);
+		}
 	}
 }
 
@@ -357,14 +372,6 @@ function normalize(loaded) {
 		}
 	}
 
-	// TODO remove before 1.0
-	if (/** @type {any} */ (loaded).context) {
-		throw new Error(
-			'You are returning "context" from a load function. ' +
-				'"context" was renamed to "stuff", please adjust your code accordingly.'
-		);
-	}
-
 	return /** @type {import('types/internal').NormalizedLoadOutput} */ (loaded);
 }
 
@@ -412,7 +419,7 @@ function page_store(value) {
 function initial_fetch(resource, opts) {
 	const url = typeof resource === 'string' ? resource : resource.url;
 
-	let selector = `script[data-type="svelte-data"][data-url=${JSON.stringify(url)}]`;
+	let selector = `script[data-type="svelte-data"][data-url="${url}"]`;
 
 	if (opts && typeof opts.body === 'string') {
 		selector += `[data-body="${hash(opts.body)}"]`;
@@ -428,15 +435,13 @@ function initial_fetch(resource, opts) {
 }
 
 class Renderer {
-	/**
-	 * @param {{
+	/** @param {{
 	 *   Root: CSRComponent;
 	 *   fallback: [CSRComponent, CSRComponent];
 	 *   target: Node;
 	 *   session: any;
 	 *   host: string;
-	 * }} opts
-	 */
+	 * }} opts */
 	constructor({ Root, fallback, target, session, host }) {
 		this.Root = Root;
 		this.fallback = fallback;
@@ -506,7 +511,7 @@ class Renderer {
 		const branch = [];
 
 		/** @type {Record<string, any>} */
-		let stuff = {};
+		let context = {};
 
 		/** @type {import('./types').NavigationResult | undefined} */
 		let result;
@@ -520,7 +525,7 @@ class Renderer {
 				const node = await this._load_node({
 					module: await nodes[i],
 					page,
-					stuff,
+					context,
 					status: is_leaf ? status : undefined,
 					error: is_leaf ? error : undefined
 				});
@@ -536,10 +541,10 @@ class Renderer {
 							path: page.path,
 							query: page.query
 						};
-					} else if (node.loaded.stuff) {
-						stuff = {
-							...stuff,
-							...node.loaded.stuff
+					} else if (node.loaded.context) {
+						context = {
+							...context,
+							...node.loaded.context
 						};
 					}
 				}
@@ -591,9 +596,8 @@ class Renderer {
 	 * @param {import('./types').NavigationInfo} info
 	 * @param {string[]} chain
 	 * @param {boolean} no_cache
-	 * @param {{hash?: string, scroll: { x: number, y: number } | null, keepfocus: boolean}} [opts]
 	 */
-	async update(info, chain, no_cache, opts) {
+	async update(info, chain, no_cache) {
 		const token = (this.token = {});
 		let navigation_result = await this._get_navigation_result(info, no_cache);
 
@@ -631,31 +635,12 @@ class Renderer {
 
 			this.root.$set(navigation_result.props);
 			this.stores.navigating.set(null);
+
+			await 0;
 		} else {
 			this._init(navigation_result);
 		}
 
-		if (opts) {
-			const { hash, scroll, keepfocus } = opts;
-
-			if (!keepfocus) {
-				document.body.focus();
-			}
-
-			const deep_linked = hash && document.getElementById(hash.slice(1));
-			if (scroll) {
-				scrollTo(scroll.x, scroll.y);
-			} else if (deep_linked) {
-				// Here we use `scrollIntoView` on the element instead of `scrollTo`
-				// because it natively supports the `scroll-margin` and `scroll-behavior`
-				// CSS properties.
-				deep_linked.scrollIntoView();
-			} else {
-				scrollTo(0, 0);
-			}
-		}
-
-		await 0;
 		dispatchEvent(new CustomEvent('sveltekit:navigation-end'));
 		this.loading.promise = null;
 		this.loading.id = null;
@@ -776,11 +761,9 @@ class Renderer {
 	 */
 	async _get_navigation_result_from_branch({ page, branch }) {
 		const filtered = /** @type {import('./types').BranchNode[] } */ (branch.filter(Boolean));
-		const redirect = filtered.find((f) => f.loaded && f.loaded.redirect);
 
 		/** @type {import('./types').NavigationResult} */
 		const result = {
-			redirect: redirect && redirect.loaded ? redirect.loaded.redirect : undefined,
 			state: {
 				page,
 				branch,
@@ -840,11 +823,11 @@ class Renderer {
 	 *   error?: Error;
 	 *   module: CSRComponent;
 	 *   page: import('types/page').Page;
-	 *   stuff: Record<string, any>;
+	 *   context: Record<string, any>;
 	 * }} options
 	 * @returns
 	 */
-	async _load_node({ status, error, module, page, stuff }) {
+	async _load_node({ status, error, module, page, context }) {
 		/** @type {import('./types').BranchNode} */
 		const node = {
 			module,
@@ -853,11 +836,11 @@ class Renderer {
 				path: false,
 				query: false,
 				session: false,
-				stuff: false,
+				context: false,
 				dependencies: []
 			},
 			loaded: null,
-			stuff
+			context
 		};
 
 		/** @type {Record<string, string>} */
@@ -895,9 +878,9 @@ class Renderer {
 					node.uses.session = true;
 					return session;
 				},
-				get stuff() {
-					node.uses.stuff = true;
-					return { ...stuff };
+				get context() {
+					node.uses.context = true;
+					return { ...context };
 				},
 				fetch(resource, info) {
 					const url = typeof resource === 'string' ? resource : resource.url;
@@ -919,7 +902,7 @@ class Renderer {
 			if (!loaded) return;
 
 			node.loaded = normalize(loaded);
-			if (node.loaded.stuff) node.stuff = node.loaded.stuff;
+			if (node.loaded.context) node.context = node.loaded.context;
 		}
 
 		return node;
@@ -930,8 +913,8 @@ class Renderer {
 	 * @param {boolean} no_cache
 	 * @returns {Promise<import('./types').NavigationResult | undefined>} undefined if fallthrough
 	 */
-	async _load({ route, info: { path, decoded_path, query } }, no_cache) {
-		const key = `${decoded_path}?${query}`;
+	async _load({ route, info: { path, query } }, no_cache) {
+		const key = `${path}?${query}`;
 
 		if (!no_cache) {
 			const cached = this.cache.get(key);
@@ -941,7 +924,7 @@ class Renderer {
 		const [pattern, a, b, get_params] = route;
 		const params = get_params
 			? // the pattern is for the route which we've already matched to this path
-			  get_params(/** @type {RegExpExecArray}  */ (pattern.exec(decoded_path)))
+			  get_params(/** @type {RegExpExecArray}  */ (pattern.exec(path)))
 			: {};
 
 		const changed = this.current.page && {
@@ -958,8 +941,8 @@ class Renderer {
 		let branch = [];
 
 		/** @type {Record<string, any>} */
-		let stuff = {};
-		let stuff_changed = false;
+		let context = {};
+		let context_changed = false;
 
 		/** @type {number | undefined} */
 		let status = 200;
@@ -988,13 +971,13 @@ class Renderer {
 					(changed.query && previous.uses.query) ||
 					(changed.session && previous.uses.session) ||
 					previous.uses.dependencies.some((dep) => this.invalid.has(dep)) ||
-					(stuff_changed && previous.uses.stuff);
+					(context_changed && previous.uses.context);
 
 				if (changed_since_last_render) {
 					node = await this._load_node({
 						module,
 						page,
-						stuff
+						context
 					});
 
 					const is_leaf = i === a.length - 1;
@@ -1013,8 +996,8 @@ class Renderer {
 							};
 						}
 
-						if (node.loaded.stuff) {
-							stuff_changed = true;
+						if (node.loaded.context) {
+							context_changed = true;
 						}
 					} else if (is_leaf && module.load) {
 						// if the leaf node has a `load` function
@@ -1047,7 +1030,7 @@ class Renderer {
 								error,
 								module: await b[i](),
 								page,
-								stuff: node_loaded.stuff
+								context: node_loaded.context
 							});
 
 							if (error_loaded && error_loaded.loaded && error_loaded.loaded.error) {
@@ -1069,10 +1052,10 @@ class Renderer {
 					query
 				});
 			} else {
-				if (node && node.loaded && node.loaded.stuff) {
-					stuff = {
-						...stuff,
-						...node.loaded.stuff
+				if (node && node.loaded && node.loaded.context) {
+					context = {
+						...context,
+						...node.loaded.context
 					};
 				}
 
@@ -1102,7 +1085,7 @@ class Renderer {
 		const node = await this._load_node({
 			module: await this.fallback[0],
 			page,
-			stuff: {}
+			context: {}
 		});
 
 		const branch = [
@@ -1112,7 +1095,7 @@ class Renderer {
 				error,
 				module: await this.fallback[1],
 				page,
-				stuff: (node && node.loaded && node.loaded.stuff) || {}
+				context: (node && node.loaded && node.loaded.context) || {}
 			})
 		];
 
@@ -1122,8 +1105,7 @@ class Renderer {
 
 // @ts-expect-error - value will be replaced on build step
 
-/**
- * @param {{
+/** @param {{
  *   paths: {
  *     assets: string;
  *     base: string;
@@ -1140,8 +1122,7 @@ class Renderer {
  *     nodes: Array<Promise<import('types/internal').CSRComponent>>;
  *     page: import('types/page').Page;
  *   };
- * }} opts
- */
+ * }} opts */
 async function start({ paths, target, session, host, route, spa, trailing_slash, hydrate }) {
 	if (import.meta.env.DEV && !target) {
 		throw new Error('Missing target element. See https://kit.svelte.dev/docs#configuration-target');

@@ -22,9 +22,9 @@ export function init(settings = default_settings) {
 		amp: false,
 		dev: false,
 		entry: {
-			file: assets + "/_app/start-7463b951.js",
+			file: assets + "/_app/start-b70c79a8.js",
 			css: [assets + "/_app/assets/start-61d1577b.css"],
-			js: [assets + "/_app/start-7463b951.js",assets + "/_app/chunks/vendor-f4af72fe.js"]
+			js: [assets + "/_app/start-b70c79a8.js",assets + "/_app/chunks/vendor-f4af72fe.js"]
 		},
 		fetched: undefined,
 		floc: false,
@@ -52,25 +52,11 @@ export function init(settings = default_settings) {
 	};
 }
 
-// input has already been decoded by decodeURI
-// now handle the rest that decodeURIComponent would do
-const d = s => s
-	.replace(/%23/g, '#')
-	.replace(/%3[Bb]/g, ';')
-	.replace(/%2[Cc]/g, ',')
-	.replace(/%2[Ff]/g, '/')
-	.replace(/%3[Ff]/g, '?')
-	.replace(/%3[Aa]/g, ':')
-	.replace(/%40/g, '@')
-	.replace(/%26/g, '&')
-	.replace(/%3[Dd]/g, '=')
-	.replace(/%2[Bb]/g, '+')
-	.replace(/%24/g, '$');
-
+const d = decodeURIComponent;
 const empty = () => ({});
 
 const manifest = {
-	assets: [{"file":"_headers.txt","size":35,"type":"text/plain"},{"file":"logo.inline.svg","size":37735,"type":"image/svg+xml"}],
+	assets: [{"file":"logo.inline.svg","size":37735,"type":"image/svg+xml"},{"file":"_headers.txt","size":35,"type":"text/plain"}],
 	layout: ".svelte-kit/build/components/layout.svelte",
 	error: ".svelte-kit/build/components/error.svelte",
 	routes: [
@@ -94,10 +80,10 @@ const get_hooks = hooks => ({
 });
 
 const module_lookup = {
-	".svelte-kit/build/components/layout.svelte": () => import("./components/layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components/error.svelte"),"src/routes/index.svelte": () => import("../../src/routes/index.svelte")
+	".svelte-kit/build/components/layout.svelte": () => import("./components\\layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components\\error.svelte"),"src/routes/index.svelte": () => import("..\\..\\src\\routes\\index.svelte")
 };
 
-const metadata_lookup = {".svelte-kit/build/components/layout.svelte":{"entry":"layout.svelte-efa6928d.js","css":[],"js":["layout.svelte-efa6928d.js","chunks/vendor-f4af72fe.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"error.svelte-035085c8.js","css":[],"js":["error.svelte-035085c8.js","chunks/vendor-f4af72fe.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-d93ca071.js","css":["assets/pages/index.svelte-28d400f2.css"],"js":["pages/index.svelte-d93ca071.js","chunks/vendor-f4af72fe.js"],"styles":[]}};
+const metadata_lookup = {".svelte-kit/build/components/layout.svelte":{"entry":"layout.svelte-88df7960.js","css":[],"js":["layout.svelte-88df7960.js","chunks/vendor-f4af72fe.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"error.svelte-860ecf0c.js","css":[],"js":["error.svelte-860ecf0c.js","chunks/vendor-f4af72fe.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-20f2ef94.js","css":["assets/pages/index.svelte-65ed1246.css"],"js":["pages/index.svelte-20f2ef94.js","chunks/vendor-f4af72fe.js"],"styles":[]}};
 
 async function load_component(file) {
 	const { entry, css, js, styles } = metadata_lookup[file];
