@@ -30,8 +30,9 @@
       "https://res.cloudinary.com/dt4xntymn/image/upload/v1630887731/rendersHighRes/33340_MULHOLLAND_INT_IMG_4A-min_ihzxkw.jpg",
     ],
     floorplans: [
-      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/2ND_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_xhlvzr.jpg",
-      "https://res.cloudinary.com/dt4xntymn/image/upload/v1631328567/FloorPlans/1ST_FLOOR_20-0001_33340_Mullholland_Hwy_20200810_ouauck.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1633199065/FloorPlans/33340_Mullholland_Hwy_SITE_PLAN_gbvv7f.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1633199064/FloorPlans/33340_Mullholland_Hwy_1ST_FLOOR_BLACK_20211001_qrb856.jpg",
+      "https://res.cloudinary.com/dt4xntymn/image/upload/v1633199063/FloorPlans/33340_Mullholland_Hwy_2ND_FLOOR_20211001_cmgvbq.jpg",
     ],
   };
 

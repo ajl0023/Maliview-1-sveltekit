@@ -50,7 +50,7 @@ export const textPages = [
   {
     header: "floorplans",
     paragraphs: [
-      "Live the dreams in the hills of Malibu when this stunning Tuscany modern architectur- al home and equestrian property is completed. Comprising a spacious four acres, this estate compound will have a matching architectural style horse barn with stalls. There is a separate entrance to the barn with plenty of additional parking for a horse trailer and RV parking. There are spectacular views of the Santa Monica Mountains with horse trails throughout leading to stunning countryside and ocean views.",
+      "Live the dreams in the hills of Malibu when this stunning Tuscany modern architectural home and equestrian property is completed. Comprising a spacious four acres, this estate compound will have a matching architectural style horse barn with stalls. There is a separate entrance to the barn with plenty of additional parking for a horse trailer and RV parking. There are spectacular views of the Santa Monica Mountains with horse trails throughout leading to stunning countryside and ocean views.",
     ],
   },
   {
