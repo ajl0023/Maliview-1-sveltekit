@@ -6,10 +6,31 @@
 </script>
 
 <div class="container">
-  <Facebook />
-  <Instagram />
-  <Linkedin />
-  <Twitter />
+  <a
+    on:click={(e) => {
+      e.preventDefault();
+      window.open("https://www.facebook.com/apeldesign/");
+    }}
+    href="https://www.facebook.com/apeldesign/"
+  >
+    <Facebook />
+  </a>
+  <a
+    on:click={(e) => {
+      e.preventDefault();
+      window.open("https://www.instagram.com/apeldesigninc/");
+    }}
+    href="https://www.instagram.com/apeldesigninc/"><Instagram /></a
+  >
+  <a
+    on:click={(e) => {
+      e.preventDefault();
+      window.open("https://www.linkedin.com/in/amit-apel-05373727");
+    }}
+    href="https://www.linkedin.com/in/amit-apel-05373727"
+  >
+    <Linkedin /></a
+  >
 </div>
 
 <style lang="scss">

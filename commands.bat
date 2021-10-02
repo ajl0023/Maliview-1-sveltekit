@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "few minor fixes" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "social links are working" && git push origin main
