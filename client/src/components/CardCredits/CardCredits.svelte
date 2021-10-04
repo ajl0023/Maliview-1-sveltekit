@@ -35,6 +35,7 @@
     }
     .mobile-credits-container {
       margin-bottom: 2rem;
+      opacity: 0;
       &:not(:last-child)::after {
         content: "";
         display: block;

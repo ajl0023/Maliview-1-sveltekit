@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "fixed css error" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "removed credits" && git push origin main
