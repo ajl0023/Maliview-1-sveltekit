@@ -3,15 +3,25 @@
   import Glide from "@glidejs/glide";
   import { onDestroy, onMount } from "svelte";
   import { navToLink, textPages } from "../../pageContent";
+  import { DragGesture } from "@use-gesture/vanilla";
+  import { spring } from "svelte/motion";
+
   import Arrow from "../Card/Arrow.svelte";
+  import PinchZoom from "../PinchZoom.svelte";
   export let index;
   export let page;
   let carousel;
   let glide;
   let showMore = false;
-
+  let slider;
   let overFlowing;
   let mainText;
+  let shouldDrag = true;
+  let glideContainer;
+  let currInd = 0;
+
+  let carouselWidth;
+  let sliderThresh = 80;
 
   const images = {
     renders: [
@@ -36,22 +46,77 @@
     ],
   };
 
-  let glideIndex = 0;
+  const xVal = spring(0, { stiffness: 0.1, damping: 0.89 });
 
   onMount(() => {
-    glide = new Glide(carousel);
+    carouselWidth = carousel.offsetWidth * images[page.title].length;
+    new DragGesture(
+      slider,
+      ({ direction, movement, down }) => {
+        if (shouldDrag) {
+          xVal.set((carousel.offsetWidth + 10) * currInd * -1 + movement[0]);
 
-    glide.mount();
-    glide.on("run", function () {
-      glideIndex = glide.index;
+          if (!down) {
+            if (
+              Math.abs(movement[0]) > sliderThresh &&
+              currInd === images[page.title].length - 1 &&
+              movement[0] < 0
+            ) {
+              xVal.set(-currInd * (carousel.offsetWidth + 10));
+
+              return;
+            }
+            if (
+              Math.abs(movement[0]) > sliderThresh &&
+              currInd === 0 &&
+              movement[0] > 0
+            ) {
+              xVal.set(-currInd * (carousel.offsetWidth + 10));
+
+              return;
+            }
+            if (Math.abs(movement[0]) > sliderThresh) {
+              if (movement[0] < -1) {
+                currInd += 1;
+              } else {
+                currInd -= 1;
+              }
+
+              xVal.set(-currInd * (carousel.offsetWidth + 10));
+            } else {
+              xVal.set(-currInd * (carousel.offsetWidth + 10));
+            }
+          }
+        }
+      },
+      {
+        pointer: {
+          touch: true,
+        },
+      }
+    );
+    glide = new Glide(carousel, {
+      swipeThreshold: false,
+      dragThreshold: false,
+    });
+    glide.mount({
+      Resize: function (Glide, Components, Events) {
+        return {};
+      },
     });
     if (browser) {
-      window.addEventListener("resize", checkOverFlow);
+      window.addEventListener("resize", resize);
     }
 
-    checkOverFlow();
+    resize();
+    xVal.subscribe((v) => {
+      slider.style.transform = `translate(${v}px,0px)`;
+    });
   });
-  function checkOverFlow() {
+  function resize() {
+    carouselWidth = carousel.offsetWidth;
+
+    carousel.style.width = xVal.set(-currInd * (carousel.offsetWidth + 10));
     if (mainText.scrollHeight > mainText.clientHeight) {
       overFlowing = true;
     } else {
@@ -61,41 +126,80 @@
 
   onDestroy(() => {
     if (browser) {
-      window.removeEventListener("resize", checkOverFlow);
+      window.removeEventListener("resize", resize);
     }
   });
+
+  $: {
+    if (glide) {
+      if (!shouldDrag) {
+        glide.disable();
+      } else {
+        glide.enable();
+      }
+    }
+  }
+  const handleCarousel = (val) => {
+    if (currInd === 0 && val === -1) {
+      return;
+    } else if (currInd === images[page.title].length - 1 && val === 1) {
+      return;
+    } else {
+      currInd += val;
+      xVal.set(-currInd * (carousel.offsetWidth + 10));
+    }
+  };
 </script>
 
-<div id={navToLink[index + 1]} class="bu-card card-container">
+<div id={navToLink[index + 2]} class="bu-card card-container">
   <div class="carousel-container">
     <div bind:this={carousel} class="glide">
       <div class="indicator">
         {#if glide}
           <p>
-            {glideIndex + 1}/{images[page.title].length}
+            {currInd + 1}/{images[page.title].length}
           </p>
         {/if}
       </div>
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
+        <ul bind:this={slider} class="glide__slides">
           {#each images[page.title] as img, i}
-            <li class="glide__slide">
+            <li
+              style="width:{glideContainer ? carouselWidth : ''}px"
+              bind:this={glideContainer}
+              class="glide__slide"
+            >
               <div class="glide-image-container">
-                <img loading="lazy" class="carousel-image" src={img} alt="" />
+                <PinchZoom
+                  on:pinch={(e) => {
+                    shouldDrag = !e.detail;
+                  }}
+                  {img}
+                />
               </div>
             </li>
           {/each}
         </ul>
       </div>
       <div class="glide__arrows" data-glide-el="controls">
-        <button data-glide-dir="<" class="page-arrow-container arrow-left">
+        <button
+          class="glide__arrow page-arrow-container glide__arrow--left arrow-left"
+          on:click={() => {
+            handleCarousel(-1);
+          }}
+        >
           <div class="page-arrow-relative">
             <Arrow
               styleP="object-fit:cover;width:100%;fill:white; transform:rotate(-90deg); height:100%; "
             />
-          </div>
-        </button>
-        <button data-glide-dir=">" class="page-arrow-container arrow-right ">
+          </div></button
+        >
+        <button
+          on:click={() => {
+            handleCarousel(1);
+          }}
+          class="glide__arrow  page-arrow-container glide__arrow--right arrow-right"
+        >
           <div class="page-arrow-relative">
             <Arrow
               styleP="object-fit:cover;width:100%;fill:white; transform:rotate(-90deg); height:100%; "
@@ -159,18 +263,15 @@
     width: 30px;
     height: 30px;
     position: absolute;
-
     border-radius: 50%;
     background-color: rgba(0 0 0 / 0.5);
     border: none;
     overflow: hidden;
-
     .page-arrow-relative {
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
-
       right: 0;
       padding: 5px;
       margin: auto;
@@ -212,11 +313,9 @@
   .card-content {
     background-color: transparent;
   }
-
   .content {
     max-height: 20rem;
     overflow: hidden;
-
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -226,7 +325,6 @@
     flex-direction: column;
     background-color: transparent;
   }
-
   .carousel-container {
     .glide-image-container {
       display: flex;
@@ -255,16 +353,17 @@
     right: 40px;
     bottom: 5px;
   }
-  .arrow-right {
-    transform: rotate(180deg);
-    right: 5px;
-    bottom: 5px;
-  }
+
   .carousel-image {
     object-fit: cover;
   }
   .show-more {
     display: block;
     max-height: 100%;
+  }
+  .arrow-right {
+    transform: rotate(180deg);
+    right: 5px;
+    bottom: 5px;
   }
 </style>

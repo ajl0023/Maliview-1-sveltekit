@@ -22,9 +22,9 @@ export function init(settings = default_settings) {
 		amp: false,
 		dev: false,
 		entry: {
-			file: assets + "/_app/start-30cfd05e.js",
+			file: assets + "/_app/start-ec6a961d.js",
 			css: [assets + "/_app/assets/start-61d1577b.css"],
-			js: [assets + "/_app/start-30cfd05e.js",assets + "/_app/chunks/vendor-f4af72fe.js"]
+			js: [assets + "/_app/start-ec6a961d.js",assets + "/_app/chunks/vendor-b1544594.js"]
 		},
 		fetched: undefined,
 		floc: false,
@@ -52,7 +52,21 @@ export function init(settings = default_settings) {
 	};
 }
 
-const d = decodeURIComponent;
+// input has already been decoded by decodeURI
+// now handle the rest that decodeURIComponent would do
+const d = s => s
+	.replace(/%23/g, '#')
+	.replace(/%3[Bb]/g, ';')
+	.replace(/%2[Cc]/g, ',')
+	.replace(/%2[Ff]/g, '/')
+	.replace(/%3[Ff]/g, '?')
+	.replace(/%3[Aa]/g, ':')
+	.replace(/%40/g, '@')
+	.replace(/%26/g, '&')
+	.replace(/%3[Dd]/g, '=')
+	.replace(/%2[Bb]/g, '+')
+	.replace(/%24/g, '$');
+
 const empty = () => ({});
 
 const manifest = {
@@ -83,7 +97,7 @@ const module_lookup = {
 	".svelte-kit/build/components/layout.svelte": () => import("./components\\layout.svelte"),".svelte-kit/build/components/error.svelte": () => import("./components\\error.svelte"),"src/routes/index.svelte": () => import("..\\..\\src\\routes\\index.svelte")
 };
 
-const metadata_lookup = {".svelte-kit/build/components/layout.svelte":{"entry":"layout.svelte-88df7960.js","css":[],"js":["layout.svelte-88df7960.js","chunks/vendor-f4af72fe.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"error.svelte-860ecf0c.js","css":[],"js":["error.svelte-860ecf0c.js","chunks/vendor-f4af72fe.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-4acf7d66.js","css":["assets/pages/index.svelte-046c6b32.css"],"js":["pages/index.svelte-4acf7d66.js","chunks/vendor-f4af72fe.js"],"styles":[]}};
+const metadata_lookup = {".svelte-kit/build/components/layout.svelte":{"entry":"layout.svelte-c958b388.js","css":[],"js":["layout.svelte-c958b388.js","chunks/vendor-b1544594.js"],"styles":[]},".svelte-kit/build/components/error.svelte":{"entry":"error.svelte-573e428d.js","css":[],"js":["error.svelte-573e428d.js","chunks/vendor-b1544594.js"],"styles":[]},"src/routes/index.svelte":{"entry":"pages/index.svelte-c7747abb.js","css":["assets/pages/index.svelte-c9672f2e.css"],"js":["pages/index.svelte-c7747abb.js","chunks/vendor-b1544594.js"],"styles":[]}};
 
 async function load_component(file) {
 	const { entry, css, js, styles } = metadata_lookup[file];
