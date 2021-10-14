@@ -33,7 +33,7 @@ const currentPageStore = () => {
   };
 };
 export const currentPage = currentPageStore();
-export const galleryImg = writable(0);
+
 export let scrollContainers = [];
 export const modal = writable({
   visibility: false,

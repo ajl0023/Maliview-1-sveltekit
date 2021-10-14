@@ -35,7 +35,8 @@
   .wrapper {
     width: 100vw;
     position: fixed;
-    z-index: 4;
+    z-index: 3;
+    pointer-events: none;
   }
   .container {
     color: white;
@@ -49,12 +50,13 @@
 
     .left-container {
       display: flex;
-
+      pointer-events: all;
       align-items: center;
     }
     .logo-container {
       max-width: 10em;
       height: 66px;
+      pointer-events: all;
       img {
         width: 100%;
         object-fit: cover;

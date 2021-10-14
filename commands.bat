@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "added pinch zoom" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "added phase feature for gallery" && git push origin main
