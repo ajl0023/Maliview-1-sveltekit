@@ -100,49 +100,7 @@
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
-  .phase-2 {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(25, 4%);
-    grid-template-rows: repeat(25, 4%);
-    width: 100%;
-    gap: 2.8px;
-    .grid-image-container:nth-child(n + 2):nth-child(-n + 5) {
-      grid-column: span 10;
-      grid-row: span 3;
-    }
 
-    .grid-image-container {
-      grid-column: span 5;
-      grid-row: span 4;
-      overflow: hidden;
-      width: 100%;
-    }
-    .grid-image-container:nth-child(20) {
-      grid-column: span 5;
-      grid-row: span 8;
-    }
-    .grid-image-container:nth-child(21) {
-      grid-column: span 5;
-      grid-row: span 10;
-    }
-    .grid-image-container:nth-child(22) {
-      grid-row: span 12;
-    }
-    .grid-image-container:nth-child(8) {
-      grid-column: span 4;
-      grid-row: span 4;
-    }
-
-    .grid-image-container:nth-child(18) {
-      grid-column: span 10;
-
-      grid-row: span 6;
-    }
-    .grid-image-container:nth-child(10) {
-      grid-column: span 6;
-    }
-  }
   .phase-1 {
     display: grid;
     height: 100%;
@@ -195,5 +153,48 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
+  }
+  .phase-2 {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(25, 4%);
+    grid-template-rows: repeat(25, 4%);
+    width: 100%;
+    gap: 2.8px;
+    .grid-image-container:nth-child(n + 2):nth-child(-n + 5) {
+      grid-column: span 10;
+      grid-row: span 3;
+    }
+
+    .grid-image-container {
+      grid-column: span 5;
+      grid-row: span 4;
+      overflow: hidden;
+      width: 100%;
+    }
+    .grid-image-container:nth-child(20) {
+      grid-column: span 5;
+      grid-row: span 8;
+    }
+    .grid-image-container:nth-child(21) {
+      grid-column: span 5;
+      grid-row: span 10;
+    }
+    .grid-image-container:nth-child(22) {
+      grid-row: span 12;
+    }
+    .grid-image-container:nth-child(8) {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
+    .grid-image-container:nth-child(18) {
+      grid-column: span 10;
+
+      grid-row: span 6;
+    }
+    .grid-image-container:nth-child(10) {
+      grid-column: span 6;
+    }
   }
 </style>
