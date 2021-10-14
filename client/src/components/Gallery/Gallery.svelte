@@ -21,6 +21,7 @@
         on:click={() => {
           galleryImg.update((s) => {
             s.currPhase = phase;
+            s.index = 0;
             return s;
           });
         }}
