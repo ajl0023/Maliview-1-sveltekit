@@ -115,7 +115,8 @@
   });
   function resize() {
     carouselWidth = carousel.offsetWidth;
-
+    slider.style.width =
+      carousel.offsetWidth * (images[page.title].length + 1) * 5 + "px";
     carousel.style.width = xVal.set(-currInd * (carousel.offsetWidth + 10));
     if (mainText.scrollHeight > mainText.clientHeight) {
       overFlowing = true;

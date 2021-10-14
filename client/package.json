@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev --host=0.0.0.0",
-    "build": "svelte-kit build && purgecss --css build/_app/assets/pages/*.css --content build/index.html  build/_app/**/*.js --output build/_app/assets/pages",
+    "build": "svelte-kit build && purgecss --css build/_app/assets/pages/*.css --content build/index.html  build/_app/**/*.js --safelist phase-2 --output build/_app/assets/pages",
     "preview": "svelte-kit preview",
     "lint": "prettier --ignore-path .gitignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
