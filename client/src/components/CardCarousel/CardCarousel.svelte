@@ -333,12 +333,6 @@
       height: 0;
       position: relative;
       justify-content: center;
-      img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        object-fit: cover;
-      }
     }
   }
   .page-arrow-container {
@@ -355,9 +349,6 @@
     bottom: 5px;
   }
 
-  .carousel-image {
-    object-fit: cover;
-  }
   .show-more {
     display: block;
     max-height: 100%;

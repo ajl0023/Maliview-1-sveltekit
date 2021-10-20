@@ -1,11 +1,11 @@
 ﻿<script>
-  import CarouselLeft from "../CarouselLeft/CarouselLeft.svelte";
+  import CarouselRenders from "../CarouselRenders/CarouselRenders.svelte";
   import ContactUs from "../ContactUs/ContactUs.svelte";
   import Credits from "../Credits/Credits.svelte";
   import GalleryPreview from "../GalleryPreview/GalleryPreview.svelte";
   import ImagePage from "../ImagePage/ImagePage.svelte";
   import TextPage from "../TextPage/TextPage.svelte";
-  let name = "world";
+
   export let leftPage;
   export let carouselPage;
 </script>
@@ -30,7 +30,8 @@
 
   <ImagePage name="malibu" index={0} />
   <TextPage name="discover" bgColor="#a4632e" index={1} />
-  <CarouselLeft name="renders" {carouselPage} page="left" />
+  <CarouselRenders name="renders" {carouselPage} page="left" />
+
   <TextPage name="floorplans" bgColor="#a4632e" index={3} />
   <ImagePage name="equestrian" index={2} />
   <TextPage name="video render" bgColor="#a4632e" index={5} />

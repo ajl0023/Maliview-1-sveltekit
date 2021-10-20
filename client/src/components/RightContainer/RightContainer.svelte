@@ -1,10 +1,10 @@
 ﻿<script>
   import CarouselFull from "../CarouselFull/CarouselFull.svelte";
-  import CarouselRight from "../CarouselRight/CarouselRight.svelte";
   import Credits from "../Credits/Credits.svelte";
   import Gallery from "../Gallery/Gallery.svelte";
   import ImagePage from "../ImagePage/ImagePage.svelte";
   import TextPage from "../TextPage/TextPage.svelte";
+  import CarouselRenders from "./../CarouselRenders/CarouselRenders.svelte";
 
   export let rightPage;
   export let carouselPage;
@@ -19,7 +19,8 @@
 
   <TextPage index={4} />
   <CarouselFull orient="full" page="right" name="floorplans" />
-  <CarouselRight {carouselPage} page="right" />
+  <CarouselRenders {carouselPage} page="right" />
+
   <CarouselFull orient="full" page="right" name="discover" index={1} />
   <TextPage index={0} />
   <div class="bg-image-container">

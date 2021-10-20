@@ -4,9 +4,9 @@
   import { lazyLoadInstance } from "../../lazy";
 
   import { currentPage } from "../../stores";
-
+  import { createEventDispatcher } from "svelte";
   export let page;
-
+  const dispatch = createEventDispatcher();
   const images = [
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/1_wohazp.jpg",
     "https://res.cloudinary.com/dt4xntymn/image/upload/v1630815470/carouselThumbs/2_ntogjy.jpg",
@@ -52,6 +52,9 @@
   {#each imagesToDisplay as img, i}
     {#if img}
       <div
+        on:click={() => {
+          dispatch("carousel-page", page === "left" ? i : i + 7);
+        }}
         class:selected={$currentPage.page === img.index}
         class="image-container"
       >
