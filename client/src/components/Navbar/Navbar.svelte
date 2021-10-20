@@ -54,8 +54,9 @@
       align-items: center;
     }
     .logo-container {
-      max-width: 10em;
+      max-width: 12em;
       height: 66px;
+
       pointer-events: all;
       img {
         width: 100%;

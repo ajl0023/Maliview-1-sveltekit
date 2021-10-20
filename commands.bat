@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "refactored carousel" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "made logo slightly larger" && git push origin main
