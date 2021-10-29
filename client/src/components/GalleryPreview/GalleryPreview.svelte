@@ -5,11 +5,7 @@
 
 <div class="page">
   <div class="image-container">
-    <img
-      loading="lazy"
-      src={highResBts[$galleryImg.currPhase][$galleryImg.index]}
-      alt=""
-    />
+    <img loading="lazy" src={$galleryImg.imageToDisplay} alt="" />
   </div>
 </div>
 

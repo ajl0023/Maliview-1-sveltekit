@@ -23,7 +23,8 @@
     "netlify-lambda": "^2.0.14",
     "nodemailer": "^6.6.3",
     "nodemon": "^2.0.12",
-    "serverless-http": "^2.7.0"
+    "serverless-http": "^2.7.0",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",

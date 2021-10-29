@@ -2,8 +2,18 @@
   import { highResBts } from "../../pageContent";
   import { modal } from "../../stores";
   import { images } from "../Gallery/galleryImages";
-  let currPhase = "phase 1";
-  const phases = ["phase 1", "phase 2"];
+  let currPhase = "phase-1";
+  const phases = [
+    {
+      label: "phase 1",
+      select: "phase-1",
+    },
+    {
+      label: "phase 2",
+      select: "phase-2",
+    },
+  ];
+
 </script>
 
 <div>
@@ -12,23 +22,23 @@
     <div class="curr-phase-container">
       {#each phases as phase}
         <h5
-          class:phase-label={phase === currPhase}
+          class:phase-label={phase.select === currPhase}
           on:click={() => {
-            currPhase = phase;
+            currPhase = phase.select;
           }}
         >
-          {phase}
+          {phase.label}
         </h5>
       {/each}
     </div>
     <div class="gallery-container">
-      {#each images[currPhase] as image, i}
+      {#each images[currPhase].card as image, i}
         <div class="image-container">
           <img
-            src={image}
+            src={image.url}
             on:click={() => {
               $modal.visibility = true;
-              $modal.content = highResBts[currPhase][i];
+              $modal.content = image.raw;
               $modal.type = "image";
             }}
             loading="lazy"

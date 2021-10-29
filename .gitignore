@@ -6,3 +6,4 @@ client/src/images
 cloudinary.js
 # Local Netlify folder
 .netlify
+/compress
