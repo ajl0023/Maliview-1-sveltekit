@@ -9,7 +9,7 @@
 	import _ from 'lodash'
 	let cardLayout = [];
 	onMount(async () => {
-		const res = await fetch("http://localhost:3000/api/mobile/pages");
+		const res = await fetch("http://localhost:3000/api/mobile");
     const data = await res.json();
 
     function isObjectOrArray(item) {
