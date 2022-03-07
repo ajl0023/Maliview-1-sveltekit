@@ -1,5 +1,10 @@
 ﻿<script>
+import { onMount } from "svelte";
+
   import { modal } from "../../stores";
+  onMount(()=>{
+    console.log($modal.content)
+  })
 </script>
 
 <div class="bu-modal {$modal.visibility ? 'bu-is-active' : ''}">
@@ -27,7 +32,9 @@
           />
         </div>
       {:else}
-        <img src={$modal.content} alt="" />
+       {#if $modal.content}
+       <img src={$modal.content.url} alt="" />
+       {/if}
       {/if}
     </div>
   </div>

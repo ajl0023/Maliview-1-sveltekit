@@ -28,7 +28,7 @@
 						src="{image.url}"
 						on:click="{() => {
 							$modal.visibility = true;
-							$modal.content = $galleryImg.selected;
+							$modal.content = image
 							$modal.type = 'image';
 						}}"
 						loading="lazy"
