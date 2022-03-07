@@ -1572,9 +1572,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-2e7a08f3.js",
+      file: assets + "/_app/start-61b71385.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-2e7a08f3.js", assets + "/_app/chunks/vendor-0947166e.js"]
+      js: [assets + "/_app/start-61b71385.js", assets + "/_app/chunks/vendor-0947166e.js"]
     },
     fetched: void 0,
     floc: false,
@@ -1633,7 +1633,7 @@ const module_lookup = {
     return index;
   })
 };
-const metadata_lookup = { ".svelte-kit/build/components/layout.svelte": { "entry": "layout.svelte-a913ad6c.js", "css": [], "js": ["layout.svelte-a913ad6c.js", "chunks/vendor-0947166e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-6ed99ddc.js", "css": [], "js": ["error.svelte-6ed99ddc.js", "chunks/vendor-0947166e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-8f9709bb.js", "css": ["assets/pages/index.svelte-08a4885a.css"], "js": ["pages/index.svelte-8f9709bb.js", "chunks/vendor-0947166e.js"], "styles": [] } };
+const metadata_lookup = { ".svelte-kit/build/components/layout.svelte": { "entry": "layout.svelte-a913ad6c.js", "css": [], "js": ["layout.svelte-a913ad6c.js", "chunks/vendor-0947166e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-6ed99ddc.js", "css": [], "js": ["error.svelte-6ed99ddc.js", "chunks/vendor-0947166e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-d9ef0f45.js", "css": ["assets/pages/index.svelte-08a4885a.css"], "js": ["pages/index.svelte-d9ef0f45.js", "chunks/vendor-0947166e.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -2781,7 +2781,6 @@ async function load({ params, fetch: fetch2, session, stuff }) {
     });
   }
   changeAllUrls(changeUrls(pageLayout));
-  console.log(arr2);
   return {
     status: 200,
     props: { pagesData: { imagePages } }

@@ -66,7 +66,7 @@
 		}
 
 		changeAllUrls(changeUrls(pageLayout, false));
-		console.log(arr2);
+		
 		return {
 			status: 200,
 			props: {
