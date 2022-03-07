@@ -9,6 +9,7 @@
 
 		const pageCarousels = await fetch('http://localhost:3000/api/page-carousels');
 		const bts = await fetch('http://localhost:3000/api/behind-the-scenes');
+		const mobile = await fetch('http://localhost:3000/api/mobile');
 		pageLayout['image-pages'] = await imagePages.json();
 
 		pageLayout['carousel-renders'] = await carouselRenders.json();
@@ -16,7 +17,7 @@
 		pageLayout['page-carousels'] = await pageCarousels.json();
 
 		pageLayout['bts'] = await bts.json();
-
+		pageLayout['mobile'] = await mobile.json();
 		galleryImg.update((s) => {
 			s.imageToDisplay = pageLayout['bts'][0].images[0].url;
 			return s;
@@ -66,7 +67,7 @@
 		}
 
 		changeAllUrls(changeUrls(pageLayout, false));
-		
+
 		return {
 			status: 200,
 			props: {

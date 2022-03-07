@@ -6,59 +6,11 @@
 	import CardCredits from '../CardCredits/CardCredits.svelte';
 	import CardGallery from '../CardGallery/CardGallery.svelte';
 	import ContactUs from '../ContactUs/ContactUs.svelte';
-	import _ from 'lodash'
+	import _ from 'lodash';
+	import { pageLayout } from '../../stores';
 	let cardLayout = [];
 	onMount(async () => {
-		const res = await fetch("http://localhost:3000/api/mobile");
-    const data = await res.json();
-
-    function isObjectOrArray(item) {
-			return _.isPlainObject(item) || Array.isArray(item);
-		}
-
-    const arr2 = [];
-		let shouldExit = false;
-
-		function changeUrls(obj) {
-			if (Array.isArray(obj)) {
-				for (const item of obj) {
-					changeUrls(item);
-				}
-				return arr2
-			}
-			if (!isObjectOrArray(obj)) {
-				return;
-			} //iterate through object
-			else {
-				if (obj.url) {
-					shouldExit = true;
-					arr2.push(obj);
-					return;
-				} else {
-					for (const key in obj) {
-						if (isObjectOrArray(obj[key])) {
-							if (shouldExit) {
-								continue;
-							} else {
-								changeUrls(obj[key]);
-								shouldExit = false;
-							}
-						}
-					}
-				}
-			}
-			return arr2;
-		}
-
-		function changeAllUrls(urls) {
-
-			urls.map((item) => {
-				item.url = item.url.replace('http://147.182.193.194/mock-bb-storage/', 'main-images/').replace('http://localhost:3000/mock-bb-storage/','main-images/')
-			});
-		}
-
-		changeAllUrls(changeUrls(data, false));    
-    cardLayout = data;
+		cardLayout = pageLayout['mobile'];
 	});
 </script>
 
