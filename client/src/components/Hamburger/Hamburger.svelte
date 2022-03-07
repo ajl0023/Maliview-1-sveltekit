@@ -1,237 +1,226 @@
 ﻿<script>
-  import { navButtons, navToLink } from "../../pageContent";
-  import { pagePositions } from "../../stores";
+	import { navButtons, navToLink } from '../../pageContent';
+	import { pagePositions } from '../../stores';
 
-  let mainInput;
-  function triggerScroll(i) {
-    $pagePositions.inital = true;
-    $pagePositions.left = i * -100;
-    $pagePositions.right = 100 * (i - 10);
-    $pagePositions.page = i;
-    mainInput.checked = false;
-  }
+	let mainInput;
+	function triggerScroll(i) {
+		$pagePositions.inital = true;
+		$pagePositions.left = i * -100;
+		$pagePositions.right = 100 * (i - 10);
+		$pagePositions.page = i;
+		mainInput.checked = false;
+	}
 </script>
 
 <div>
-  <input
-    bind:this={mainInput}
-    type="checkbox"
-    id="burger-trigger"
-    class="burger-input"
-  />
-  <label for="burger-trigger" class="burger-label">
-    <span class="main-trigger-icon-container">
-      <i class="main-trigger-icon" />
-    </span>
-  </label>
-  <div class="side-menu-container">
-    <ul name="list-container" class="side-menu-item-container">
-      {#each navButtons as label, i}
-        <li
-          on:click={() => {
-            triggerScroll(i);
-            window.location.href = "#" + navToLink[i];
-          }}
-        >
-          {label}
-        </li>
-      {/each}
-    </ul>
-    <div class="sidebar-logo-container">
-      <a
-        on:click={(e) => {
-          e.preventDefault();
-          window.open("https://www.apeldesign.com/");
-        }}
-        href="https://www.apeldesign.com/"
-      >
-        <img
-          src="https://res.cloudinary.com/dt4xntymn/image/upload/v1631656727/misc/By_Apel_Design_Black_z0yd9b.png"
-          alt=""
-        />
-      </a>
-    </div>
-  </div>
+	<input bind:this="{mainInput}" type="checkbox" id="burger-trigger" class="burger-input" />
+	<label for="burger-trigger" class="burger-label">
+		<span class="main-trigger-icon-container">
+			<i class="main-trigger-icon"></i>
+		</span>
+	</label>
+	<div class="side-menu-container">
+		<ul name="list-container" class="side-menu-item-container">
+			{#each navButtons as label, i}
+				<li
+					on:click="{() => {
+						triggerScroll(i);
+						window.location.href = '#' + navToLink[i];
+					}}"
+				>
+					{label}
+				</li>
+			{/each}
+		</ul>
+		<div class="sidebar-logo-container">
+			<a
+				on:click="{(e) => {
+					e.preventDefault();
+					window.open('https://www.apeldesign.com/');
+				}}"
+				href="https://www.apeldesign.com/"
+			>
+				<img src="By Apel Design Black.png" alt="" />
+			</a>
+		</div>
+	</div>
 
-  <div
-    on:click={() => {
-      mainInput.checked = false;
-    }}
-    data-id="header-mask"
-    class="header-mask"
-  />
+	<div
+		on:click="{() => {
+			mainInput.checked = false;
+		}}"
+		data-id="header-mask"
+		class="header-mask"
+	></div>
 </div>
 
 <style lang="scss">
-  @mixin side-menu-container($leftValue) {
-    background-color: white;
-    height: 100vh;
+	@mixin side-menu-container($leftValue) {
+		background-color: white;
+		height: 100vh;
 
-    bottom: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    transition: all 400ms ease-in-out;
-    z-index: 3;
-    left: $leftValue;
+		bottom: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		transition: all 400ms ease-in-out;
+		z-index: 3;
+		left: $leftValue;
 
-    position: absolute;
-    .side-menu-item-container {
-      padding: 40px 8px;
-      overflow-y: scroll;
-      height: 100%;
-      margin-top: 1.5rem;
-      &::before {
-        content:"";
-        height: 100%;
-        width: 100%;
-        display: block;
-        opacity: 30%;
-        background-size: 200px;
-        z-index: 1;
-     
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-image: url("https://res.cloudinary.com/dt4xntymn/image/upload/v1631656727/misc/By_Apel_Design_Black_z0yd9b.png");
-        
-   
-        background-repeat: no-repeat;
+		position: absolute;
+		.side-menu-item-container {
+			padding: 40px 8px;
+			overflow-y: scroll;
+			height: 100%;
+			margin-top: 1.5rem;
+			&::before {
+				content: '';
+				height: 100%;
+				width: 100%;
+				display: block;
+				opacity: 30%;
+				background-size: 200px;
+				z-index: 1;
 
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
 
-        background-position: center center;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      li:nth-child(-n + 11) {
-        font-size: 23px;
-        font-weight: 600;
-        display: flex;
-        text-transform: uppercase;
-        align-items: center;
-        z-index: 2;
-        position: relative;
-        color: black;
-        cursor: pointer;
-        padding: 20px 110px 20px 20px;
+				background-repeat: no-repeat;
 
-        border-bottom: 1px solid #d0d1d2;
-      }
-    }
-  }
+				background-position: center center;
+			}
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			li:nth-child(-n + 11) {
+				font-size: 23px;
+				font-weight: 600;
+				display: flex;
+				text-transform: uppercase;
+				align-items: center;
+				z-index: 2;
+				position: relative;
+				color: black;
+				cursor: pointer;
+				padding: 20px 110px 20px 20px;
 
-  .burger-label {
-    block-size: 18px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    inline-size: 18px;
-    font-size: 14px;
+				border-bottom: 1px solid #d0d1d2;
+			}
+		}
+	}
 
-    line-height: 21px;
+	.burger-label {
+		block-size: 18px;
+		display: flex;
+		justify-content: center;
+		cursor: pointer;
+		inline-size: 18px;
+		font-size: 14px;
 
-    align-items: center;
-    .main-trigger-icon-container {
-      position: relative;
-      display: block;
-      block-size: 18px;
-      inline-size: 100%;
-      .main-trigger-icon {
-        background-color: white;
-        inline-size: 100%;
-        position: absolute;
-        display: block;
-        transition: all 300ms ease-in-out;
-        block-size: calc(20px / 10);
-        top: calc(36% + 2px);
+		line-height: 21px;
 
-        &:before {
-          transition: all 300ms ease-in-out;
-          block-size: calc(20px / 10);
-          background-color: white;
-          content: "";
-          top: -5px;
-          display: block;
-          position: absolute;
-          inline-size: 100%;
-        }
-        &:after {
-          transition: all 300ms ease-in-out;
-          block-size: calc(20px / 10);
-          background-color: white;
-          content: "";
-          top: 5px;
-          display: block;
-          position: absolute;
-          inline-size: 100%;
-        }
-      }
-    }
-  }
-  .burger-input {
-    opacity: 1;
-    display: none;
-    &:checked ~ .burger-label {
-      z-index: 4;
+		align-items: center;
+		.main-trigger-icon-container {
+			position: relative;
+			display: block;
+			block-size: 18px;
+			inline-size: 100%;
+			.main-trigger-icon {
+				background-color: white;
+				inline-size: 100%;
+				position: absolute;
+				display: block;
+				transition: all 300ms ease-in-out;
+				block-size: calc(20px / 10);
+				top: calc(36% + 2px);
 
-      .main-trigger-icon {
-        transition: all 300ms ease-in-out;
-        background-color: transparent;
+				&:before {
+					transition: all 300ms ease-in-out;
+					block-size: calc(20px / 10);
+					background-color: white;
+					content: '';
+					top: -5px;
+					display: block;
+					position: absolute;
+					inline-size: 100%;
+				}
+				&:after {
+					transition: all 300ms ease-in-out;
+					block-size: calc(20px / 10);
+					background-color: white;
+					content: '';
+					top: 5px;
+					display: block;
+					position: absolute;
+					inline-size: 100%;
+				}
+			}
+		}
+	}
+	.burger-input {
+		opacity: 1;
+		display: none;
+		&:checked ~ .burger-label {
+			z-index: 4;
 
-        &:before {
-          top: 0;
-          z-index: 4;
-          background-color: black;
-          transform: rotate(45deg);
-          transition: all 300ms ease-in-out;
-        }
-        &:after {
-          top: 0;
+			.main-trigger-icon {
+				transition: all 300ms ease-in-out;
+				background-color: transparent;
 
-          z-index: 4;
-          background-color: black;
-          transform: rotate(-45deg);
-          transition: all 300ms ease-in-out;
-        }
-      }
-    }
+				&:before {
+					top: 0;
+					z-index: 4;
+					background-color: black;
+					transform: rotate(45deg);
+					transition: all 300ms ease-in-out;
+				}
+				&:after {
+					top: 0;
 
-    &:checked ~ .side-menu-container {
-      @include side-menu-container(0);
-    }
-    &:checked ~ .header-mask {
-      position: fixed;
-      block-size: 100vh;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      bottom: 0;
-      inline-size: 100%;
+					z-index: 4;
+					background-color: black;
+					transform: rotate(-45deg);
+					transition: all 300ms ease-in-out;
+				}
+			}
+		}
 
-      // pointer-events: none;
-      // cursor: not-allowed;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-  }
+		&:checked ~ .side-menu-container {
+			@include side-menu-container(0);
+		}
+		&:checked ~ .header-mask {
+			position: fixed;
+			block-size: 100vh;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			bottom: 0;
+			inline-size: 100%;
 
-  .side-menu-container {
-    position: relative;
-    @include side-menu-container(-600px);
-  }
-  .sidebar-logo-container {
-    max-width: 266px;
-    margin: auto;
-    padding: 30px;
-    z-index: 2;
-    position: relative;
-    img {
-      width: 100%;
+			// pointer-events: none;
+			// cursor: not-allowed;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
 
-      object-fit: cover;
-    }
-  }
+	.side-menu-container {
+		position: relative;
+		@include side-menu-container(-600px);
+	}
+	.sidebar-logo-container {
+		max-width: 266px;
+		margin: auto;
+		padding: 30px;
+		z-index: 2;
+		position: relative;
+		img {
+			width: 100%;
+
+			object-fit: cover;
+		}
+	}
 </style>
