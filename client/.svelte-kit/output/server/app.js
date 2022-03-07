@@ -1572,9 +1572,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-3e31c163.js",
+      file: assets + "/_app/start-dca22955.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-3e31c163.js", assets + "/_app/chunks/vendor-0947166e.js"]
+      js: [assets + "/_app/start-dca22955.js", assets + "/_app/chunks/vendor-0947166e.js"]
     },
     fetched: void 0,
     floc: false,
@@ -1633,7 +1633,7 @@ const module_lookup = {
     return index;
   })
 };
-const metadata_lookup = { ".svelte-kit/build/components/layout.svelte": { "entry": "layout.svelte-a913ad6c.js", "css": [], "js": ["layout.svelte-a913ad6c.js", "chunks/vendor-0947166e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-6ed99ddc.js", "css": [], "js": ["error.svelte-6ed99ddc.js", "chunks/vendor-0947166e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-54ae74c9.js", "css": ["assets/pages/index.svelte-08a4885a.css"], "js": ["pages/index.svelte-54ae74c9.js", "chunks/vendor-0947166e.js"], "styles": [] } };
+const metadata_lookup = { ".svelte-kit/build/components/layout.svelte": { "entry": "layout.svelte-a913ad6c.js", "css": [], "js": ["layout.svelte-a913ad6c.js", "chunks/vendor-0947166e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-6ed99ddc.js", "css": [], "js": ["error.svelte-6ed99ddc.js", "chunks/vendor-0947166e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-dc1733ad.js", "css": ["assets/pages/index.svelte-08a4885a.css"], "js": ["pages/index.svelte-dc1733ad.js", "chunks/vendor-0947166e.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -2000,7 +2000,7 @@ const galleryImg = writable({
   currPhase: 0,
   index: 0,
   selected: 0,
-  imageToDisplay: pageLayout["bts"] ? pageLayout["bts"][0].images[0].url : null
+  imageToDisplay: null
 });
 var Modal_svelte_svelte_type_style_lang = "";
 const css$n = {
@@ -2366,7 +2366,7 @@ const CarouselFull = create_ssr_component(($$result, $$props, $$bindings, slots)
 var GallerySelected_svelte_svelte_type_style_lang = "";
 const css$9 = {
   code: '.image-container.svelte-16g7mu0.svelte-16g7mu0{flex:30%}.image-container.svelte-16g7mu0.svelte-16g7mu0:last-child{flex-grow:0}.image-container.svelte-16g7mu0 img.svelte-16g7mu0{object-fit:cover;cursor:pointer;width:100%;height:100%}.overlay-image.svelte-16g7mu0.svelte-16g7mu0{position:relative;border:1px solid white}.overlay-image.svelte-16g7mu0.svelte-16g7mu0::before{z-index:2;content:"";height:100%;width:100%;position:absolute;display:block;background-color:rgba(0, 0, 0, 0.5)}',
-  map: `{"version":3,"file":"GallerySelected.svelte","sources":["GallerySelected.svelte"],"sourcesContent":["<script>\\r\\n\\timport { galleryImg } from './../GalleryPreview/store.js';\\r\\n\\timport { createEventDispatcher } from 'svelte';\\r\\n\\r\\n\\texport let img;\\r\\n\\texport let index;\\r\\n\\r\\n\\tconst dispatch = createEventDispatcher();\\r\\n<\/script>\\r\\n\\r\\n<div\\r\\n\\tclass:overlay-image=\\"{$galleryImg.selected === index}\\"\\r\\n\\tclass=\\"{$galleryImg.currPhase} image-container\\"\\r\\n>\\r\\n\\t<img\\r\\n\\t\\ton:click=\\"{() => {\\r\\n\\t\\t\\tgalleryImg.update((s) => {\\r\\n\\t\\t\\t\\t$galleryImg.selected = index;\\r\\n\\t\\t\\t\\t$galleryImg.imageToDisplay = img.url;\\r\\n\\t\\t\\t\\t// s.imageToDisplay = img.raw;\\r\\n\\t\\t\\t\\treturn s;\\r\\n\\t\\t\\t});\\r\\n\\t\\t\\tdispatch('select', img.index);\\r\\n\\t\\t}}\\"\\r\\n\\t\\tloading=\\"lazy\\"\\r\\n\\t\\tsrc=\\"{img.url}\\"\\r\\n\\t\\talt=\\"\\"\\r\\n\\t/>\\r\\n</div>\\r\\n\\r\\n<style lang=\\"scss\\">.image-container {\\n  flex: 30%;\\n}\\n.image-container:last-child {\\n  flex-grow: 0;\\n}\\n.image-container img {\\n  object-fit: cover;\\n  cursor: pointer;\\n  width: 100%;\\n  height: 100%;\\n}\\n\\n.overlay-image {\\n  position: relative;\\n  border: 1px solid white;\\n}\\n.overlay-image::before {\\n  z-index: 2;\\n  content: \\"\\";\\n  height: 100%;\\n  width: 100%;\\n  position: absolute;\\n  display: block;\\n  background-color: rgba(0, 0, 0, 0.5);\\n}</style>\\r\\n"],"names":[],"mappings":"AA8BmB,gBAAgB,8BAAC,CAAC,AACnC,IAAI,CAAE,GAAG,AACX,CAAC,AACD,8CAAgB,WAAW,AAAC,CAAC,AAC3B,SAAS,CAAE,CAAC,AACd,CAAC,AACD,+BAAgB,CAAC,GAAG,eAAC,CAAC,AACpB,UAAU,CAAE,KAAK,CACjB,MAAM,CAAE,OAAO,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,cAAc,8BAAC,CAAC,AACd,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,KAAK,AACzB,CAAC,AACD,4CAAc,QAAQ,AAAC,CAAC,AACtB,OAAO,CAAE,CAAC,CACV,OAAO,CAAE,EAAE,CACX,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,KAAK,CACd,gBAAgB,CAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,AACtC,CAAC"}`
+  map: `{"version":3,"file":"GallerySelected.svelte","sources":["GallerySelected.svelte"],"sourcesContent":["<script>\\r\\n\\timport { galleryImg } from './../GalleryPreview/store.js';\\r\\n\\timport { createEventDispatcher, onMount } from 'svelte';\\r\\n\\timport { pageLayout } from '../../stores.js';\\r\\n\\r\\n\\texport let img;\\r\\n\\texport let index;\\r\\n\\r\\n\\tconst dispatch = createEventDispatcher();\\r\\n\\tonMount(() => {\\r\\n\\t\\t$galleryImg.imageToDisplay = pageLayout['bts'] ? pageLayout['bts'][0].images[0].url : null;\\r\\n\\t});\\r\\n<\/script>\\r\\n\\r\\n<div\\r\\n\\tclass:overlay-image=\\"{$galleryImg.selected === index}\\"\\r\\n\\tclass=\\"{$galleryImg.currPhase} image-container\\"\\r\\n>\\r\\n\\t<img\\r\\n\\t\\ton:click=\\"{() => {\\r\\n\\t\\t\\tgalleryImg.update((s) => {\\r\\n\\t\\t\\t\\t$galleryImg.selected = index;\\r\\n\\t\\t\\t\\t$galleryImg.imageToDisplay = img.url;\\r\\n\\t\\t\\t\\t// s.imageToDisplay = img.raw;\\r\\n\\t\\t\\t\\treturn s;\\r\\n\\t\\t\\t});\\r\\n\\t\\t\\tdispatch('select', img.index);\\r\\n\\t\\t}}\\"\\r\\n\\t\\tloading=\\"lazy\\"\\r\\n\\t\\tsrc=\\"{img.url}\\"\\r\\n\\t\\talt=\\"\\"\\r\\n\\t/>\\r\\n</div>\\r\\n\\r\\n<style lang=\\"scss\\">.image-container {\\n  flex: 30%;\\n}\\n.image-container:last-child {\\n  flex-grow: 0;\\n}\\n.image-container img {\\n  object-fit: cover;\\n  cursor: pointer;\\n  width: 100%;\\n  height: 100%;\\n}\\n\\n.overlay-image {\\n  position: relative;\\n  border: 1px solid white;\\n}\\n.overlay-image::before {\\n  z-index: 2;\\n  content: \\"\\";\\n  height: 100%;\\n  width: 100%;\\n  position: absolute;\\n  display: block;\\n  background-color: rgba(0, 0, 0, 0.5);\\n}</style>\\r\\n"],"names":[],"mappings":"AAkCmB,gBAAgB,8BAAC,CAAC,AACnC,IAAI,CAAE,GAAG,AACX,CAAC,AACD,8CAAgB,WAAW,AAAC,CAAC,AAC3B,SAAS,CAAE,CAAC,AACd,CAAC,AACD,+BAAgB,CAAC,GAAG,eAAC,CAAC,AACpB,UAAU,CAAE,KAAK,CACjB,MAAM,CAAE,OAAO,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,cAAc,8BAAC,CAAC,AACd,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,KAAK,AACzB,CAAC,AACD,4CAAc,QAAQ,AAAC,CAAC,AACtB,OAAO,CAAE,CAAC,CACV,OAAO,CAAE,EAAE,CACX,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,KAAK,CACd,gBAAgB,CAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,AACtC,CAAC"}`
 };
 const GallerySelected = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $galleryImg, $$unsubscribe_galleryImg;

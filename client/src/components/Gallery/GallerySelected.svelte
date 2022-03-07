@@ -1,11 +1,15 @@
 <script>
 	import { galleryImg } from './../GalleryPreview/store.js';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
+	import { pageLayout } from '../../stores.js';
 
 	export let img;
 	export let index;
 
 	const dispatch = createEventDispatcher();
+	onMount(() => {
+		$galleryImg.imageToDisplay = pageLayout['bts'] ? pageLayout['bts'][0].images[0].url : null;
+	});
 </script>
 
 <div
