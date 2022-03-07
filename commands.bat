@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "fixed mobile phases" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "updated urls" && git push origin main

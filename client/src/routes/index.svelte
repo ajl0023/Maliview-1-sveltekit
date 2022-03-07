@@ -1,5 +1,5 @@
 <script context="module">
-	import { pageLayout } from './../stores';
+	import { modal, pageLayout } from './../stores';
 	import { galleryImg } from '../components/GalleryPreview/store';
 	import _ from 'lodash';
 	export const prerender = true;
@@ -120,7 +120,9 @@
 
 	<CardContainer />
 
-	<Modal />
+	{#if $modal.visibility && $modal.content}
+		<Modal />
+	{/if}
 	<Socials />
 </div>
 

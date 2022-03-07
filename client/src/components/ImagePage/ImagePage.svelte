@@ -14,10 +14,11 @@
 
 <div
 	on:click="{() => {
+		console.log(images[imageInd]);
 		if (images[imageInd].type === 'video') {
-			$modal.visibility = true;
-			$modal.content = images[imageInd].videoUrl;
+			$modal.content = images[imageInd].image;
 			$modal.type = 'video';
+			$modal.visibility = true;
 		}
 	}}"
 	class="page"
