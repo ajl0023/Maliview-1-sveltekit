@@ -1,1 +1,1 @@
- cd client && npm run build && cd ..&& git add . && git commit -m "updated urls" && git push origin main
+ cd client && npm run build && cd ..&& git add . && git commit -m "images are now from server" && git push origin main

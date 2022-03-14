@@ -1,15 +1,12 @@
 const c = [
-	() => import("..\\components\\layout.svelte"),
-	() => import("..\\components\\error.svelte"),
-	() => import("..\\..\\..\\src\\routes\\index.svelte")
+	() => import("..\\..\\src\\routes\\__layout.svelte"),
+	() => import("..\\runtime\\components\\error.svelte"),
+	() => import("..\\..\\src\\routes\\index.svelte")
 ];
 
 const d = decodeURIComponent;
 
 export const routes = [
-	// src/routes/index.js
-	[/^\/$/],
-
 	// src/routes/index.svelte
 	[/^\/$/, [c[0], c[2]], [c[1]]]
 ];

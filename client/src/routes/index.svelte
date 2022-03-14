@@ -2,28 +2,33 @@
 	import { modal, pageLayout } from './../stores';
 	import { galleryImg } from '../components/GalleryPreview/store';
 	import _ from 'lodash';
-	export const prerender = true;
-	export async function load({ params, fetch, session, stuff }) {
-		const imagePages = await fetch('http://localhost:3000/api/bg-pages');
-		const carouselRenders = await fetch('http://localhost:3000/api/carousel-renders');
 
-		const pageCarousels = await fetch('http://localhost:3000/api/page-carousels');
-		const bts = await fetch('http://localhost:3000/api/behind-the-scenes');
-		const mobile = await fetch('http://localhost:3000/api/mobile');
+	export async function load({ fetch }) {
+		const categories = (await (await fetch('/api2/api/categories')).json()).reduce((acc, item) => {
+			acc[item._id] = item;
+			return acc;
+		}, {});
+
+		const imagePages = await fetch('/api2/api/bg-pages');
+		const carouselRenders = await fetch('/api2/api/carousel-renders');
+		const pageCarousels = await fetch('/api2/api/page-carousels');
+		const bts = await fetch('/api2/api/behind-the-scenes');
+		const mobile = await fetch('/api2/api/mobile');
 		pageLayout['image-pages'] = await imagePages.json();
-
 		pageLayout['carousel-renders'] = await carouselRenders.json();
-
 		pageLayout['page-carousels'] = await pageCarousels.json();
-
 		pageLayout['bts'] = await bts.json();
 		pageLayout['mobile'] = await mobile.json();
+		pageLayout['mobile'] = pageLayout['mobile'].map((item) => {
+			item['type'] = categories[item.category].category;
+			return item;
+		});
+
 		galleryImg.update((s) => {
 			s.imageToDisplay = pageLayout['bts'][0].images[0].url;
 			return s;
 		});
 
-		//recursively change the urls for each image
 		function isObjectOrArray(item) {
 			return _.isPlainObject(item) || Array.isArray(item);
 		}
@@ -38,8 +43,7 @@
 			}
 			if (!isObjectOrArray(obj)) {
 				return;
-			} //iterate through object
-			else {
+			} else {
 				if (obj.url) {
 					shouldExit = true;
 					arr2.push(obj);
@@ -47,6 +51,11 @@
 				} else {
 					for (const key in obj) {
 						if (isObjectOrArray(obj[key])) {
+							if (Array.isArray(obj[key])) {
+								obj[key] = obj[key].sort((a, b) => {
+									return a.order - b.order;
+								});
+							}
 							if (shouldExit) {
 								continue;
 							} else {
@@ -59,23 +68,18 @@
 			}
 			return arr2;
 		}
-
 		function changeAllUrls(urls) {
 			urls.map((item) => {
-				item.url = item.url.replace('http://localhost:3000/mock-bb-storage/', 'main-images/');
+				if (dev) {
+					item.url = item.url.replace('http://test12312312356415616.store', hostName);
+				} else {
+					return item;
+				}
 			});
 		}
 
 		changeAllUrls(changeUrls(pageLayout, false));
-
-		return {
-			status: 200,
-			props: {
-				pagesData: {
-					imagePages
-				}
-			}
-		};
+		return {};
 	}
 </script>
 
@@ -83,13 +87,14 @@
 	import { onDestroy, onMount } from 'svelte';
 	import Modal from '../components/Modal/Modal.svelte';
 	import Navbar from '../components/Navbar/Navbar.svelte';
-	import { browser } from '$app/env';
+	import { browser, dev } from '$app/env';
 	import Socials from '../components/Socials/Socials.svelte';
 	import '../global.scss';
 
 	import '../bulma.prefixed.css';
 	import ScrollContainer from '../components/ScrollContainer/ScrollContainer.svelte';
 	import CardContainer from '../components/CardContainer/CardContainer.svelte';
+	import { hostName } from 'src/host';
 
 	export let pagesData;
 	let windowThreshHold = false;

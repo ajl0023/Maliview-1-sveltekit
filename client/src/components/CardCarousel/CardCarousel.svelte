@@ -11,9 +11,7 @@
 	export let index;
 	export let page;
 	export let images;
-	images = images.filter((item) => {
-		return item.url;
-	});
+
 	let carousel;
 	let glide;
 	let showMore = false;

@@ -10,7 +10,9 @@
 	import { pageLayout } from '../../stores';
 	let cardLayout = [];
 	onMount(async () => {
-		cardLayout = pageLayout['mobile'];
+		cardLayout = pageLayout['mobile'].sort((a, b) => {
+			return a.order - b.order;
+		});
 	});
 </script>
 
@@ -25,7 +27,7 @@
 	</div>
 	<div class="card-container">
 		{#each cardLayout as card, i}
-			{#if cardLayout[i].type === 'bg-image' || cardLayout[i].type === 'video'}
+			{#if cardLayout[i].type === 'bg-pages' || cardLayout[i].type === 'video'}
 				<Card
 					type="{card.type}"
 					image="{card.images.filter((item) => {
@@ -34,10 +36,16 @@
 					page="{card}"
 					index="{i}"
 				/>
-			{:else if cardLayout[i].type === 'gallery'}
+			{:else if cardLayout[i].type === 'behind-the-scenes'}
 				<CardGallery data="{card}" />
 			{:else}
-				<CardCarousel images="{card.images}" page="{card}" index="{i}" />
+				<CardCarousel
+					images="{card.images.filter((item) => {
+						return item.url;
+					})}"
+					page="{card}"
+					index="{i}"
+				/>
 			{/if}
 		{/each}
 		<CardCredits />

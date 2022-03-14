@@ -5,10 +5,12 @@
 	import { navToLink, textPages } from '../../pageContent';
 	import { modal } from '../../stores';
 	import Arrow from './Arrow.svelte';
+	import Logo from 'src/images/svgs/Logo/Logo.svelte';
 
 	export let index;
 	export let image;
 	export let type;
+	export let page;
 	let showMore = false;
 	let mainText;
 	let overFlowing;
@@ -32,16 +34,15 @@
 			window.removeEventListener('resize', checkOverFlow);
 		}
 	});
-
 </script>
 
 <div class="bu-card card-container" id="{navToLink[index + 1]}">
-	<div class="bu-card-image">
+	<div class="bu-card-image" class:video="{type === 'video'}">
 		<figure
 			on:click="{() => {
 				if (type === 'video') {
 					$modal.visibility = true;
-					$modal.content = images[index].videoUrl;
+					$modal.content = page.video_url;
 					$modal.type = 'video';
 				}
 			}}"
@@ -102,6 +103,9 @@
 </div>
 
 <style lang="scss">
+	.bu-card-image.video {
+		cursor: pointer;
+	}
 	.main-image {
 		object-fit: cover;
 	}

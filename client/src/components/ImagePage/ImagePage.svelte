@@ -2,21 +2,15 @@
 	import { modal, pageLayout } from '../../stores';
 	import { afterUpdate, beforeUpdate, onMount } from 'svelte';
 	import { lazy } from '../../lazy.js';
-	export let index;
+
 	export let imageInd;
-	const images = [
-		...pageLayout['image-pages'],
-		{
-			type: 'images'
-		}
-	];
+	const images = [...pageLayout['image-pages']];
 </script>
 
 <div
 	on:click="{() => {
-		console.log(images[imageInd]);
 		if (images[imageInd].type === 'video') {
-			$modal.content = images[imageInd].image;
+			$modal.content = images[imageInd].video_url;
 			$modal.type = 'video';
 			$modal.visibility = true;
 		}
@@ -38,7 +32,7 @@
 		right: 0;
 		z-index: 0;
 		position: relative;
-
+		cursor: pointer;
 		&::before {
 			pointer-events: none;
 			position: absolute;
