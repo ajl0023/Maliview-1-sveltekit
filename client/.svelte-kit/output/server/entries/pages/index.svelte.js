@@ -3,7 +3,7 @@ import _ from "lodash";
 import "@glidejs/glide";
 import "vanilla-lazyload";
 import "@use-gesture/vanilla";
-import "../../chunks/host-b5b4a144.js";
+import "../../chunks/host-ef40cb6e.js";
 const subscriber_queue = [];
 function writable(value, start = noop) {
   let stop;

@@ -71,7 +71,7 @@
 		function changeAllUrls(urls) {
 			urls.map((item) => {
 				if (dev) {
-					item.url = item.url.replace('http://test12312312356415616.store', hostName);
+					item.url = item.url.replace('https://test12312312356415616.store', hostName);
 				} else {
 					return item;
 				}

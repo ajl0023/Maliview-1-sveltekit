@@ -5,7 +5,7 @@
     "isEntry": true,
     "imports": [
       "_index-d30cef5f.js",
-      "_host-b5b4a144.js"
+      "_host-ef40cb6e.js"
     ],
     "dynamicImports": [
       "src/hooks.js"
@@ -21,7 +21,7 @@
     "src": "src/routes/api/page-data.js",
     "isEntry": true,
     "imports": [
-      "_host-b5b4a144.js"
+      "_host-ef40cb6e.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -46,7 +46,7 @@
     "isEntry": true,
     "imports": [
       "_index-d30cef5f.js",
-      "_host-b5b4a144.js"
+      "_host-ef40cb6e.js"
     ],
     "css": [
       "assets/entries/pages/index.svelte-5ddaa49f.css"
@@ -55,18 +55,18 @@
       "assets/orator-15bae5c4.otf"
     ]
   },
-  "_host-b5b4a144.js": {
-    "file": "chunks/host-b5b4a144.js"
+  "_host-ef40cb6e.js": {
+    "file": "chunks/host-ef40cb6e.js"
   },
   "_index-d30cef5f.js": {
     "file": "chunks/index-d30cef5f.js"
   },
   "src/hooks.js": {
-    "file": "chunks/hooks-ac61f13e.js",
+    "file": "chunks/hooks-56e73277.js",
     "src": "src/hooks.js",
     "isDynamicEntry": true,
     "imports": [
-      "_host-b5b4a144.js"
+      "_host-ef40cb6e.js"
     ]
   }
 }
