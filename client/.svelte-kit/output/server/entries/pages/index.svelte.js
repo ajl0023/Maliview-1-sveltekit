@@ -1093,6 +1093,7 @@ const CardContainer = create_ssr_component(($$result, $$props, $$bindings, slots
 		<div id="${"contact"}" class="${"contact-us-container svelte-1fu2nnh"}">${validate_component(ContactUs, "ContactUs").$$render($$result, {}, {}, {})}</div></div>
 </div>`;
 });
+const prerender = true;
 async function load({ fetch }) {
   const categories = (await (await fetch("/api2/api/categories")).json()).reduce((acc, item) => {
     acc[item._id] = item;
@@ -1184,4 +1185,4 @@ const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 	${validate_component(Socials, "Socials").$$render($$result, {}, {}, {})}
 </div>`;
 });
-export { Routes as default, load };
+export { Routes as default, load, prerender };

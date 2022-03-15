@@ -1,5 +1,5 @@
 import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 import path from 'path';
 export default {
 	kit: {
@@ -11,12 +11,11 @@ export default {
 				}
 			}
 		},
-		adapter: adapter({
-			// default options are shown
-			pages: './build',
-			assets: './build',
-			fallback: null
-		})
+		prerender: {
+			crawl: true,
+			enabled: true
+		},
+		adapter: adapter()
 	},
 	preprocess: sveltePreprocess({})
 };

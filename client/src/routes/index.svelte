@@ -2,7 +2,7 @@
 	import { modal, pageLayout } from './../stores';
 	import { galleryImg } from '../components/GalleryPreview/store';
 	import _ from 'lodash';
-
+	export const prerender = true;
 	export async function load({ fetch }) {
 		const categories = (await (await fetch('/api2/api/categories')).json()).reduce((acc, item) => {
 			acc[item._id] = item;
