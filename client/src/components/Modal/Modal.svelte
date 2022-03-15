@@ -22,12 +22,14 @@
 						class="video-modal"
 						width="100%"
 						src="{(function () {
-							var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-							var match = $modal.content.match(regExp);
-							if (match && match[2].length == 11) {
-								return 'https://www.youtube.com/embed/' + match[2];
-							} else {
-								return 'error';
+							if ($modal.content) {
+								var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+								var match = $modal.content.match(regExp);
+								if (match && match[2].length == 11) {
+									return 'https://www.youtube.com/embed/' + match[2];
+								} else {
+									return 'error';
+								}
 							}
 						})()}"
 						title="YouTube video player"
