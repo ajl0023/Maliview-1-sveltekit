@@ -11,10 +11,7 @@ export default {
 				}
 			}
 		},
-		prerender: {
-			crawl: true,
-			enabled: true
-		},
+
 		adapter: adapter()
 	},
 	preprocess: sveltePreprocess({})

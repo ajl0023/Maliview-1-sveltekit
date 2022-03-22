@@ -335,12 +335,14 @@ const Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_modal();
   return `<div class="${"bu-modal " + escape($modal.visibility ? "bu-is-active" : "")}"><div class="${"bu-modal-background"}"></div>
 	<div class="${"bu-modal-content"}"><div class="${"bu-image bu-is-4by3"}">${$modal.type === "video" && $modal.content ? `<div class="${"video-container svelte-1uwzqqj"}"><iframe height="${"100%"}" class="${"video-modal svelte-1uwzqqj"}" width="${"100%"}"${add_attribute("src", function() {
-    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    var match = $modal.content.match(regExp);
-    if (match && match[2].length == 11) {
-      return "https://www.youtube.com/embed/" + match[2];
-    } else {
-      return "error";
+    if ($modal.content) {
+      var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      var match = $modal.content.match(regExp);
+      if (match && match[2].length == 11) {
+        return "https://www.youtube.com/embed/" + match[2];
+      } else {
+        return "error";
+      }
     }
   }(), 0)} title="${"YouTube video player"}" frameborder="${"0"}" allow="${"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"}" allowfullscreen></iframe></div>` : `${$modal.content ? `<img${add_attribute("src", $modal.content.url, 0)} alt="${""}" class="${"svelte-1uwzqqj"}">` : ``}`}</div></div>
 	<button class="${"bu-modal-close bu-is-large"}" aria-label="${"close"}"></button>

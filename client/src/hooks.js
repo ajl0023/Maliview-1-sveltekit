@@ -12,9 +12,11 @@ export const handle = async ({ event, resolve }) => {
 		const new_cookie = cookie.serialize('collection', 'maliview', {
 			path: '/'
 		});
+		const auth_cookie = cookie.serialize('client_token', import.meta.env.VITE_CLIENT_TOKEN);
 		if (!has_cookie || !cookie.parse(has_cookie).collection) {
 			event.request.headers.append('cookie', new_cookie);
 		}
+		event.request.headers.append('cookie', auth_cookie);
 
 		const new_request = new Request(
 			event.request.url.replace(`${base}/api2`, hostName),

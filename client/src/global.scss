@@ -53,6 +53,7 @@ html {
 		display: block;
 	}
 }
+
 @media (min-width: 650px) {
 	.scroll-container {
 		max-height: 100vh;
@@ -76,4 +77,34 @@ html {
 	@media (min-width: 650px) {
 		display: none;
 	}
+}
+@media only screen and (device-width: 768px) {
+	/* For general iPad layouts */
+
+	.scroll-container {
+		display: none;
+	}
+	.card-wrapper {
+		display: block;
+	}
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.scroll-container {
+		display: none;
+	}
+	.card-wrapper {
+		display: block;
+	}
+	/* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+	.scroll-container {
+		display: none;
+	}
+	.card-wrapper {
+		display: block;
+	}
+	/* For landscape layouts only */
 }
