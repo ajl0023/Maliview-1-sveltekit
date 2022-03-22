@@ -1,1 +1,1 @@
-cd client && git add . && git commit -m "purge css" && git push origin main
+cd client && git add . && git commit -m "server logic/https issues" && git push origin main

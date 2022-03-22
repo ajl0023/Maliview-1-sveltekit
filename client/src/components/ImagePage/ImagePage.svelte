@@ -4,6 +4,7 @@
 	import { lazy } from '../../lazy.js';
 
 	export let imageInd;
+
 	const images = [...pageLayout['image-pages']];
 </script>
 

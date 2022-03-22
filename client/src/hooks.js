@@ -24,7 +24,7 @@ export const handle = async ({ event, resolve }) => {
 		const new_request = new Request(event.request.url.replace(`${base}/api2`, hostName), {
 			headers: serialized_headers
 		});
-		console.log(new_request.headers);
+
 		const response = await fetch(new_request);
 
 		return response;
