@@ -1,4 +1,4 @@
-import { hostName } from './host';
+import { hostName, mock_dev } from './host';
 import path from 'path';
 import cookie from 'cookie';
 import axios from 'axios';
@@ -8,21 +8,23 @@ export const handle = async ({ event, resolve }) => {
 	const base = event.url.origin;
 
 	if (event.request.url.startsWith(`${base}/api2`)) {
-		const has_cookie = event.request.headers.get('cookie');
-		const new_cookie = cookie.serialize('collection', 'maliview', {
-			path: '/'
-		});
-		const auth_cookie = cookie.serialize('client_token', import.meta.env.VITE_CLIENT_TOKEN);
-		if (!has_cookie || !cookie.parse(has_cookie).collection) {
-			event.request.headers.append('cookie', new_cookie);
+		if (!mock_dev || !dev) {
+			event.request.headers.set('host', 'test12312312356415616.store');
 		}
-		event.request.headers.append('cookie', auth_cookie);
+		const headers = new Headers(event.request.headers);
+		const has_cookie = event.request.headers.get('cookie');
+		const new_cookie = cookie.serialize('collection', 'maliview');
 
-		const new_request = new Request(
-			event.request.url.replace(`${base}/api2`, hostName),
-			event.request
-		);
+		const auth_cookie = cookie.serialize('client_token', import.meta.env.VITE_CLIENT_TOKEN);
+		const res_cookies = auth_cookie + '; ' + new_cookie;
 
+		headers.set('cookie', res_cookies);
+		const serialized_headers = Object.fromEntries(headers.entries());
+
+		const new_request = new Request(event.request.url.replace(`${base}/api2`, hostName), {
+			headers: serialized_headers
+		});
+		console.log(new_request.headers);
 		const response = await fetch(new_request);
 
 		return response;

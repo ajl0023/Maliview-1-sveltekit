@@ -1,5 +1,5 @@
 import { n as noop, a as safe_not_equal, c as create_ssr_component, b as subscribe, e as escape, d as add_attribute, f as each, v as validate_component, g as compute_rest_props, h as spread, i as escape_object, j as createEventDispatcher, o as onDestroy, k as now, l as loop } from "../../chunks/index-d30cef5f.js";
-import _ from "lodash";
+import "lodash";
 import "@glidejs/glide";
 import "vanilla-lazyload";
 import "@use-gesture/vanilla";
@@ -734,7 +734,7 @@ const GallerySelected = create_ssr_component(($$result, $$props, $$bindings, slo
 });
 var Gallery_svelte_svelte_type_style_lang = "";
 const css$8 = {
-  code: '.flex-column.svelte-y9p1ko.svelte-y9p1ko{display:flex;width:100%;gap:5px;flex-direction:column}.flex-container.svelte-y9p1ko.svelte-y9p1ko{width:100%;height:100%;gap:5px;display:flex;flex-wrap:wrap;overflow:auto}.phase-label-container.svelte-y9p1ko.svelte-y9p1ko{color:white;display:flex;gap:10px;align-items:center;padding:0.5rem;font-family:Orator}.phase-label-container.svelte-y9p1ko h5.svelte-y9p1ko{width:fit-content;position:relative;cursor:pointer}.phase-label-container.svelte-y9p1ko .phase-label.svelte-y9p1ko::after{content:"";display:block;width:100%;height:1px;background-color:white}',
+  code: '.wrapper.svelte-1bvvzp7.svelte-1bvvzp7{display:flex;height:100%;flex-direction:column;overflow-y:auto}.flex-column.svelte-1bvvzp7.svelte-1bvvzp7{display:flex;width:100%;gap:5px;flex-direction:column}.flex-container.svelte-1bvvzp7.svelte-1bvvzp7{width:100%;height:100%;gap:5px;display:flex;flex-wrap:wrap}.phase-label-container.svelte-1bvvzp7.svelte-1bvvzp7{color:white;display:flex;gap:10px;align-items:center;padding:0.5rem;font-family:Orator}.phase-label-container.svelte-1bvvzp7 h5.svelte-1bvvzp7{width:fit-content;position:relative;cursor:pointer}.phase-label-container.svelte-1bvvzp7 .phase-label.svelte-1bvvzp7::after{content:"";display:block;width:100%;height:1px;background-color:white}',
   map: null
 };
 const Gallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -744,14 +744,14 @@ const Gallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const images2 = pageLayout.bts;
   $$result.css.add(css$8);
   $$unsubscribe_galleryImg();
-  return `<div class="${"page"}"><div class="${"phase-label-container svelte-y9p1ko"}">${each(images2, (phase, i) => {
-    return `<h5 class="${["svelte-y9p1ko", i === $galleryImg.currPhase ? "phase-label" : ""].join(" ").trim()}">phase ${escape(i + 1)}
-			</h5>`;
+  return `<div class="${"page"}"><div class="${"wrapper svelte-1bvvzp7"}"><div class="${"phase-label-container svelte-1bvvzp7"}">${each(images2, (phase, i) => {
+    return `<h5 class="${["svelte-1bvvzp7", i === $galleryImg.currPhase ? "phase-label" : ""].join(" ").trim()}">phase ${escape(i + 1)}
+				</h5>`;
   })}</div>
-	<div class="${"flex-container " + escape($galleryImg.currPhase) + " svelte-y9p1ko"}">${each(images2[$galleryImg.currPhase].images, (img, i) => {
+		<div class="${"flex-container " + escape($galleryImg.currPhase) + " svelte-1bvvzp7"}">${each(images2[$galleryImg.currPhase].images, (img, i) => {
     return `${validate_component(GallerySelected, "GallerySelected").$$render($$result, { img, selected, index: i }, {}, {})}`;
   })}
-		${$galleryImg.currPhase === "phase-1" ? `` : ``}</div>
+			${$galleryImg.currPhase === "phase-1" ? `` : ``}</div></div>
 </div>`;
 });
 var RightContainer_svelte_svelte_type_style_lang = "";
@@ -885,7 +885,7 @@ function tick_spring(ctx, last_value, current_value, target_value) {
       return is_date(current_value) ? new Date(current_value.getTime() + d) : current_value + d;
     }
   } else if (Array.isArray(current_value)) {
-    return current_value.map((_2, i) => tick_spring(ctx, last_value[i], current_value[i], target_value[i]));
+    return current_value.map((_, i) => tick_spring(ctx, last_value[i], current_value[i], target_value[i]));
   } else if (typeof current_value === "object") {
     const next_value = {};
     for (const k in current_value) {
@@ -1097,94 +1097,27 @@ const CardContainer = create_ssr_component(($$result, $$props, $$bindings, slots
 });
 const prerender = true;
 async function load({ fetch }) {
-  const categories = (await (await fetch("/api2/api/categories")).json()).reduce((acc, item) => {
-    acc[item._id] = item;
-    return acc;
-  }, {});
-  const imagePages = await fetch("/api2/api/bg-pages");
-  const carouselRenders = await fetch("/api2/api/carousel-renders");
-  const pageCarousels = await fetch("/api2/api/page-carousels");
-  const bts = await fetch("/api2/api/behind-the-scenes");
-  const mobile = await fetch("/api2/api/mobile");
-  pageLayout["image-pages"] = await imagePages.json();
-  pageLayout["carousel-renders"] = await carouselRenders.json();
-  pageLayout["page-carousels"] = await pageCarousels.json();
-  pageLayout["bts"] = await bts.json();
-  pageLayout["mobile"] = await mobile.json();
-  pageLayout["mobile"] = pageLayout["mobile"].map((item) => {
-    item["type"] = categories[item.category].category;
-    return item;
-  });
-  galleryImg.update((s) => {
-    s.imageToDisplay = pageLayout["bts"][0].images[0].url;
-    return s;
-  });
-  function isObjectOrArray(item) {
-    return _.isPlainObject(item) || Array.isArray(item);
-  }
-  const arr2 = [];
-  let shouldExit = false;
-  function changeUrls(obj) {
-    if (Array.isArray(obj)) {
-      for (const item of obj) {
-        changeUrls(item);
-      }
-      return;
-    }
-    if (!isObjectOrArray(obj)) {
-      return;
-    } else {
-      if (obj.url) {
-        shouldExit = true;
-        arr2.push(obj);
-        return;
-      } else {
-        for (const key in obj) {
-          if (isObjectOrArray(obj[key])) {
-            if (Array.isArray(obj[key])) {
-              obj[key] = obj[key].sort((a, b) => {
-                return a.order - b.order;
-              });
-            }
-            if (shouldExit) {
-              continue;
-            } else {
-              changeUrls(obj[key]);
-              shouldExit = false;
-            }
-          }
-        }
-      }
-    }
-    return arr2;
-  }
-  function changeAllUrls(urls) {
-    urls.map((item) => {
-      {
-        return item;
-      }
-    });
-  }
-  changeAllUrls(changeUrls(pageLayout));
   return {};
 }
 const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $modal, $$unsubscribe_modal;
   $$unsubscribe_modal = subscribe(modal, (value) => $modal = value);
   let { pagesData } = $$props;
+  let { data_loaded } = $$props;
   onDestroy(() => {
   });
   if ($$props.pagesData === void 0 && $$bindings.pagesData && pagesData !== void 0)
     $$bindings.pagesData(pagesData);
+  if ($$props.data_loaded === void 0 && $$bindings.data_loaded && data_loaded !== void 0)
+    $$bindings.data_loaded(data_loaded);
   $$unsubscribe_modal();
-  return `<div>${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
+  return `${data_loaded ? `<div>${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}
 
-	${validate_component(ScrollContainer, "ScrollContainer").$$render($$result, { pageLayout: pagesData }, {}, {})}
+		${validate_component(ScrollContainer, "ScrollContainer").$$render($$result, { pageLayout: pagesData }, {}, {})}
 
-	${validate_component(CardContainer, "CardContainer").$$render($$result, {}, {}, {})}
+		${validate_component(CardContainer, "CardContainer").$$render($$result, {}, {}, {})}
 
-	${$modal.visibility && $modal.content ? `${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}` : ``}
-	${validate_component(Socials, "Socials").$$render($$result, {}, {}, {})}
-</div>`;
+		${$modal.visibility && $modal.content ? `${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}` : ``}
+		${validate_component(Socials, "Socials").$$render($$result, {}, {}, {})}</div>` : ``}`;
 });
 export { Routes as default, load, prerender };

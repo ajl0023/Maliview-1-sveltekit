@@ -49,7 +49,7 @@
       "_host-ef40cb6e.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-5ddaa49f.css"
+      "assets/entries/pages/index.svelte-a9cf6d45.css"
     ],
     "assets": [
       "assets/orator-15bae5c4.otf"
@@ -62,7 +62,7 @@
     "file": "chunks/index-d30cef5f.js"
   },
   "src/hooks.js": {
-    "file": "chunks/hooks-56e73277.js",
+    "file": "chunks/hooks-c0ef0bec.js",
     "src": "src/hooks.js",
     "isDynamicEntry": true,
     "imports": [
