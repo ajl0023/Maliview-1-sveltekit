@@ -8,7 +8,7 @@
 
 	const dispatch = createEventDispatcher();
 	onMount(() => {
-		$galleryImg.imageToDisplay = pageLayout['bts'] ? pageLayout['bts'][0].images[0].url : null;
+		$galleryImg.imageToDisplay = pageLayout['bts'] ? pageLayout['bts'][pageLayout['bts'].length-1].images[0].url : null;
 	});
 </script>
 
