@@ -24,6 +24,7 @@
 				<img class="logo" src="By Apel Design White.png" alt="" />
 			</a>
 		</div>
+	
 	</div>
 </nav>
 
