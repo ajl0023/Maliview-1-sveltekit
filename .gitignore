@@ -7,6 +7,7 @@ cloudinary.js
 # Local Netlify folder
 .netlify
 /compress
+git_script.sh
 
 
 

@@ -4,7 +4,7 @@
 git add .
 
 # Commit the changes with a default commit message
-git commit -m "updating to sveltekit 1.0, also completely removing cms interaction...."
+git commit -m "currently moving to sveltekit 1, handling assets with netlify"
 
 
 # Push the changes to the remote repository

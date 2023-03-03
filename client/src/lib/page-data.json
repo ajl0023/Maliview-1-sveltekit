@@ -389,88 +389,76 @@
 			"page": "discover",
 			"images": [
 				{
-					"_id": "622fb7ebeb23e128b01d5433",
-					"url": "79a95623-a25a-4a7a-b454-d63f791c18f21.jpg",
+					"_id": "15a2a813-95af-4266-b161-0695e730d006",
+					"name": "8aa37e37-370b-49ed-80f1-213d176f77841.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/79a95623-a25a-4a7a-b454-d63f791c18f21.jpg",
-					"filePath": "79a95623-a25a-4a7a-b454-d63f791c18f21.jpg"
+					"url": "8aa37e37-370b-49ed-80f1-213d176f77841.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5434",
-					"url": "113bd54b-8a9f-416b-89da-e808f37d8ccb2.jpg",
+					"_id": "a8f1f454-bff7-47ce-b56a-e760b05d7d19",
+					"name": "3f78ce4a-18b3-4c6a-8a7d-134fb59e957810.jpg",
 					"order": 1,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/113bd54b-8a9f-416b-89da-e808f37d8ccb2.jpg",
-					"filePath": "113bd54b-8a9f-416b-89da-e808f37d8ccb2.jpg"
+					"url": "3f78ce4a-18b3-4c6a-8a7d-134fb59e957810.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5435",
-					"url": "05310c45-0f0f-41be-be69-f0d0dba36f143.jpg",
+					"_id": "7ec4fd1f-cf87-45c1-b411-2edd5772b300",
+					"name": "4fdc567d-85b7-4100-b248-412f220c121711.jpg",
 					"order": 2,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/05310c45-0f0f-41be-be69-f0d0dba36f143.jpg",
-					"filePath": "05310c45-0f0f-41be-be69-f0d0dba36f143.jpg"
+					"url": "4fdc567d-85b7-4100-b248-412f220c121711.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5436",
-					"url": "22ef86e1-d52a-4e6e-bd80-22305e6d5b584.jpg",
+					"_id": "6df66823-1bd8-4c06-ade5-abb7902ecbe3",
+					"name": "909733d3-1214-4b7a-b42a-d8d7e0cb159a12.jpg",
 					"order": 3,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/22ef86e1-d52a-4e6e-bd80-22305e6d5b584.jpg",
-					"filePath": "22ef86e1-d52a-4e6e-bd80-22305e6d5b584.jpg"
+					"url": "909733d3-1214-4b7a-b42a-d8d7e0cb159a12.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5437",
-					"url": "8f662382-860a-42ec-80f7-c4c665e989765.jpg",
+					"_id": "86af9d52-30e4-4702-b191-7b074d57f022",
+					"name": "dc8a40c1-0176-41f2-a7d8-9c9580df551e2.jpg",
 					"order": 4,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/8f662382-860a-42ec-80f7-c4c665e989765.jpg",
-					"filePath": "8f662382-860a-42ec-80f7-c4c665e989765.jpg"
+					"url": "dc8a40c1-0176-41f2-a7d8-9c9580df551e2.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5438",
-					"url": "ff67f8c7-58f9-4a2f-a8c1-522cba49ffb66.jpg",
+					"_id": "6f40a32b-b5ad-4052-937c-478484543f5e",
+					"name": "50444b16-40d5-4e16-9651-86b10b8876b43.jpg",
 					"order": 5,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/ff67f8c7-58f9-4a2f-a8c1-522cba49ffb66.jpg",
-					"filePath": "ff67f8c7-58f9-4a2f-a8c1-522cba49ffb66.jpg"
+					"url": "50444b16-40d5-4e16-9651-86b10b8876b43.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d5439",
-					"url": "40d98aff-e295-40e3-8e93-d4ab182f3c787.jpg",
+					"_id": "346f016c-9d9c-4170-8708-e83b9120c444",
+					"name": "2d172862-6980-478d-acbd-53d3494b0ccc4.jpg",
 					"order": 6,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/40d98aff-e295-40e3-8e93-d4ab182f3c787.jpg",
-					"filePath": "40d98aff-e295-40e3-8e93-d4ab182f3c787.jpg"
+					"url": "2d172862-6980-478d-acbd-53d3494b0ccc4.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d543a",
-					"url": "420ea80a-56b7-4c59-967b-9e16d7f26bc08.jpg",
+					"_id": "57babd46-47ec-476c-8050-92f8ff0056f8",
+					"name": "4f08174b-36d9-4ddd-94d5-e24e39628afe5.jpg",
 					"order": 7,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/420ea80a-56b7-4c59-967b-9e16d7f26bc08.jpg",
-					"filePath": "420ea80a-56b7-4c59-967b-9e16d7f26bc08.jpg"
+					"url": "4f08174b-36d9-4ddd-94d5-e24e39628afe5.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d543b",
-					"url": "bbeac411-5d9b-4b40-9a02-ce3c3baf2ee19.jpg",
+					"_id": "2befa64c-92be-49f0-b425-b467240cf1c5",
+					"name": "8a157f9f-03e2-4a5b-9c0e-b6f203df5dbc6.jpg",
 					"order": 8,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/bbeac411-5d9b-4b40-9a02-ce3c3baf2ee19.jpg",
-					"filePath": "bbeac411-5d9b-4b40-9a02-ce3c3baf2ee19.jpg"
+					"url": "8a157f9f-03e2-4a5b-9c0e-b6f203df5dbc6.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d543c",
-					"url": "926a566d-c55f-4d54-88be-d41fdd50eb2410.jpg",
+					"_id": "ee78eaa4-4ea1-4844-8c2f-c1584bd6fa2f",
+					"name": "833044ce-cd12-4835-bf19-73d29c3b60bd7.jpg",
 					"order": 9,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/926a566d-c55f-4d54-88be-d41fdd50eb2410.jpg",
-					"filePath": "926a566d-c55f-4d54-88be-d41fdd50eb2410.jpg"
+					"url": "833044ce-cd12-4835-bf19-73d29c3b60bd7.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d543d",
-					"url": "f5be412c-cdf6-4539-81dc-fdee09c1780411.jpg",
+					"_id": "45cacf06-01e9-492e-959e-9c4b4d7f9370",
+					"name": "3cd7ca29-6ff8-4556-bfd1-ada5d60715278.jpg",
 					"order": 10,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/f5be412c-cdf6-4539-81dc-fdee09c1780411.jpg",
-					"filePath": "f5be412c-cdf6-4539-81dc-fdee09c1780411.jpg"
+					"url": "3cd7ca29-6ff8-4556-bfd1-ada5d60715278.jpg"
 				},
 				{
-					"_id": "622fb7ebeb23e128b01d543e",
-					"url": "113d8612-1265-49f4-b0d7-51cc94daf74c12.jpg",
+					"_id": "3e146cfd-1061-4abf-99ba-d6b32b7664c7",
+					"name": "21d4f8fa-9fb7-4ac4-810b-5024f1d98b929.jpg",
 					"order": 11,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/113d8612-1265-49f4-b0d7-51cc94daf74c12.jpg",
-					"filePath": "113d8612-1265-49f4-b0d7-51cc94daf74c12.jpg"
+					"url": "21d4f8fa-9fb7-4ac4-810b-5024f1d98b929.jpg"
 				}
 			],
 			"category": "62198b33f38911e118d08032"
@@ -480,25 +468,19 @@
 			"page": "floorplans",
 			"images": [
 				{
-					"_id": "622ea59e2ffdd2dd79eee69d",
-					"url": "4681aa29-bd4c-45a6-893a-2bbdb3c90ca533340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
-					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/4681aa29-bd4c-45a6-893a-2bbdb3c90ca533340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
-					"filePath": "4681aa29-bd4c-45a6-893a-2bbdb3c90ca533340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg"
+					"_id": "5baca0be-5af6-4aed-8f5e-eafd79bf5822",
+					"name": "33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
+					"order": 0
 				},
 				{
-					"_id": "622ea59e2ffdd2dd79eee69e",
-					"url": "da9373df-2a5a-44bc-8b35-1309a73ee77233340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
-					"order": 1,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/da9373df-2a5a-44bc-8b35-1309a73ee77233340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
-					"filePath": "da9373df-2a5a-44bc-8b35-1309a73ee77233340 Mullholland Hwy_2ND FLOOR 20211001.jpg"
+					"_id": "9dfe4f5e-fafa-4582-9c05-6af3da19ef1d",
+					"name": "33340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
+					"order": 1
 				},
 				{
-					"_id": "622ea59e2ffdd2dd79eee69f",
-					"url": "07fa91f9-0df8-474d-b594-2707bb05017933340 Mullholland Hwy_SITE PLAN.jpg",
-					"order": 2,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/07fa91f9-0df8-474d-b594-2707bb05017933340 Mullholland Hwy_SITE PLAN.jpg",
-					"filePath": "07fa91f9-0df8-474d-b594-2707bb05017933340 Mullholland Hwy_SITE PLAN.jpg"
+					"_id": "9c01bdc2-df40-4365-b88e-321330267394",
+					"name": "33340 Mullholland Hwy_SITE PLAN.jpg",
+					"order": 2
 				}
 			],
 			"category": "62198b33f38911e118d08032"

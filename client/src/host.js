@@ -1,4 +1,4 @@
-import { dev } from '$app/env';
+import { dev } from '$app/environment';
 let host;
 let is_host = false;
 if (dev) {

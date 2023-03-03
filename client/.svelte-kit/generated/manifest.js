@@ -1,14 +1,18 @@
 const c = [
-	() => import("..\\..\\src\\routes\\__layout.svelte"),
+	() => import("..\\runtime\\components\\layout.svelte"),
 	() => import("..\\runtime\\components\\error.svelte"),
-	() => import("..\\..\\src\\routes\\index.svelte")
+	() => import("..\\..\\src\\routes\\+layout.svelte"),
+	() => import("..\\..\\src\\routes\\+page.svelte")
 ];
 
 const d = decodeURIComponent;
 
 export const routes = [
-	// src/routes/index.svelte
-	[/^\/$/, [c[0], c[2]], [c[1]]]
+	// src/routes/+layout.svelte
+	[/^\/\+layout\/?$/, [c[0], c[2]], [c[1]]],
+
+	// src/routes/+page.svelte
+	[/^\/\+page\/?$/, [c[0], c[3]], [c[1]]]
 ];
 
 // we import the root layout/error components eagerly, so that

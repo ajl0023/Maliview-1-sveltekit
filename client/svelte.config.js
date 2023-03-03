@@ -1,18 +1,22 @@
-import sveltePreprocess from 'svelte-preprocess';
+// import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 import adapter from '@sveltejs/adapter-netlify';
-import path from 'path';
-export default {
-	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		vite: {
-			resolve: {
-				alias: {
-					src: path.resolve('./src')
-				}
-			}
-		},
+import importAssets from 'svelte-preprocess-import-assets';
+/** @type {import('@sveltejs/kit').Config} */
+import preprocess from 'svelte-preprocess';
 
+const config = {
+	preprocess: [
+		vitePreprocess({
+			optimizeDeps: {
+				include: []
+			}
+		}),
+		importAssets()
+	],
+	kit: {
 		adapter: adapter()
-	},
-	preprocess: sveltePreprocess({})
+	}
 };
+
+export default config;
