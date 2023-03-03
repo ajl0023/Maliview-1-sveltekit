@@ -5,9 +5,11 @@
 	import GalleryPreview from '../GalleryPreview/GalleryPreview.svelte';
 	import ImagePage from '../ImagePage/ImagePage.svelte';
 	import TextPage from '../TextPage/TextPage.svelte';
-
+	export let pageLayout;
 	export let leftPage;
 	export let carouselPage;
+
+	console.log(pageLayout['image-pages']);
 </script>
 
 <div bind:this="{leftPage}" class="container">
@@ -20,8 +22,8 @@
 		</div>
 	</div>
 
-	<ImagePage imageInd="{0}" name="malibu" index="{0}" />
-	<TextPage name="discover" bgColor="#a4632e" index="{1}" />
+	<ImagePage image="{pageLayout['image-pages'][0]}" name="malibu" />
+	<!-- <TextPage name="discover" bgColor="#a4632e" index="{1}" />
 	<CarouselRenders itemIndex="{0}" name="renders" carouselPage="{carouselPage}" page="left" />
 
 	<TextPage name="floorplans" bgColor="#a4632e" index="{3}" />
@@ -33,7 +35,7 @@
 	<Credits page="left" />
 	<div class="page">
 		<ContactUs />
-	</div>
+	</div> -->
 </div>
 
 <style lang="scss">

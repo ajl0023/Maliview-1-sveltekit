@@ -1,4 +1,4 @@
-﻿<script>
+﻿<!-- <script>
 	import CarouselFull from '../CarouselFull/CarouselFull.svelte';
 	import Credits from '../Credits/Credits.svelte';
 	import Gallery from '../Gallery/Gallery.svelte';
@@ -101,4 +101,4 @@
 			justify-content: center;
 		}
 	}
-</style>
+</style> -->

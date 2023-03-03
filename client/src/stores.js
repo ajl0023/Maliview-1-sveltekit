@@ -2,7 +2,6 @@ import { derived, writable } from 'svelte/store';
 import { pageLength } from './pageContent';
 import { images } from './components/image';
 
-export const pageLayout = {};
 const currentPageStore = () => {
 	const state = {
 		page: 0,

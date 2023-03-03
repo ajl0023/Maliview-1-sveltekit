@@ -1,29 +1,26 @@
 ﻿<script>
-	import { modal, pageLayout } from '../../stores';
+	import { modal } from '../../stores';
 	import { afterUpdate, beforeUpdate, onMount } from 'svelte';
 	import { lazy } from '../../lazy.js';
-
-	export let imageInd;
-
-	const images = [...pageLayout['image-pages']];
+	export let image;
 </script>
 
 <div
 	on:click="{() => {
-		if (images[imageInd].type === 'video') {
-			$modal.content = images[imageInd].video_url;
+		if (image.type === 'video') {
+			$modal.content = image.video_url;
 			$modal.type = 'video';
 			$modal.visibility = true;
 		}
 	}}"
 	class="page"
 >
-	<div class="image-container {images[imageInd].type === 'video' ? 'blur' : ''} ">
-		{#if images[imageInd].type === 'video'}
+	<div class="image-container {image.type === 'video' ? 'blur' : ''} ">
+		{#if image.type === 'video'}
 			<img alt="" src="playButton.png" class="play-button" />
 		{/if}
 
-		<img data-src="{images[imageInd].image.url}" alt="" class="main-image lazy" />
+		<img data-src="{image.image.url}" alt="" class="main-image lazy" />
 	</div>
 </div>
 

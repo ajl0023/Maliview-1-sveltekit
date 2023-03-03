@@ -1,1 +1,0 @@
-cd client && git add . && git commit -m "server logic/https issues" && git push origin main
