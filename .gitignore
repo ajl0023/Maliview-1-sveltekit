@@ -8,7 +8,7 @@ cloudinary.js
 .netlify
 /compress
 git_script.sh
-client/src/lib/images
+
 client/build
 .vscode
 convert.cjs
