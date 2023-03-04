@@ -15,3 +15,4 @@ git_script.sh
 .netlify
 **/.vscode/
 tests
+static/images
