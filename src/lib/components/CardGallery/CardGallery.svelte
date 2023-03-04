@@ -25,7 +25,7 @@
 			{#each data.phases[$galleryImg.currPhase].images as image, i}
 				<div class="image-container">
 					<img
-						src="{image.url}"
+						src="images/{image.url}"
 						on:click="{() => {
 							$modal.visibility = true;
 							$modal.content = image

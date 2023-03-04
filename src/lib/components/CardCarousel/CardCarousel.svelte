@@ -149,7 +149,7 @@
 									on:pinch="{(e) => {
 										shouldDrag = !e.detail;
 									}}"
-									img="{img.url}"
+									img="images/{img.url}"
 								/>
 							</div>
 						</li>
@@ -189,7 +189,7 @@
 			<div class="bu-media-left">
 				<figure class="bu-image bu-is-48x48">
 					<div class="square-place-holder" style=" height: 100%; width:100%;">
-						<img src="mobile-logo.png" alt="" />
+						<img src="/images/mobile-logo.png" alt="" />
 					</div>
 				</figure>
 			</div>

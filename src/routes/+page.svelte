@@ -44,7 +44,8 @@
 
 		<ScrollContainer pageLayout="{pagesData}" pageContent="{pageContent}" />
 
-		<!-- <CardContainer />
+		<CardContainer cardLayout="{pagesData['mobile']}" />
+		<!-- 
 
 		{#if $modal.visibility && $modal.content}
 			<Modal />

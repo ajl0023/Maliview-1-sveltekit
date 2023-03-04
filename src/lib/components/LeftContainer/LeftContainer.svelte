@@ -1,8 +1,8 @@
 ﻿<script>
 	import { getContext } from 'svelte';
 	import CarouselRenders from '../CarouselRenders/CarouselRenders.svelte';
-	// import ContactUs from '../ContactUs/ContactUs.svelte';
-	// import Credits from '../Credits/Credits.svelte';
+	import ContactUs from '../ContactUs/ContactUs.svelte';
+	import Credits from '../Credits/Credits.svelte';
 	import GalleryPreview from '../GalleryPreview/GalleryPreview.svelte';
 
 	import TextPage from '../TextPage/TextPage.svelte';
@@ -22,10 +22,10 @@
 <div bind:this="{leftPage}" class="container">
 	<div id="home" class="logo-wrapper">
 		<div class="bg-image-container">
-			<img class="bg-image" src="$lib/images/horse-left.jpg" alt="" />
+			<img class="bg-image" src="/images/horse-left.jpg" alt="" />
 		</div>
 		<div class="logo-container">
-			<img class="image-logo" src="$lib/images/Maliview Left.png" alt="" />
+			<img class="image-logo" src="/images/Maliview Left.png" alt="" />
 		</div>
 	</div>
 
@@ -49,6 +49,12 @@
 	<TextPage name="video render" bgColor="{true}" text_content="{pageContent.textPages[5]}" />
 
 	<GalleryPreview name="behind the scenes" />
+
+	<TextPage bgColor="{false}" text_content="{pageContent.textPages[7]}" name="drone footage" />
+	<Credits />
+	<div class="page">
+		<ContactUs />
+	</div>
 </div>
 
 <style lang="scss">

@@ -21,7 +21,7 @@
 				}}"
 				href="https://www.apeldesign.com/"
 			>
-				<img class="logo" src="$lib/images/By Apel Design White.png" alt="" />
+				<img class="logo" src="/images/By Apel Design White.png" alt="" />
 			</a>
 		</div>
 	</div>

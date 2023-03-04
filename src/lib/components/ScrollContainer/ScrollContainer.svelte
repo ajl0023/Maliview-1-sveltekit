@@ -32,7 +32,7 @@
 
 	$: {
 		if (dev && leftElement && rightElement) {
-			leftElement.style.transform = `translateY( ${-600}vh)`;
+			leftElement.style.transform = `translateY( ${-1000}vh)`;
 			rightElement.style.transform = `translateY( ${0}vh)`;
 		} else if (leftElement && rightElement && $pagePositions.inital) {
 			leftElement.style.transform = `translateY( ${$pagePositions.left}vh)`;

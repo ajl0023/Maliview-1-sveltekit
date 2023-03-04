@@ -22,7 +22,7 @@
 			galleryImg.update((s) => {
 				$galleryImg.selected = index;
 				$galleryImg.imageToDisplay = img.url;
-				s.imageToDisplay = img.raw;
+				s.imageToDisplay = '/images/' + img.url;
 				return s;
 			});
 			dispatch('select', img.index);

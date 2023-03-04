@@ -55,7 +55,7 @@
 				}}"
 				href="https://www.apeldesign.com/"
 			>
-				<img src="$lib/images/By Apel Design Black.png" alt="" />
+				<img src="/images/By Apel Design Black.png" alt="" />
 			</a>
 		</div>
 	</div>

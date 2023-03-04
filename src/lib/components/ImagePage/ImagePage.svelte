@@ -16,7 +16,7 @@
 >
 	<div class="image-container {image.type === 'video' ? 'blur' : ''} ">
 		{#if image.type === 'video'}
-			<img alt="" src="$lib/images/playButton.png" class="play-button" />
+			<img alt="" src="/images/playButton.png" class="play-button" />
 		{/if}
 
 		<img src="/images/{image.image.url}" data-src="images/{image.image.url}" alt="" class="main-image lazy" />

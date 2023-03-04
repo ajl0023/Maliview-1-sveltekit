@@ -1,5 +1,5 @@
 ﻿<script>
-	import { onMount } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 
 	import { creditsContent } from '../../pageContent';
 	import { pagePositions, scrollContainers } from '../../stores';
@@ -12,23 +12,27 @@
 	onMount(() => {
 		scrollContainers.push(scrollContainer);
 	});
+	const page_side = getContext('page_side');
 </script>
 
 <div class="page">
 	<div
 		class="container"
 		style="
-        justify-content: {page === 'left' ? 'flex-end' : 'flex-start'}
+        justify-content: {page_side === 'left' ? 'flex-end' : 'flex-start'}
       "
 	>
-		<div style="align-items:{page === 'left' ? 'flex-end' : 'flex-start'}" class="sub-container">
+		<div
+			style="align-items:{page_side === 'left' ? 'flex-end' : 'flex-start'}"
+			class="sub-container"
+		>
 			<div
 				class="title-container"
 				style="
-        justify-content: {page === 'left' ? 'flex-end' : 'flex-start'}
+        justify-content: {page_side === 'left' ? 'flex-end' : 'flex-start'}
       "
 			>
-				{#if page === 'left'}<div class="title-text-container">
+				{#if page_side === 'left'}<div class="title-text-container">
 						<h5>Developmen</h5>
 					</div>
 				{:else}<div class="title-text-container">
@@ -36,14 +40,14 @@
 					</div>{/if}
 			</div>
 			<div
-				bind:this={scrollContainer}
-				on:scroll={(e) => {
+				bind:this="{scrollContainer}"
+				on:scroll="{(e) => {
 					window.addEventListener('wheel', disableWheel);
 					window.removeEventListener('wheel', disableWheel);
-				}}
+				}}"
 				class="content-container"
 			>
-				{#if page === 'left'}
+				{#if page_side === 'left'}
 					<div class="credits-container-sub">
 						{#each creditsContent.slice(0, 2) as credit}
 							<div class="credits-container">

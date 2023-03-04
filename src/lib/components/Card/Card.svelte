@@ -51,11 +51,11 @@
 			{#if type === 'video'}
 				<div class="play-button-container">
 					<figure class="bu-image bu-is-square ">
-						<img src="playButton.png" alt="" />
+						<img src="/images/playButton.png" alt="" />
 					</figure>
 				</div>
 			{/if}
-			<img loading="lazy" class="main-image" src="{image.url}" alt="" />
+			<img loading="lazy" class="main-image" src="/images/{image.url}" alt="" />
 		</figure>
 	</div>
 	<div class="card-content bu-card-content">
@@ -63,7 +63,7 @@
 			<div class="bu-media-left">
 				<figure class="bu-image bu-is-48x48">
 					<div class="square-place-holder" style=" height: 100%; width:100%;">
-						<img src="mobile-logo.png" alt="" />
+						<img src="/images/mobile-logo.png" alt="" />
 					</div>
 				</figure>
 			</div>

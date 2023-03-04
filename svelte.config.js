@@ -11,8 +11,7 @@ const config = {
 			optimizeDeps: {
 				include: []
 			}
-		}),
-		importAssets()
+		})
 	],
 	kit: {
 		adapter: adapter()

@@ -1,6 +1,6 @@
 ﻿<script>
 	import CarouselFull from '$lib/components/CarouselFull/CarouselFull.svelte';
-	// import Credits from '$lib/components/Credits/Credits.svelte';
+	import Credits from '$lib/components/Credits/Credits.svelte';
 	import Gallery from '$lib/components/Gallery/Gallery.svelte';
 	import ImagePage from '$lib/components/ImagePage/ImagePage.svelte';
 	import TextPage from '$lib/components/TextPage/TextPage.svelte';
@@ -16,9 +16,9 @@
 </script>
 
 <div bind:this="{rightPage}" class="container">
-	<!-- <ImagePage image="{pageLayout['image-pages'][1]}" index="{5}" />
-	 <Credits page="right" />
-	<ImagePage imageInd="{3}" index="{4}" /> -->
+	<ImagePage image="{pageLayout['image-pages'][4]}" index="{5}" />
+	<Credits />
+	<ImagePage image="{pageLayout['image-pages'][3]}" index="{4}" />
 	<Gallery phases="{pageLayout['bts']}" />
 	<ImagePage image="{pageLayout['image-pages'][2]}" index="{3}" name="video-render" />
 
@@ -45,10 +45,10 @@
 	<TextPage index="{0}" text_content="{pageContent.textPages[0]}" />
 	<div id="home" class="logo-wrapper">
 		<div class="bg-image-container">
-			<img class="bg-image" src="$lib/images/horse-right.jpg" alt="" />
+			<img class="bg-image" src="/images/horse-right.jpg" alt="" />
 		</div>
 		<div class="logo-container">
-			<img class="image-logo" src="$lib/images/Maliview Right.png" alt="" />
+			<img class="image-logo" src="/images/Maliview Right.png" alt="" />
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-﻿<!-- <script>
+﻿<script>
 	import { onMount } from 'svelte';
 
 	import Card from '../Card/Card.svelte';
@@ -7,10 +7,11 @@
 	import CardGallery from '../CardGallery/CardGallery.svelte';
 	import ContactUs from '../ContactUs/ContactUs.svelte';
 	import _ from 'lodash';
-	import { pageLayout } from '../../stores';
-	let cardLayout = [];
+
+	export let cardLayout;
+	console.log(cardLayout)
 	onMount(async () => {
-		cardLayout = pageLayout['mobile'].sort((a, b) => {
+		cardLayout = cardLayout.sort((a, b) => {
 			return a.order - b.order;
 		});
 	});
@@ -18,11 +19,11 @@
 
 <div class="card-wrapper">
 	<div class="bg-image-container">
-		<img class="bg-image" src="horses.jpg" alt="" />
+		<img class="bg-image" src="/images/horses.jpg" alt="" />
 	</div>
 	<div id="home" class="logo-wrapper">
 		<div class="logo-container">
-			<img class="image-logo" src="homeLogo.png" alt="" />
+			<img class="image-logo" src="/images/homeLogo.png" alt="" />
 		</div>
 	</div>
 	<div class="card-container">
@@ -95,4 +96,4 @@
 			}
 		}
 	}
-</style> -->
+</style>

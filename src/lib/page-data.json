@@ -33,10 +33,10 @@
 			"order": 2,
 			"category": "621ae8462b5171ada3bf1987",
 			"image": {
-				"_id": "287f0dd5-94df-4d4a-8e62-496506cf7d0d",
-				"name": "dc187e20-f6c4-40de-ba20-971b0e372d26bg4.jpg",
+				"_id": "a70a0d3f-ead4-4ded-bf1d-0c865a1443ff",
+				"name": "a2e182ac-d1df-47ec-922e-9e29d6f79ac1bg4.jpg",
 				"order": 0,
-				"url": "dc187e20-f6c4-40de-ba20-971b0e372d26bg4.jpg"
+				"url": "a2e182ac-d1df-47ec-922e-9e29d6f79ac1bg4.jpg"
 			},
 			"video_url": "https://youtu.be/nTS10ZQM5Ms"
 		},
@@ -47,9 +47,10 @@
 			"order": 3,
 			"category": "621ae8462b5171ada3bf1987",
 			"image": {
-				"url": "ae39bf74-8d8b-4994-817e-cd423fd76b37drone.jpg",
-				"_id": "622bca8cc54a209373c4d335",
-				"old_url": "https://test12312312356415616.store/mock-bb-storage/bg-image-page/ae39bf74-8d8b-4994-817e-cd423fd76b37drone.jpg"
+				"_id": "5e09919a-9a54-41cd-8a0b-937a018b7fd3",
+				"name": "bee6b947-4540-4141-b38e-79e6d27ed6f9drone.jpg",
+				"order": 0,
+				"url": "bee6b947-4540-4141-b38e-79e6d27ed6f9drone.jpg"
 			},
 			"video_url": "https://youtu.be/l7h2P07cSbc"
 		},
@@ -60,9 +61,10 @@
 			"order": 4,
 			"category": "62198acfee737dc5b139ea71",
 			"image": {
-				"url": "feb39b8a-520c-4ba0-9cfe-d52e1fa59f4d33340 MULHOLLAND HWY IMG 3B.jpg",
-				"_id": "622bca97c079847e68ff9cbe",
-				"old_url": "https://test12312312356415616.store/mock-bb-storage/bg-image-page/feb39b8a-520c-4ba0-9cfe-d52e1fa59f4d33340 MULHOLLAND HWY IMG 3B.jpg"
+				"_id": "387bf1be-1c1f-4849-a30f-789583e44d69",
+				"name": "9e57b9b1-e726-4d9e-8c20-5c0ed20337be33340-mulholland-hwy-img-3b.jpg",
+				"order": 0,
+				"url": "9e57b9b1-e726-4d9e-8c20-5c0ed20337be33340-mulholland-hwy-img-3b.jpg"
 			}
 		}
 	],
@@ -1245,11 +1247,10 @@
 			"category": "62198acfee737dc5b139ea71",
 			"images": [
 				{
-					"_id": "622ea5aa2ffdd2dd79eee6a0",
-					"url": "e9e0ea57-e5e2-48c5-9c56-8ce19452ce0bbg1.jpg",
+					"_id": "a4c693e4-df4f-4e86-9ac0-03c1b33feb85",
+					"name": "e47d8722-9f24-4559-8464-834b6f6e42dc9b36f2e1-d10b-4545-a8ff-ed11e5bb1026bg1.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/e9e0ea57-e5e2-48c5-9c56-8ce19452ce0bbg1.jpg",
-					"filePath": "e9e0ea57-e5e2-48c5-9c56-8ce19452ce0bbg1.jpg"
+					"url": "e47d8722-9f24-4559-8464-834b6f6e42dc9b36f2e1-d10b-4545-a8ff-ed11e5bb1026bg1.jpg"
 				}
 			],
 			"type": "bg-pages"
@@ -1261,88 +1262,10 @@
 			"category": "62198acfee737dc5b139ea71",
 			"images": [
 				{
-					"_id": "622ea5ff2ffdd2dd79eee6a7",
-					"url": "44daea4b-0d7b-4be0-959c-053870b5c98b1.jpg",
+					"_id": "c6c09d21-d1f4-44ac-9f5a-cbd07d8f4f42",
+					"name": "cbce37d4-dbc2-494e-8833-c87343d506aebg2.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/44daea4b-0d7b-4be0-959c-053870b5c98b1.jpg",
-					"filePath": "44daea4b-0d7b-4be0-959c-053870b5c98b1.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6a8",
-					"url": "10a0bb6c-2a19-4b0b-a6ba-f3d44056182e2.jpg",
-					"order": 1,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/10a0bb6c-2a19-4b0b-a6ba-f3d44056182e2.jpg",
-					"filePath": "10a0bb6c-2a19-4b0b-a6ba-f3d44056182e2.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6a9",
-					"url": "191b6b9b-6d88-4144-9d5d-95472366f2513.jpg",
-					"order": 2,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/191b6b9b-6d88-4144-9d5d-95472366f2513.jpg",
-					"filePath": "191b6b9b-6d88-4144-9d5d-95472366f2513.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6aa",
-					"url": "4d25ea3d-d1d1-4029-b29c-f41afdfff3044.jpg",
-					"order": 3,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/4d25ea3d-d1d1-4029-b29c-f41afdfff3044.jpg",
-					"filePath": "4d25ea3d-d1d1-4029-b29c-f41afdfff3044.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6ab",
-					"url": "9073014d-1618-445f-8dd2-ee60af01df275.jpg",
-					"order": 4,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/9073014d-1618-445f-8dd2-ee60af01df275.jpg",
-					"filePath": "9073014d-1618-445f-8dd2-ee60af01df275.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6ac",
-					"url": "87fd9695-e287-4e2a-b26f-ce37e883dc936.jpg",
-					"order": 5,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/87fd9695-e287-4e2a-b26f-ce37e883dc936.jpg",
-					"filePath": "87fd9695-e287-4e2a-b26f-ce37e883dc936.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6ad",
-					"url": "93383238-d097-4251-a3e0-2679973309c97.jpg",
-					"order": 6,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/93383238-d097-4251-a3e0-2679973309c97.jpg",
-					"filePath": "93383238-d097-4251-a3e0-2679973309c97.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6ae",
-					"url": "5f2ea150-1fa7-45d6-9fdf-d4b2f28bfff58.jpg",
-					"order": 7,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/5f2ea150-1fa7-45d6-9fdf-d4b2f28bfff58.jpg",
-					"filePath": "5f2ea150-1fa7-45d6-9fdf-d4b2f28bfff58.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6af",
-					"url": "c1c7ca92-9080-43a2-a7f6-daef57d323399.jpg",
-					"order": 8,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/c1c7ca92-9080-43a2-a7f6-daef57d323399.jpg",
-					"filePath": "c1c7ca92-9080-43a2-a7f6-daef57d323399.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6b0",
-					"url": "56a1642e-f0d1-4d01-9930-1649a690081910.jpg",
-					"order": 9,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/56a1642e-f0d1-4d01-9930-1649a690081910.jpg",
-					"filePath": "56a1642e-f0d1-4d01-9930-1649a690081910.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6b1",
-					"url": "ee14fe08-2ebd-4a5b-90d0-b87042a24fdc11.jpg",
-					"order": 10,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/ee14fe08-2ebd-4a5b-90d0-b87042a24fdc11.jpg",
-					"filePath": "ee14fe08-2ebd-4a5b-90d0-b87042a24fdc11.jpg"
-				},
-				{
-					"_id": "622ea5ff2ffdd2dd79eee6b2",
-					"url": "f2993354-9bef-407b-93ed-c5eea13cee9c12.jpg",
-					"order": 11,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/f2993354-9bef-407b-93ed-c5eea13cee9c12.jpg",
-					"filePath": "f2993354-9bef-407b-93ed-c5eea13cee9c12.jpg"
+					"url": "cbce37d4-dbc2-494e-8833-c87343d506aebg2.jpg"
 				}
 			],
 			"type": "bg-pages"
@@ -1354,102 +1277,88 @@
 			"category": "62198b33f38911e118d08032",
 			"images": [
 				{
-					"_id": "622ea6132ffdd2dd79eee6b3",
-					"url": "eba548fa-b5a6-4a41-bbc4-096bfef40f2433340 MULHOLLAND INT IMG 3A_00.jpg",
+					"_id": "e3f9bb36-1a67-440b-b334-e63b97725d14",
+					"name": "9d584503-697a-4e47-8678-732278e7b24c33340-mulholland-int-img-11az00.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/eba548fa-b5a6-4a41-bbc4-096bfef40f2433340 MULHOLLAND INT IMG 3A_00.jpg",
-					"filePath": "eba548fa-b5a6-4a41-bbc4-096bfef40f2433340 MULHOLLAND INT IMG 3A_00.jpg"
+					"url": "9d584503-697a-4e47-8678-732278e7b24c33340-mulholland-int-img-11az00.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b4",
-					"url": "139042bc-0531-41ae-862e-2c9dc104bb0833340 MULHOLLAND INT IMG 4A.jpg",
+					"_id": "85b1bff3-4f26-48a3-a1cf-7ddd333e283b",
+					"name": "2b9eb3fa-2b23-4eb7-b3cf-a4ded989c7ff33340-mulholland-int-img-12az00.jpg",
 					"order": 1,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/139042bc-0531-41ae-862e-2c9dc104bb0833340 MULHOLLAND INT IMG 4A.jpg",
-					"filePath": "139042bc-0531-41ae-862e-2c9dc104bb0833340 MULHOLLAND INT IMG 4A.jpg"
+					"url": "2b9eb3fa-2b23-4eb7-b3cf-a4ded989c7ff33340-mulholland-int-img-12az00.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b5",
-					"url": "f2b34d2b-e9d8-4619-8633-3061839a710a33340 MULHOLLAND INT IMG 11A_00.jpg",
+					"_id": "316ab7b7-c12e-4b09-a8f3-c9524a93c26a",
+					"name": "5e923489-92dc-4492-bbf8-0755a84d5dc033340-mulholland-int-img-14a.jpg",
 					"order": 2,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/f2b34d2b-e9d8-4619-8633-3061839a710a33340 MULHOLLAND INT IMG 11A_00.jpg",
-					"filePath": "f2b34d2b-e9d8-4619-8633-3061839a710a33340 MULHOLLAND INT IMG 11A_00.jpg"
+					"url": "5e923489-92dc-4492-bbf8-0755a84d5dc033340-mulholland-int-img-14a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b6",
-					"url": "bb33c46f-5f59-4366-b244-508047ede10d33340 MULHOLLAND INT IMG 12A_00.jpg",
+					"_id": "bcd1713e-5f9f-4d89-a0a5-7ef9780d9c5c",
+					"name": "e36e94b6-3181-45d4-9fdc-2dfafea5c10d33340-mulholland-int-img-16az00.jpg",
 					"order": 3,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/bb33c46f-5f59-4366-b244-508047ede10d33340 MULHOLLAND INT IMG 12A_00.jpg",
-					"filePath": "bb33c46f-5f59-4366-b244-508047ede10d33340 MULHOLLAND INT IMG 12A_00.jpg"
+					"url": "e36e94b6-3181-45d4-9fdc-2dfafea5c10d33340-mulholland-int-img-16az00.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b7",
-					"url": "c11b00b5-eba5-49b2-b8ad-2509f0dbf13333340 MULHOLLAND INT IMG 14A.jpg",
+					"_id": "58683615-0550-48e9-8da7-0c9433329c2a",
+					"name": "b23d38c2-2069-483f-b9d9-ac63f9a16e9f33340-mulholland-int-img-24a.jpg",
 					"order": 4,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/c11b00b5-eba5-49b2-b8ad-2509f0dbf13333340 MULHOLLAND INT IMG 14A.jpg",
-					"filePath": "c11b00b5-eba5-49b2-b8ad-2509f0dbf13333340 MULHOLLAND INT IMG 14A.jpg"
+					"url": "b23d38c2-2069-483f-b9d9-ac63f9a16e9f33340-mulholland-int-img-24a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b8",
-					"url": "09af2a62-cf29-461c-bee4-ac49a28277b433340 MULHOLLAND INT IMG 16A_00.jpg",
+					"_id": "e51a0b84-818b-409e-bd58-4ed59468f168",
+					"name": "ee62df11-4f35-4ec7-8d4b-bc9745a1e66b33340-mulholland-int-img-26a.jpg",
 					"order": 5,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/09af2a62-cf29-461c-bee4-ac49a28277b433340 MULHOLLAND INT IMG 16A_00.jpg",
-					"filePath": "09af2a62-cf29-461c-bee4-ac49a28277b433340 MULHOLLAND INT IMG 16A_00.jpg"
+					"url": "ee62df11-4f35-4ec7-8d4b-bc9745a1e66b33340-mulholland-int-img-26a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6b9",
-					"url": "c8ed4fd0-25d0-41e5-985f-a5883039cdbf33340 MULHOLLAND INT IMG 24A.jpg",
+					"_id": "f6126339-c921-4840-b8c4-591c1f4370d6",
+					"name": "0eb5d3a1-b89e-465f-8b02-6752a119b8a133340-mulholland-int-img-26b.jpg",
 					"order": 6,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/c8ed4fd0-25d0-41e5-985f-a5883039cdbf33340 MULHOLLAND INT IMG 24A.jpg",
-					"filePath": "c8ed4fd0-25d0-41e5-985f-a5883039cdbf33340 MULHOLLAND INT IMG 24A.jpg"
+					"url": "0eb5d3a1-b89e-465f-8b02-6752a119b8a133340-mulholland-int-img-26b.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6ba",
-					"url": "27632c4f-d868-497e-a006-8e1c6055a9ed33340 MULHOLLAND INT IMG 26A.jpg",
+					"_id": "de68a308-ff83-417c-8ce0-f079d74a2c58",
+					"name": "e0861526-f6b9-4280-8bd3-659b4dce014d33340-mulholland-int-img-30a.jpg",
 					"order": 7,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/27632c4f-d868-497e-a006-8e1c6055a9ed33340 MULHOLLAND INT IMG 26A.jpg",
-					"filePath": "27632c4f-d868-497e-a006-8e1c6055a9ed33340 MULHOLLAND INT IMG 26A.jpg"
+					"url": "e0861526-f6b9-4280-8bd3-659b4dce014d33340-mulholland-int-img-30a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6bb",
-					"url": "0341771d-6d63-4677-9e7a-84354198b36833340 MULHOLLAND INT IMG 26B.jpg",
+					"_id": "f741e627-1582-4564-a771-d6476007a860",
+					"name": "79dee839-848d-434c-971a-54aa26fefc5933340-mulholland-int-img-31a.jpg",
 					"order": 8,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/0341771d-6d63-4677-9e7a-84354198b36833340 MULHOLLAND INT IMG 26B.jpg",
-					"filePath": "0341771d-6d63-4677-9e7a-84354198b36833340 MULHOLLAND INT IMG 26B.jpg"
+					"url": "79dee839-848d-434c-971a-54aa26fefc5933340-mulholland-int-img-31a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6bc",
-					"url": "3fdad1b4-5ec6-46dc-bd9f-c13be367118233340 MULHOLLAND INT IMG 30A.jpg",
+					"_id": "6df98c5c-6994-4c21-a091-1ebef15c7fab",
+					"name": "46c2adcc-b071-44d7-bfea-fb4158abb61f33340-mulholland-int-img-34a.jpg",
 					"order": 9,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/3fdad1b4-5ec6-46dc-bd9f-c13be367118233340 MULHOLLAND INT IMG 30A.jpg",
-					"filePath": "3fdad1b4-5ec6-46dc-bd9f-c13be367118233340 MULHOLLAND INT IMG 30A.jpg"
+					"url": "46c2adcc-b071-44d7-bfea-fb4158abb61f33340-mulholland-int-img-34a.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6bd",
-					"url": "bc715f84-4981-4b46-9d12-3d32e364200433340 MULHOLLAND INT IMG 31A.jpg",
+					"_id": "f9e85792-0615-44ee-8f4d-f763c06ad210",
+					"name": "59a192be-f646-4342-a177-9ef2b9fe646833340-mulholland-int-img-34b.jpg",
 					"order": 10,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/bc715f84-4981-4b46-9d12-3d32e364200433340 MULHOLLAND INT IMG 31A.jpg",
-					"filePath": "bc715f84-4981-4b46-9d12-3d32e364200433340 MULHOLLAND INT IMG 31A.jpg"
+					"url": "59a192be-f646-4342-a177-9ef2b9fe646833340-mulholland-int-img-34b.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6be",
-					"url": "20889c8a-3422-480c-a67f-47f5dc99058633340 MULHOLLAND INT IMG 34A.jpg",
+					"_id": "7eabf55b-0001-4e85-a8f7-962e51f4dabc",
+					"name": "947a4f8e-60c3-4cb6-824d-d5b1f56a17c533340-mulholland-int-img-34c.jpg",
 					"order": 11,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/20889c8a-3422-480c-a67f-47f5dc99058633340 MULHOLLAND INT IMG 34A.jpg",
-					"filePath": "20889c8a-3422-480c-a67f-47f5dc99058633340 MULHOLLAND INT IMG 34A.jpg"
+					"url": "947a4f8e-60c3-4cb6-824d-d5b1f56a17c533340-mulholland-int-img-34c.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6bf",
-					"url": "a292fa80-2cef-4489-b06e-64073955b07e33340 MULHOLLAND INT IMG 34B.jpg",
+					"_id": "9d13a461-90d7-4127-addd-53355b5b28db",
+					"name": "e918bc50-aaa9-4e8e-ae48-128d7e2e462a33340-mulholland-int-img-3az00.jpg",
 					"order": 12,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/a292fa80-2cef-4489-b06e-64073955b07e33340 MULHOLLAND INT IMG 34B.jpg",
-					"filePath": "a292fa80-2cef-4489-b06e-64073955b07e33340 MULHOLLAND INT IMG 34B.jpg"
+					"url": "e918bc50-aaa9-4e8e-ae48-128d7e2e462a33340-mulholland-int-img-3az00.jpg"
 				},
 				{
-					"_id": "622ea6132ffdd2dd79eee6c0",
-					"url": "ac4c008f-362c-43ba-96e7-0e50157c097a33340 MULHOLLAND INT IMG 34C.jpg",
+					"_id": "613eef1b-606a-4967-9581-f3e818d09050",
+					"name": "026a3402-51a9-4a17-bd4f-11b72058efbe33340-mulholland-int-img-4a.jpg",
 					"order": 13,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/ac4c008f-362c-43ba-96e7-0e50157c097a33340 MULHOLLAND INT IMG 34C.jpg",
-					"filePath": "ac4c008f-362c-43ba-96e7-0e50157c097a33340 MULHOLLAND INT IMG 34C.jpg"
+					"url": "026a3402-51a9-4a17-bd4f-11b72058efbe33340-mulholland-int-img-4a.jpg"
 				}
 			],
 			"type": "page-carousels"
@@ -1461,25 +1370,22 @@
 			"category": "62198b33f38911e118d08032",
 			"images": [
 				{
-					"_id": "6233feca2048caba8a6aff72",
-					"url": "c82aaa07-8840-4d41-a987-d2f20903ed4b33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
+					"_id": "4d80677c-bd1a-4376-8cd0-c76f9ef74a9e",
+					"name": "250547f6-0d08-48d5-85f4-ae0f0e51092e33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/c82aaa07-8840-4d41-a987-d2f20903ed4b33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg",
-					"filePath": "c82aaa07-8840-4d41-a987-d2f20903ed4b33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg"
+					"url": "250547f6-0d08-48d5-85f4-ae0f0e51092e33340 Mullholland Hwy_1ST FLOOR  BLACK 20211001.jpg"
 				},
 				{
-					"_id": "6233feca2048caba8a6aff73",
-					"url": "2a5df5f0-4c59-4639-970c-b4c8810d157c33340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
+					"_id": "b3ecaeac-4280-4644-bb0b-6b93b2befc76",
+					"name": "eb86490a-7dc7-4e6e-ae2b-23795da395f433340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
 					"order": 1,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/2a5df5f0-4c59-4639-970c-b4c8810d157c33340 Mullholland Hwy_2ND FLOOR 20211001.jpg",
-					"filePath": "2a5df5f0-4c59-4639-970c-b4c8810d157c33340 Mullholland Hwy_2ND FLOOR 20211001.jpg"
+					"url": "eb86490a-7dc7-4e6e-ae2b-23795da395f433340 Mullholland Hwy_2ND FLOOR 20211001.jpg"
 				},
 				{
-					"_id": "6233feca2048caba8a6aff74",
-					"url": "bcfcae77-4b62-4bfa-b5ed-1b9388eb1cac33340 Mullholland Hwy_SITE PLAN.jpg",
+					"_id": "ed0daa80-a165-444e-9d1a-5712eac72dac",
+					"name": "9b38abf4-94a9-40c5-86e3-603dbccd9a8733340 Mullholland Hwy_SITE PLAN.jpg",
 					"order": 2,
-					"old_url": "http://localhost:8080/mock-bb-storage/page-carousels/bcfcae77-4b62-4bfa-b5ed-1b9388eb1cac33340 Mullholland Hwy_SITE PLAN.jpg",
-					"filePath": "bcfcae77-4b62-4bfa-b5ed-1b9388eb1cac33340 Mullholland Hwy_SITE PLAN.jpg"
+					"url": "9b38abf4-94a9-40c5-86e3-603dbccd9a8733340 Mullholland Hwy_SITE PLAN.jpg"
 				}
 			],
 			"type": "page-carousels"
@@ -1491,11 +1397,10 @@
 			"category": "62198acfee737dc5b139ea71",
 			"images": [
 				{
-					"_id": "622ea5d52ffdd2dd79eee6a4",
-					"url": "ec33710e-e62c-4d28-bcdb-631c1c447cfbbg3.jpg",
+					"_id": "91fc43d7-393e-43cc-b22d-d7d6ab5adb9d",
+					"name": "9c215015-d9a9-45a2-87b3-204c44a4761abg3.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/ec33710e-e62c-4d28-bcdb-631c1c447cfbbg3.jpg",
-					"filePath": "ec33710e-e62c-4d28-bcdb-631c1c447cfbbg3.jpg"
+					"url": "9c215015-d9a9-45a2-87b3-204c44a4761abg3.jpg"
 				}
 			],
 			"type": "bg-pages"
@@ -1507,11 +1412,10 @@
 			"category": "621ae8462b5171ada3bf1987",
 			"images": [
 				{
-					"_id": "622ea5df2ffdd2dd79eee6a5",
-					"url": "159f6aef-9c6d-4c03-ac17-5ee62635ccb1bg4.jpg",
+					"_id": "a70a0d3f-ead4-4ded-bf1d-0c865a1443ff",
+					"name": "a2e182ac-d1df-47ec-922e-9e29d6f79ac1bg4.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/159f6aef-9c6d-4c03-ac17-5ee62635ccb1bg4.jpg",
-					"filePath": "159f6aef-9c6d-4c03-ac17-5ee62635ccb1bg4.jpg"
+					"url": "a2e182ac-d1df-47ec-922e-9e29d6f79ac1bg4.jpg"
 				}
 			],
 			"video_url": "https://youtu.be/nTS10ZQM5Ms",
@@ -1526,82 +1430,82 @@
 				{
 					"images": [
 						{
-							"_id": "6233fead2048caba8a6aff46",
-							"url": "http://localhost:8080/mock-bb-storage/bts/241fba82-f567-42ca-b7cd-22b3e9e1a4092021.05.29 roof 2.jpg",
+							"_id": "1cfd4ebb-9ff6-434e-b0e2-fdd0b2feb2f3",
+							"name": "91d31d62-9598-4978-963d-11c678e39bfb2021.05.29 roof 2.jpg",
 							"order": 0,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/241fba82-f567-42ca-b7cd-22b3e9e1a4092021.05.29 roof 2.jpg"
+							"url": "91d31d62-9598-4978-963d-11c678e39bfb2021.05.29 roof 2.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff47",
-							"url": "http://localhost:8080/mock-bb-storage/bts/52f85f99-e8dd-48c8-af95-23f0656e7209Amit and Russel.jpg",
+							"_id": "ed13afab-4c66-47f0-9c06-b7196b5c1922",
+							"name": "93cc9254-ce78-4764-b60f-7eb078a3698aAmit and Russel.jpg",
 							"order": 1,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/52f85f99-e8dd-48c8-af95-23f0656e7209Amit and Russel.jpg"
+							"url": "93cc9254-ce78-4764-b60f-7eb078a3698aAmit and Russel.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff48",
-							"url": "http://localhost:8080/mock-bb-storage/bts/a353aa24-aac8-485a-936f-7ceebc04ec27Bike.jpg",
+							"_id": "adf8debd-6fb9-4cd2-b127-ed8483a64149",
+							"name": "5886c586-bc68-4833-927d-812e451d44eaBike.jpg",
 							"order": 2,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/a353aa24-aac8-485a-936f-7ceebc04ec27Bike.jpg"
+							"url": "5886c586-bc68-4833-927d-812e451d44eaBike.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff49",
-							"url": "http://localhost:8080/mock-bb-storage/bts/06479f2c-6a30-4ea9-9b00-3826d7807fc2circle window with pendant light.jpg",
+							"_id": "d66355cb-0650-401e-820f-a4082d49b951",
+							"name": "c6ae1854-5aa6-43f0-b066-baf886582db3circle window with pendant light.jpg",
 							"order": 3,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/06479f2c-6a30-4ea9-9b00-3826d7807fc2circle window with pendant light.jpg"
+							"url": "c6ae1854-5aa6-43f0-b066-baf886582db3circle window with pendant light.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b70f9147-1110-42da-b7b0-2d4e94595f7adining room discussion.jpg",
+							"_id": "c62480d7-6108-4b6d-9d7f-eb421244671b",
+							"name": "fc9296b9-5baf-4296-92b3-d9736823c36cdining room discussion.jpg",
 							"order": 4,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b70f9147-1110-42da-b7b0-2d4e94595f7adining room discussion.jpg"
+							"url": "fc9296b9-5baf-4296-92b3-d9736823c36cdining room discussion.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/4db1682f-8066-4f34-aa50-3a9483e990efelectrical 2.jpg",
+							"_id": "cf5e33ad-aaf9-4611-b890-5f81915d8770",
+							"name": "770f7ba4-6c46-418f-a2d8-b2d5ffdcb4f0electrical 2.jpg",
 							"order": 5,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/4db1682f-8066-4f34-aa50-3a9483e990efelectrical 2.jpg"
+							"url": "770f7ba4-6c46-418f-a2d8-b2d5ffdcb4f0electrical 2.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/5b31d925-9ba2-41e0-ae58-d5e1b0c02d23electrical discussion.jpg",
+							"_id": "b996c071-2e04-4858-8f30-0d948b798119",
+							"name": "d0fde967-1db5-47dd-b191-96e433ed92a5electrical discussion.jpg",
 							"order": 6,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/5b31d925-9ba2-41e0-ae58-d5e1b0c02d23electrical discussion.jpg"
+							"url": "d0fde967-1db5-47dd-b191-96e433ed92a5electrical discussion.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b368905a-8104-4ca0-bb1d-5a47893a3ee4framing discussion.jpg",
+							"_id": "52f3c349-9e12-47c7-b282-cc29d6e70ba1",
+							"name": "bba820a3-a35f-4b55-bbef-a8d3ea402050framing discussion.jpg",
 							"order": 7,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b368905a-8104-4ca0-bb1d-5a47893a3ee4framing discussion.jpg"
+							"url": "bba820a3-a35f-4b55-bbef-a8d3ea402050framing discussion.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/a29e5cef-fd02-4e91-9da4-a7be77ec1203Framing.jpg",
+							"_id": "d050cbab-4d15-4e89-9d2a-7e62f63fe9ea",
+							"name": "740f531e-144a-461b-8fbb-0794093eafb9Framing.jpg",
 							"order": 8,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/a29e5cef-fd02-4e91-9da4-a7be77ec1203Framing.jpg"
+							"url": "740f531e-144a-461b-8fbb-0794093eafb9Framing.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff4f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/31f5c36f-4dc0-4766-8499-04ee5e498fe6Humming Bird.jpg",
+							"_id": "43bb892c-be91-48b9-a3b7-8206c52a7ecf",
+							"name": "ca27a253-992f-4b3f-b61f-929171f34af0Humming Bird.jpg",
 							"order": 9,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/31f5c36f-4dc0-4766-8499-04ee5e498fe6Humming Bird.jpg"
+							"url": "ca27a253-992f-4b3f-b61f-929171f34af0Humming Bird.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff50",
-							"url": "http://localhost:8080/mock-bb-storage/bts/e65f5dfc-695d-4d8c-a7c2-aa378ba8b8d2kitchen discussion 2.jpg",
+							"_id": "ef0fee67-a694-433e-9e56-8eaec01baa94",
+							"name": "db3323a1-4bfe-4580-b0b3-f2ec30f3a43bkitchen discussion 2.jpg",
 							"order": 10,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/e65f5dfc-695d-4d8c-a7c2-aa378ba8b8d2kitchen discussion 2.jpg"
+							"url": "db3323a1-4bfe-4580-b0b3-f2ec30f3a43bkitchen discussion 2.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff51",
-							"url": "http://localhost:8080/mock-bb-storage/bts/333043da-e337-4d34-98e6-7c713e58a64ekitchen discussion 3.jpg",
+							"_id": "5eeb6774-e427-493c-a882-1df63c546f95",
+							"name": "897819f0-bcdb-4313-8077-9fddec8f8599kitchen discussion 3.jpg",
 							"order": 11,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/333043da-e337-4d34-98e6-7c713e58a64ekitchen discussion 3.jpg"
+							"url": "897819f0-bcdb-4313-8077-9fddec8f8599kitchen discussion 3.jpg"
 						},
 						{
-							"_id": "6233fead2048caba8a6aff52",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b71d7963-2a94-4fc7-8316-2c005aefdf69kitchen discussion.jpg",
+							"_id": "56546506-8b2f-4ef0-86a8-3384a494d9d0",
+							"name": "5b83f8e3-b5fb-4858-a7c8-774aa23c5a3dkitchen discussion.jpg",
 							"order": 12,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b71d7963-2a94-4fc7-8316-2c005aefdf69kitchen discussion.jpg"
+							"url": "5b83f8e3-b5fb-4858-a7c8-774aa23c5a3dkitchen discussion.jpg"
 						}
 					],
 					"phase": 1
@@ -1609,190 +1513,190 @@
 				{
 					"images": [
 						{
-							"_id": "6233feb72048caba8a6aff53",
-							"url": "http://localhost:8080/mock-bb-storage/bts/65cbf366-5770-4b83-ab1a-21c498546b590.jpg",
+							"_id": "c1d7eac0-f6bd-42bc-8d85-dffcf677f1a1",
+							"name": "c909dcfb-ac6e-4727-9189-fb280a861b300.jpg",
 							"order": 0,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/65cbf366-5770-4b83-ab1a-21c498546b590.jpg"
+							"url": "c909dcfb-ac6e-4727-9189-fb280a861b300.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff54",
-							"url": "http://localhost:8080/mock-bb-storage/bts/98b9eb6b-1cd3-47c2-a6e9-b1b78e9d832302.jpg",
+							"_id": "fc700d1e-6c2b-4519-92ca-0114eddca70f",
+							"name": "430b710b-92aa-4096-a81c-5712340226ab02.jpg",
 							"order": 1,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/98b9eb6b-1cd3-47c2-a6e9-b1b78e9d832302.jpg"
+							"url": "430b710b-92aa-4096-a81c-5712340226ab02.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff55",
-							"url": "http://localhost:8080/mock-bb-storage/bts/0d9b78a4-e658-4f32-b51d-4924d702db6803.jpg",
+							"_id": "ffd64c3a-24a0-45c5-817c-56d8411f41f7",
+							"name": "5af6fa96-6ceb-4ca0-a895-0f1fb4ce8f8e03.jpg",
 							"order": 2,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/0d9b78a4-e658-4f32-b51d-4924d702db6803.jpg"
+							"url": "5af6fa96-6ceb-4ca0-a895-0f1fb4ce8f8e03.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff56",
-							"url": "http://localhost:8080/mock-bb-storage/bts/52103ecf-51d9-41d9-b9c5-9194fe9f166d04.jpg",
+							"_id": "5ad24b07-2190-4832-ab54-2fb090fdcf50",
+							"name": "183874dd-6783-45a3-9cc7-aec95d80b4ff04.jpg",
 							"order": 3,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/52103ecf-51d9-41d9-b9c5-9194fe9f166d04.jpg"
+							"url": "183874dd-6783-45a3-9cc7-aec95d80b4ff04.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff57",
-							"url": "http://localhost:8080/mock-bb-storage/bts/525718e7-bbc6-4e86-bac9-dd31fdd5a2a505.jpg",
+							"_id": "cf10a2c0-961b-41ae-ad54-f8b718446893",
+							"name": "ee333b84-3c0b-4677-bb90-5dd67af3d6e505.jpg",
 							"order": 4,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/525718e7-bbc6-4e86-bac9-dd31fdd5a2a505.jpg"
+							"url": "ee333b84-3c0b-4677-bb90-5dd67af3d6e505.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff58",
-							"url": "http://localhost:8080/mock-bb-storage/bts/37f514eb-fe32-4227-9748-c5b125db0ad206.jpg",
+							"_id": "d7967703-a634-42db-b60a-f50a8a44e555",
+							"name": "4c2ac560-75d0-4f4e-a4d2-2d038da2fe7f06.jpg",
 							"order": 5,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/37f514eb-fe32-4227-9748-c5b125db0ad206.jpg"
+							"url": "4c2ac560-75d0-4f4e-a4d2-2d038da2fe7f06.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff59",
-							"url": "http://localhost:8080/mock-bb-storage/bts/a402a108-aead-4902-afe9-93524456a80b07.jpg",
+							"_id": "f7f7efc5-6604-404d-a51d-31eb59f1c70e",
+							"name": "7840bbdd-978d-42f4-a499-cedf4a32ebdc07.jpg",
 							"order": 6,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/a402a108-aead-4902-afe9-93524456a80b07.jpg"
+							"url": "7840bbdd-978d-42f4-a499-cedf4a32ebdc07.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/1c14d9d9-1fb5-4a9b-8a83-9e05d015a7da08.jpg",
+							"_id": "b144afa1-fe37-49b6-af84-d7658b3b9631",
+							"name": "55067cdd-d98f-4e37-bbf4-0dc0dea58d3108.jpg",
 							"order": 7,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/1c14d9d9-1fb5-4a9b-8a83-9e05d015a7da08.jpg"
+							"url": "55067cdd-d98f-4e37-bbf4-0dc0dea58d3108.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/72705ed2-5321-42e7-9d62-56dcbdfd3b3909.jpg",
+							"_id": "f5eeb5f1-88eb-41cf-baec-412f0871a5da",
+							"name": "11e322f0-154f-47b2-82ac-385635f230c609.jpg",
 							"order": 8,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/72705ed2-5321-42e7-9d62-56dcbdfd3b3909.jpg"
+							"url": "11e322f0-154f-47b2-82ac-385635f230c609.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/7bb7bc96-4ce0-4fe7-838d-9df14cde80c7010.jpg",
+							"_id": "c78eb62a-c055-4b0a-aec1-2a368cb29238",
+							"name": "a09ccab0-5587-4fe3-81e4-44c9415c394c010.jpg",
 							"order": 9,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/7bb7bc96-4ce0-4fe7-838d-9df14cde80c7010.jpg"
+							"url": "a09ccab0-5587-4fe3-81e4-44c9415c394c010.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/f2aff87b-3c51-4cf1-87e9-91ac7e16032c011.jpg",
+							"_id": "8c3ebadd-ce38-4dff-823b-98af318847f8",
+							"name": "2ea6d24b-4f34-49d9-a907-d79f55cca1ca011.jpg",
 							"order": 10,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/f2aff87b-3c51-4cf1-87e9-91ac7e16032c011.jpg"
+							"url": "2ea6d24b-4f34-49d9-a907-d79f55cca1ca011.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/88e8cbc6-303d-4745-9a4f-b14bdaef6dd0012.jpg",
+							"_id": "a584daca-2f26-4dde-ac1c-8f5d8604e1ff",
+							"name": "4cfdba8e-2181-4d59-b827-354300139700012.jpg",
 							"order": 11,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/88e8cbc6-303d-4745-9a4f-b14bdaef6dd0012.jpg"
+							"url": "4cfdba8e-2181-4d59-b827-354300139700012.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff5f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/1dfd54f7-e04d-418e-8f1a-26e1ad13db84013.jpg",
+							"_id": "510f71a6-c8aa-4df8-b2f4-842c7a9ff43f",
+							"name": "8cc3c226-bdcb-455d-b11f-6069dc5d0d9d013.jpg",
 							"order": 12,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/1dfd54f7-e04d-418e-8f1a-26e1ad13db84013.jpg"
+							"url": "8cc3c226-bdcb-455d-b11f-6069dc5d0d9d013.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff60",
-							"url": "http://localhost:8080/mock-bb-storage/bts/19be42ec-76c1-45ab-a4d6-da7984fac65a014.jpg",
+							"_id": "265863dc-95b7-4c89-b78c-a729a4359504",
+							"name": "217530b9-950e-48a4-8f68-307f65bf4a0c014.jpg",
 							"order": 13,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/19be42ec-76c1-45ab-a4d6-da7984fac65a014.jpg"
+							"url": "217530b9-950e-48a4-8f68-307f65bf4a0c014.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff61",
-							"url": "http://localhost:8080/mock-bb-storage/bts/5702e04a-ef3b-45a6-9ab3-474bf312a84a15.jpg",
+							"_id": "b636fe3f-6df5-4140-bedd-5ddcc16c4306",
+							"name": "f26c7611-054a-4c25-8602-6288b2489b1715.jpg",
 							"order": 14,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/5702e04a-ef3b-45a6-9ab3-474bf312a84a15.jpg"
+							"url": "f26c7611-054a-4c25-8602-6288b2489b1715.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff62",
-							"url": "http://localhost:8080/mock-bb-storage/bts/e56488df-e7c8-4703-9a40-a79c27f9311616.jpg",
+							"_id": "8031df8d-7c6d-4b21-a8c3-8f130cede52b",
+							"name": "4dc7b2b8-5481-4063-a7f0-353e63519a2c16.jpg",
 							"order": 15,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/e56488df-e7c8-4703-9a40-a79c27f9311616.jpg"
+							"url": "4dc7b2b8-5481-4063-a7f0-353e63519a2c16.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff63",
-							"url": "http://localhost:8080/mock-bb-storage/bts/2657ca72-8af3-4c09-a4ae-562532fd798517.jpg",
+							"_id": "6c525a5e-e623-49eb-b29f-d82730995273",
+							"name": "13b2980e-b82e-4ed0-8f37-75f056ea8a1517.jpg",
 							"order": 16,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/2657ca72-8af3-4c09-a4ae-562532fd798517.jpg"
+							"url": "13b2980e-b82e-4ed0-8f37-75f056ea8a1517.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff64",
-							"url": "http://localhost:8080/mock-bb-storage/bts/fc74242d-e514-49b7-9503-e25c9691330e18.jpg",
+							"_id": "ac1e7913-dcc1-42a7-99a9-e5d218d60a42",
+							"name": "db64a2b5-e7de-42e5-b272-d02975c531b418.jpg",
 							"order": 17,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/fc74242d-e514-49b7-9503-e25c9691330e18.jpg"
+							"url": "db64a2b5-e7de-42e5-b272-d02975c531b418.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff65",
-							"url": "http://localhost:8080/mock-bb-storage/bts/c7d871bc-7d0e-4a99-acca-4880f66b7e3f19.jpg",
+							"_id": "95001c90-1e2f-47bb-8a98-2e915cda72a2",
+							"name": "142573f2-fc29-42a8-b18a-dc9c36d92e4219.jpg",
 							"order": 18,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/c7d871bc-7d0e-4a99-acca-4880f66b7e3f19.jpg"
+							"url": "142573f2-fc29-42a8-b18a-dc9c36d92e4219.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff66",
-							"url": "http://localhost:8080/mock-bb-storage/bts/ee67cefd-feee-4a6a-87d7-f10432f2411a20.jpg",
+							"_id": "4879829b-233d-4f38-bea9-121e57618a20",
+							"name": "8552da76-68b7-41fc-9da3-a160cf7d505420.jpg",
 							"order": 19,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/ee67cefd-feee-4a6a-87d7-f10432f2411a20.jpg"
+							"url": "8552da76-68b7-41fc-9da3-a160cf7d505420.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff67",
-							"url": "http://localhost:8080/mock-bb-storage/bts/4e4c99cd-6866-4f5a-9074-601644ae393f21.jpg",
+							"_id": "e29b2876-d6e4-459c-9163-12477962d853",
+							"name": "e6a620e1-c551-4273-8f7a-f7bb5d785dbb21.jpg",
 							"order": 20,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/4e4c99cd-6866-4f5a-9074-601644ae393f21.jpg"
+							"url": "e6a620e1-c551-4273-8f7a-f7bb5d785dbb21.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff68",
-							"url": "http://localhost:8080/mock-bb-storage/bts/88d851ab-5eab-4fa9-acce-b3f9facc2db022.jpg",
+							"_id": "9d739007-badf-428f-8981-f9a0641d4d12",
+							"name": "9274b4a9-830d-453f-aa35-6d5c9cd5c40c22.jpg",
 							"order": 21,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/88d851ab-5eab-4fa9-acce-b3f9facc2db022.jpg"
+							"url": "9274b4a9-830d-453f-aa35-6d5c9cd5c40c22.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff69",
-							"url": "http://localhost:8080/mock-bb-storage/bts/dfb9e2c9-7bae-4f21-95e8-83490004445d23.jpg",
+							"_id": "4d87db9e-c772-49e4-b519-936cba87f00f",
+							"name": "b1c8c3b6-ef34-42d2-882c-f57a54876dee23.jpg",
 							"order": 22,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/dfb9e2c9-7bae-4f21-95e8-83490004445d23.jpg"
+							"url": "b1c8c3b6-ef34-42d2-882c-f57a54876dee23.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/a8cd3f8a-8148-4921-9a25-5ed98b031b6024.jpg",
+							"_id": "e47a2388-6431-4b47-bb68-6dd1523021cf",
+							"name": "55646201-946d-46cf-9d9e-444a0daf103824.jpg",
 							"order": 23,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/a8cd3f8a-8148-4921-9a25-5ed98b031b6024.jpg"
+							"url": "55646201-946d-46cf-9d9e-444a0daf103824.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/2a8786d8-382d-47b8-8a77-f6551be34f6725.jpg",
+							"_id": "8eb6248d-586e-4d41-a594-eea10d147e39",
+							"name": "485d8e18-32f9-4989-ac75-acfd45c4d64025.jpg",
 							"order": 24,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/2a8786d8-382d-47b8-8a77-f6551be34f6725.jpg"
+							"url": "485d8e18-32f9-4989-ac75-acfd45c4d64025.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/461d6e6a-4740-48e5-90e8-c71800b116df26.jpg",
+							"_id": "222af2d4-014a-419b-97fa-c3907cb1519f",
+							"name": "2f5a1ad7-14e3-4070-964d-6b6e25a7584626.jpg",
 							"order": 25,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/461d6e6a-4740-48e5-90e8-c71800b116df26.jpg"
+							"url": "2f5a1ad7-14e3-4070-964d-6b6e25a7584626.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/63790d1b-4094-4d30-ad73-1e5efb88187727.jpg",
+							"_id": "55768a9d-029b-427e-bcf4-e18d9d7f76cb",
+							"name": "a3f751a6-fe38-43e5-97c3-865684b74c5a27.jpg",
 							"order": 26,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/63790d1b-4094-4d30-ad73-1e5efb88187727.jpg"
+							"url": "a3f751a6-fe38-43e5-97c3-865684b74c5a27.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/0e4b5c27-7249-4df4-8fb5-dbe9fcdf196c28.jpg",
+							"_id": "3f22c795-5f7b-4ab9-a7ab-83f72d9ec153",
+							"name": "158345fc-2869-4988-b7ee-a5fc9904231628.jpg",
 							"order": 27,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/0e4b5c27-7249-4df4-8fb5-dbe9fcdf196c28.jpg"
+							"url": "158345fc-2869-4988-b7ee-a5fc9904231628.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff6f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/2c398a69-7c3e-4eba-b2eb-a60dfe643f0d29.jpg",
+							"_id": "604f5ae7-7c05-40b1-b555-9adb835480b3",
+							"name": "6eca35ba-7807-4f1d-bf39-4dc644c0034429.jpg",
 							"order": 28,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/2c398a69-7c3e-4eba-b2eb-a60dfe643f0d29.jpg"
+							"url": "6eca35ba-7807-4f1d-bf39-4dc644c0034429.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff70",
-							"url": "http://localhost:8080/mock-bb-storage/bts/84de1827-3955-430d-87e4-4584a531ec3a30.jpg",
+							"_id": "a4fbd26c-63a7-4a57-bb23-7e272ee5b5b4",
+							"name": "f6557208-c5a4-4123-af41-30d4438b79de30.jpg",
 							"order": 29,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/84de1827-3955-430d-87e4-4584a531ec3a30.jpg"
+							"url": "f6557208-c5a4-4123-af41-30d4438b79de30.jpg"
 						},
 						{
-							"_id": "6233feb72048caba8a6aff71",
-							"url": "http://localhost:8080/mock-bb-storage/bts/861dca87-ac87-4001-a30f-855147076b5d31.jpg",
+							"_id": "d3f72758-2294-4861-a1d2-6d12495fc131",
+							"name": "f627f651-2207-4fad-b041-7d02b1b0a4c231.jpg",
 							"order": 30,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/861dca87-ac87-4001-a30f-855147076b5d31.jpg"
+							"url": "f627f651-2207-4fad-b041-7d02b1b0a4c231.jpg"
 						}
 					],
 					"phase": 2
@@ -1800,340 +1704,340 @@
 				{
 					"images": [
 						{
-							"_id": "627aecc7caa55ea72f6f8a35",
-							"url": "http://localhost:8080/mock-bb-storage/bts/3a021bec-52db-4a01-8264-eee7f7f1642b1C1FAFC5-38F5-4B0F-89A6-DC880B74E61D.jpeg",
+							"_id": "940ce299-6e6b-4dbc-87b2-3fc59900aadc",
+							"name": "e7b3d17c-e0b4-446f-8966-f8d8737017de01805b4f-a972-497c-a745-86322fd7a580.jpg",
 							"order": 0,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/3a021bec-52db-4a01-8264-eee7f7f1642b1C1FAFC5-38F5-4B0F-89A6-DC880B74E61D.jpeg"
+							"url": "e7b3d17c-e0b4-446f-8966-f8d8737017de01805b4f-a972-497c-a745-86322fd7a580.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a36",
-							"url": "http://localhost:8080/mock-bb-storage/bts/a064dc25-09b1-4c84-acf1-7e59c0fd36e41F438813-682E-4392-AF2B-8B44E0D8BB6B.jpeg",
+							"_id": "47bb116e-ff4e-4593-bb67-21fa7111ca69",
+							"name": "a7b015a8-cba6-42db-a9a4-08063cb09a0c1014d67f-4661-45fe-ba2e-0b22e77ce7de.jpg",
 							"order": 1,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/a064dc25-09b1-4c84-acf1-7e59c0fd36e41F438813-682E-4392-AF2B-8B44E0D8BB6B.jpeg"
+							"url": "a7b015a8-cba6-42db-a9a4-08063cb09a0c1014d67f-4661-45fe-ba2e-0b22e77ce7de.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a37",
-							"url": "http://localhost:8080/mock-bb-storage/bts/2c012ad9-056f-49f8-b637-3055fbfbfef17E4652EE-524F-49C7-9E42-5510F8449C62.jpeg",
+							"_id": "28aedd19-a9bb-4741-bb23-8daca2e18198",
+							"name": "b9f5fba7-01f6-43af-8c22-f34f62b607f51026472a-063b-4335-9111-34d2637da1e1.jpg",
 							"order": 2,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/2c012ad9-056f-49f8-b637-3055fbfbfef17E4652EE-524F-49C7-9E42-5510F8449C62.jpeg"
+							"url": "b9f5fba7-01f6-43af-8c22-f34f62b607f51026472a-063b-4335-9111-34d2637da1e1.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a38",
-							"url": "http://localhost:8080/mock-bb-storage/bts/382972a5-98a2-41df-a8d5-9c6af82d9ed18C1523A5-DB30-4EE8-9262-FEE58DF74861.jpeg",
+							"_id": "d6363875-fbcd-4216-9a51-c832ff3f7e21",
+							"name": "9afe2a3b-1fae-48fa-8bd2-cd771b2172561c1fafc5-38f5-4b0f-89a6-dc880b74e61d.jpg",
 							"order": 3,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/382972a5-98a2-41df-a8d5-9c6af82d9ed18C1523A5-DB30-4EE8-9262-FEE58DF74861.jpeg"
+							"url": "9afe2a3b-1fae-48fa-8bd2-cd771b2172561c1fafc5-38f5-4b0f-89a6-dc880b74e61d.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a39",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b8c78993-893e-4079-9f8e-55ee68da2ef39A3F5A35-9BEE-4D37-83FD-96D0C23DD30C.jpeg",
+							"_id": "181b5da7-25fc-440d-81ce-5bc243d94eb8",
+							"name": "f2205e3f-ca3f-4c35-8c84-10588a393fdf1f438813-682e-4392-af2b-8b44e0d8bb6b.jpg",
 							"order": 4,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b8c78993-893e-4079-9f8e-55ee68da2ef39A3F5A35-9BEE-4D37-83FD-96D0C23DD30C.jpeg"
+							"url": "f2205e3f-ca3f-4c35-8c84-10588a393fdf1f438813-682e-4392-af2b-8b44e0d8bb6b.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/4a7cdc81-b3af-404d-89c9-c8b1c0ff616d9CCF92A0-C158-4825-A458-6CD6FB52B55A.jpeg",
+							"_id": "749a195b-6663-4169-a9e2-cf911ac32bde",
+							"name": "bfd9d32c-3d1f-4528-b40f-fb6914c8323524d9fefa-1716-4dfe-bf6e-2c79fdf51f73.jpg",
 							"order": 5,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/4a7cdc81-b3af-404d-89c9-c8b1c0ff616d9CCF92A0-C158-4825-A458-6CD6FB52B55A.jpeg"
+							"url": "bfd9d32c-3d1f-4528-b40f-fb6914c8323524d9fefa-1716-4dfe-bf6e-2c79fdf51f73.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/8e68cb5d-3e7e-4432-85e8-911fe9be1fbb24D9FEFA-1716-4DFE-BF6E-2C79FDF51F73.jpeg",
+							"_id": "9696834a-7f09-4b6b-937a-b4769503dcff",
+							"name": "a5ef03e3-688c-4b53-8516-0e294df0771527808528-140e-4d92-a6f2-87bb1a142353.jpg",
 							"order": 6,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/8e68cb5d-3e7e-4432-85e8-911fe9be1fbb24D9FEFA-1716-4DFE-BF6E-2C79FDF51F73.jpeg"
+							"url": "a5ef03e3-688c-4b53-8516-0e294df0771527808528-140e-4d92-a6f2-87bb1a142353.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/30f86004-28c7-4c93-bd06-6e4016bd8e2b28DBEAD7-F6E8-4B66-BE55-CBBBD92D3044.jpeg",
+							"_id": "91c69f57-6646-4ab3-893b-171f6a094d72",
+							"name": "14b6313c-4fb3-4cda-a63e-ae9f055af49c28dbead7-f6e8-4b66-be55-cbbbd92d3044.jpg",
 							"order": 7,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/30f86004-28c7-4c93-bd06-6e4016bd8e2b28DBEAD7-F6E8-4B66-BE55-CBBBD92D3044.jpeg"
+							"url": "14b6313c-4fb3-4cda-a63e-ae9f055af49c28dbead7-f6e8-4b66-be55-cbbbd92d3044.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/42fa0804-1c7a-4f86-b9a5-e2c8f8baed3239C662B8-3A5D-4E21-AE5D-B92126ABD556.jpeg",
+							"_id": "e5e6275b-0370-48b6-b69e-ee6d39c5b25d",
+							"name": "ed020acb-c554-49e2-8dbd-7ddb10fa1c17353d44d5-00fe-4fe7-80ca-293dcfdaffdf.jpg",
 							"order": 8,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/42fa0804-1c7a-4f86-b9a5-e2c8f8baed3239C662B8-3A5D-4E21-AE5D-B92126ABD556.jpeg"
+							"url": "ed020acb-c554-49e2-8dbd-7ddb10fa1c17353d44d5-00fe-4fe7-80ca-293dcfdaffdf.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/311809f1-6e0b-4db6-9fd1-098f51fde76149D0E5DF-A200-4E8B-853F-622A0C21A9C0.jpeg",
+							"_id": "36e2f0d2-babe-4fa8-a620-ae06503a0353",
+							"name": "2fb14d1a-996b-4165-9d05-56443dbf872039c662b8-3a5d-4e21-ae5d-b92126abd556.jpg",
 							"order": 9,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/311809f1-6e0b-4db6-9fd1-098f51fde76149D0E5DF-A200-4E8B-853F-622A0C21A9C0.jpeg"
+							"url": "2fb14d1a-996b-4165-9d05-56443dbf872039c662b8-3a5d-4e21-ae5d-b92126abd556.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a3f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/188fda6b-be34-4d47-b78f-7fdb8ab2860251BED95B-64E0-4F98-8005-248F3CD3437B.jpeg",
+							"_id": "7c894f5c-3fb4-4358-b089-2a4b7c3a6e6e",
+							"name": "60c0be1c-4d82-488c-8b60-587ed01ad2ed4079c79e-e860-443f-8c8f-d107d37aaff5.jpg",
 							"order": 10,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/188fda6b-be34-4d47-b78f-7fdb8ab2860251BED95B-64E0-4F98-8005-248F3CD3437B.jpeg"
+							"url": "60c0be1c-4d82-488c-8b60-587ed01ad2ed4079c79e-e860-443f-8c8f-d107d37aaff5.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a40",
-							"url": "http://localhost:8080/mock-bb-storage/bts/af38f74f-5074-46bf-aa4d-8bcdb9bf69ac61FED3A4-C248-4DD4-9C29-FC909E4AF88D.jpeg",
+							"_id": "eb3c01dd-c568-4e5b-8f47-7ea6c4d85c5c",
+							"name": "6ca44bf0-d1bc-4e4e-91c0-73331c74391f41199c0f-9447-4e14-b2f5-df3416a86d41.jpg",
 							"order": 11,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/af38f74f-5074-46bf-aa4d-8bcdb9bf69ac61FED3A4-C248-4DD4-9C29-FC909E4AF88D.jpeg"
+							"url": "6ca44bf0-d1bc-4e4e-91c0-73331c74391f41199c0f-9447-4e14-b2f5-df3416a86d41.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a41",
-							"url": "http://localhost:8080/mock-bb-storage/bts/d2306e70-ccc0-47ef-8975-aab9220447ca88A29673-030A-4FCB-B5C0-147767589AD0.jpeg",
+							"_id": "556a3ee0-d298-4c2e-9e6c-6d89c78db57f",
+							"name": "17b6c7a0-5dd7-4dee-803f-9a6b62030414488a7221-355b-4612-9647-b9260746c62e.jpg",
 							"order": 12,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/d2306e70-ccc0-47ef-8975-aab9220447ca88A29673-030A-4FCB-B5C0-147767589AD0.jpeg"
+							"url": "17b6c7a0-5dd7-4dee-803f-9a6b62030414488a7221-355b-4612-9647-b9260746c62e.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a42",
-							"url": "http://localhost:8080/mock-bb-storage/bts/cb17704c-4e00-4acb-b525-915860ec437b91E1563B-08C2-44F7-B896-EA3F58E03B44.jpeg",
+							"_id": "72b3b620-d91e-47eb-8cd1-78d84c50985b",
+							"name": "f9ca5b9c-d2c8-488a-972c-dfa284bc8b1e49d0e5df-a200-4e8b-853f-622a0c21a9c0.jpg",
 							"order": 13,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/cb17704c-4e00-4acb-b525-915860ec437b91E1563B-08C2-44F7-B896-EA3F58E03B44.jpeg"
+							"url": "f9ca5b9c-d2c8-488a-972c-dfa284bc8b1e49d0e5df-a200-4e8b-853f-622a0c21a9c0.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a43",
-							"url": "http://localhost:8080/mock-bb-storage/bts/9098e47a-aa07-4fc4-b583-300c1be8824093BA1708-D5B4-4E5B-A801-4624DF80CE48.jpeg",
+							"_id": "adae752c-a985-4044-bc48-7472f4896e21",
+							"name": "6f45daa3-b71e-42f8-99ae-ef63a24454ac502c00eb-f1d7-4bfb-9bf3-4a8ef69424c6.jpg",
 							"order": 14,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/9098e47a-aa07-4fc4-b583-300c1be8824093BA1708-D5B4-4E5B-A801-4624DF80CE48.jpeg"
+							"url": "6f45daa3-b71e-42f8-99ae-ef63a24454ac502c00eb-f1d7-4bfb-9bf3-4a8ef69424c6.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a44",
-							"url": "http://localhost:8080/mock-bb-storage/bts/1c4ca204-4486-46e1-a5f7-7a779dfa0d4d353D44D5-00FE-4FE7-80CA-293DCFDAFFDF.jpeg",
+							"_id": "4bdb4ce1-fcfc-4b2b-8cd1-70496e36f1d0",
+							"name": "45975c47-53cd-46fd-b5b2-385a6aedd6d451bed95b-64e0-4f98-8005-248f3cd3437b.jpg",
 							"order": 15,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/1c4ca204-4486-46e1-a5f7-7a779dfa0d4d353D44D5-00FE-4FE7-80CA-293DCFDAFFDF.jpeg"
+							"url": "45975c47-53cd-46fd-b5b2-385a6aedd6d451bed95b-64e0-4f98-8005-248f3cd3437b.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a45",
-							"url": "http://localhost:8080/mock-bb-storage/bts/f00245d3-52f4-4b33-b0e4-211dbd445848488A7221-355B-4612-9647-B9260746C62E.jpeg",
+							"_id": "048effdf-da5a-441c-ba25-061ee51654c5",
+							"name": "056c2b58-eb5c-494c-a1c5-4a5cdc973717553b7523-7002-4a30-bca7-104f19771c3c.jpg",
 							"order": 16,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/f00245d3-52f4-4b33-b0e4-211dbd445848488A7221-355B-4612-9647-B9260746C62E.jpeg"
+							"url": "056c2b58-eb5c-494c-a1c5-4a5cdc973717553b7523-7002-4a30-bca7-104f19771c3c.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a46",
-							"url": "http://localhost:8080/mock-bb-storage/bts/94b49929-58b9-46e0-8cea-0a71b28ebef5502C00EB-F1D7-4BFB-9BF3-4A8EF69424C6.jpeg",
+							"_id": "1ec0c73e-12f9-48c3-ba72-d28752e1252a",
+							"name": "b9ba1756-869d-4774-aba5-91d43bd1638361fed3a4-c248-4dd4-9c29-fc909e4af88d.jpg",
 							"order": 17,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/94b49929-58b9-46e0-8cea-0a71b28ebef5502C00EB-F1D7-4BFB-9BF3-4A8EF69424C6.jpeg"
+							"url": "b9ba1756-869d-4774-aba5-91d43bd1638361fed3a4-c248-4dd4-9c29-fc909e4af88d.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a47",
-							"url": "http://localhost:8080/mock-bb-storage/bts/15c2bdcf-9d4c-411b-bd07-d2235823e63b553B7523-7002-4A30-BCA7-104F19771C3C.jpeg",
+							"_id": "94322686-d560-43e9-94e7-625d35627d3a",
+							"name": "938f0d6c-b902-4ce0-acc4-5481a26f37266540628e-2ed1-45e6-ba0d-601c9e90461a.jpg",
 							"order": 18,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/15c2bdcf-9d4c-411b-bd07-d2235823e63b553B7523-7002-4A30-BCA7-104F19771C3C.jpeg"
+							"url": "938f0d6c-b902-4ce0-acc4-5481a26f37266540628e-2ed1-45e6-ba0d-601c9e90461a.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a48",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b9a8a584-cdeb-4ca7-85a5-877139fa83881014D67F-4661-45FE-BA2E-0B22E77CE7DE.jpeg",
+							"_id": "238215f9-24a9-4006-998d-70175c28dc2c",
+							"name": "39c2f879-0dff-4200-90cb-7779040739487e4652ee-524f-49c7-9e42-5510f8449c62.jpg",
 							"order": 19,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b9a8a584-cdeb-4ca7-85a5-877139fa83881014D67F-4661-45FE-BA2E-0B22E77CE7DE.jpeg"
+							"url": "39c2f879-0dff-4200-90cb-7779040739487e4652ee-524f-49c7-9e42-5510f8449c62.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a49",
-							"url": "http://localhost:8080/mock-bb-storage/bts/1dd2fd13-6fba-4a1b-b2ed-9b2369299bb601805B4F-A972-497C-A745-86322FD7A580.jpeg",
+							"_id": "85b42581-4ebb-4274-9f17-ef81343ad4ee",
+							"name": "a5bde5ba-7eea-4659-8021-b32084b7b1a088a29673-030a-4fcb-b5c0-147767589ad0.jpg",
 							"order": 20,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/1dd2fd13-6fba-4a1b-b2ed-9b2369299bb601805B4F-A972-497C-A745-86322FD7A580.jpeg"
+							"url": "a5bde5ba-7eea-4659-8021-b32084b7b1a088a29673-030a-4fcb-b5c0-147767589ad0.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/4132f2f6-3a1e-4c7b-bc24-3a570d4eabb84079C79E-E860-443F-8C8F-D107D37AAFF5.jpeg",
+							"_id": "4d41da6a-a211-4251-bc76-af813abb4dc0",
+							"name": "d3c7f28c-5252-4b54-a65c-c8965e631f9b8919b0ac-ab27-416b-9159-572743f26685.jpg",
 							"order": 21,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/4132f2f6-3a1e-4c7b-bc24-3a570d4eabb84079C79E-E860-443F-8C8F-D107D37AAFF5.jpeg"
+							"url": "d3c7f28c-5252-4b54-a65c-c8965e631f9b8919b0ac-ab27-416b-9159-572743f26685.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/8db93757-87dc-42c9-b047-f24b30214fcd8919B0AC-AB27-416B-9159-572743F26685.jpeg",
+							"_id": "183f88ce-25f1-44e6-9ba6-612cb3a98801",
+							"name": "4713ec4f-b74d-486d-8922-c469ec9943ca8c1523a5-db30-4ee8-9262-fee58df74861.jpg",
 							"order": 22,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/8db93757-87dc-42c9-b047-f24b30214fcd8919B0AC-AB27-416B-9159-572743F26685.jpeg"
+							"url": "4713ec4f-b74d-486d-8922-c469ec9943ca8c1523a5-db30-4ee8-9262-fee58df74861.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/9c413012-f199-468f-8aae-0740af6800689446A872-3091-482E-B9EB-F0642172F687.jpeg",
+							"_id": "daa25b98-d449-48ef-bcf4-9ab287286e54",
+							"name": "d9310ac4-50e4-4ca3-afae-48929aec7dd791e1563b-08c2-44f7-b896-ea3f58e03b44.jpg",
 							"order": 23,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/9c413012-f199-468f-8aae-0740af6800689446A872-3091-482E-B9EB-F0642172F687.jpeg"
+							"url": "d9310ac4-50e4-4ca3-afae-48929aec7dd791e1563b-08c2-44f7-b896-ea3f58e03b44.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/8fb9135f-ad5d-45f5-847d-87a7d89551fc41199C0F-9447-4E14-B2F5-DF3416A86D41.jpeg",
+							"_id": "13b26f64-98d7-4580-875c-609a86baa16f",
+							"name": "edff6460-9ece-4a3c-b67a-eb58c739876793ba1708-d5b4-4e5b-a801-4624df80ce48.jpg",
 							"order": 24,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/8fb9135f-ad5d-45f5-847d-87a7d89551fc41199C0F-9447-4E14-B2F5-DF3416A86D41.jpeg"
+							"url": "edff6460-9ece-4a3c-b67a-eb58c739876793ba1708-d5b4-4e5b-a801-4624df80ce48.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/8dca6f42-7faa-44ae-ba27-2ad879f17b6b1026472A-063B-4335-9111-34D2637DA1E1.jpeg",
+							"_id": "1ffc1669-5ae8-404f-beea-bcf899e691aa",
+							"name": "be6995ef-54d1-461a-af2f-0ef4aa2fba689446a872-3091-482e-b9eb-f0642172f687.jpg",
 							"order": 25,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/8dca6f42-7faa-44ae-ba27-2ad879f17b6b1026472A-063B-4335-9111-34D2637DA1E1.jpeg"
+							"url": "be6995ef-54d1-461a-af2f-0ef4aa2fba689446a872-3091-482e-b9eb-f0642172f687.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a4f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/3399ea36-089c-4974-abe2-da7544b3b06b6540628E-2ED1-45E6-BA0D-601C9E90461A.jpeg",
+							"_id": "94acb385-e1e1-4019-ac53-225d530c7227",
+							"name": "7042f598-d032-4683-bb88-ab5f57081c7c9a3f5a35-9bee-4d37-83fd-96d0c23dd30c.jpg",
 							"order": 26,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/3399ea36-089c-4974-abe2-da7544b3b06b6540628E-2ED1-45E6-BA0D-601C9E90461A.jpeg"
+							"url": "7042f598-d032-4683-bb88-ab5f57081c7c9a3f5a35-9bee-4d37-83fd-96d0c23dd30c.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a50",
-							"url": "http://localhost:8080/mock-bb-storage/bts/cc2f9c91-eeea-4b87-9fc7-91a67c55a01927808528-140E-4D92-A6F2-87BB1A142353.jpeg",
+							"_id": "7bfa1116-cfbd-4fc8-aa29-5ada978c255b",
+							"name": "02abbcc6-85e4-4472-a0c5-3eb22d7163159ccf92a0-c158-4825-a458-6cd6fb52b55a.jpg",
 							"order": 27,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/cc2f9c91-eeea-4b87-9fc7-91a67c55a01927808528-140E-4D92-A6F2-87BB1A142353.jpeg"
+							"url": "02abbcc6-85e4-4472-a0c5-3eb22d7163159ccf92a0-c158-4825-a458-6cd6fb52b55a.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a51",
-							"url": "http://localhost:8080/mock-bb-storage/bts/eed03af9-1baf-4ef1-8cfa-3cb05c68dd00A16F65E4-4974-4BD1-9748-10A687B1679A.jpeg",
+							"_id": "bd934c95-9d9f-4b4b-be51-04560744a49a",
+							"name": "16ea2d76-2342-4c1e-9c95-7f419d4e5c5ea16f65e4-4974-4bd1-9748-10a687b1679a.jpg",
 							"order": 28,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/eed03af9-1baf-4ef1-8cfa-3cb05c68dd00A16F65E4-4974-4BD1-9748-10A687B1679A.jpeg"
+							"url": "16ea2d76-2342-4c1e-9c95-7f419d4e5c5ea16f65e4-4974-4bd1-9748-10a687b1679a.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a52",
-							"url": "http://localhost:8080/mock-bb-storage/bts/78179cde-1cd1-4896-a21d-411131a4bf96A686E449-52CE-4719-BDCE-0D1096DF660E.jpeg",
+							"_id": "467eb723-325f-4a2f-a0a2-b96d42263dae",
+							"name": "4f8bf8da-0b66-4c7e-be59-643d1a2b444ca686e449-52ce-4719-bdce-0d1096df660e.jpg",
 							"order": 29,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/78179cde-1cd1-4896-a21d-411131a4bf96A686E449-52CE-4719-BDCE-0D1096DF660E.jpeg"
+							"url": "4f8bf8da-0b66-4c7e-be59-643d1a2b444ca686e449-52ce-4719-bdce-0d1096df660e.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a53",
-							"url": "http://localhost:8080/mock-bb-storage/bts/87db9549-bd49-49b5-b021-74a13fc3c20fB5C942DF-5227-4AB2-BA31-712178EBE3D7.jpeg",
+							"_id": "09011624-cdff-4a55-beaf-21d85a36bd50",
+							"name": "9a4f3a8e-6fb8-4175-bc58-04e1269da76fb5c942df-5227-4ab2-ba31-712178ebe3d7.jpg",
 							"order": 30,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/87db9549-bd49-49b5-b021-74a13fc3c20fB5C942DF-5227-4AB2-BA31-712178EBE3D7.jpeg"
+							"url": "9a4f3a8e-6fb8-4175-bc58-04e1269da76fb5c942df-5227-4ab2-ba31-712178ebe3d7.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a54",
-							"url": "http://localhost:8080/mock-bb-storage/bts/3e0fc895-d6bc-4807-a4e2-2db4aa86c3ddB71AAE5F-714B-4A65-B470-3B64A2FD5CFC.jpeg",
+							"_id": "07278b45-1a3b-4030-ab4b-d5541e677324",
+							"name": "c9a09c93-0f10-47f8-b437-3739195438b7b61367c8-57d3-49fe-9750-8de4ec8459c3.jpg",
 							"order": 31,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/3e0fc895-d6bc-4807-a4e2-2db4aa86c3ddB71AAE5F-714B-4A65-B470-3B64A2FD5CFC.jpeg"
+							"url": "c9a09c93-0f10-47f8-b437-3739195438b7b61367c8-57d3-49fe-9750-8de4ec8459c3.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a55",
-							"url": "http://localhost:8080/mock-bb-storage/bts/caa1f40e-f171-4b4c-848b-778547bc95a4B61367C8-57D3-49FE-9750-8DE4EC8459C3.jpeg",
+							"_id": "b512e5a6-e8b1-434e-9c21-8fb1821cbb86",
+							"name": "174be064-130a-4314-8b5d-9bb30a901266b71aae5f-714b-4a65-b470-3b64a2fd5cfc.jpg",
 							"order": 32,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/caa1f40e-f171-4b4c-848b-778547bc95a4B61367C8-57D3-49FE-9750-8DE4EC8459C3.jpeg"
+							"url": "174be064-130a-4314-8b5d-9bb30a901266b71aae5f-714b-4a65-b470-3b64a2fd5cfc.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a56",
-							"url": "http://localhost:8080/mock-bb-storage/bts/c2b6d3bb-0bec-4d91-a4e7-39bbf0da97f9BCB4A768-F4D7-40E9-8EB1-DF8D738C0345.jpeg",
+							"_id": "b2b008e4-73b8-44aa-bff4-dc2f545a7ec0",
+							"name": "e8af6c18-05f8-4237-9700-0ed56f5f83c0bcb4a768-f4d7-40e9-8eb1-df8d738c0345.jpg",
 							"order": 33,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/c2b6d3bb-0bec-4d91-a4e7-39bbf0da97f9BCB4A768-F4D7-40E9-8EB1-DF8D738C0345.jpeg"
+							"url": "e8af6c18-05f8-4237-9700-0ed56f5f83c0bcb4a768-f4d7-40e9-8eb1-df8d738c0345.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a57",
-							"url": "http://localhost:8080/mock-bb-storage/bts/db508e82-0ebf-4e03-b90f-bc17fdf05d65BFACDF30-A524-4C81-8CAF-8D8F1DD4F918.jpeg",
+							"_id": "c4659a36-483d-4db9-b6e4-1a23b813e395",
+							"name": "278f04cd-9a9c-473e-aa3d-283d0699cc53bfacdf30-a524-4c81-8caf-8d8f1dd4f918.jpg",
 							"order": 34,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/db508e82-0ebf-4e03-b90f-bc17fdf05d65BFACDF30-A524-4C81-8CAF-8D8F1DD4F918.jpeg"
+							"url": "278f04cd-9a9c-473e-aa3d-283d0699cc53bfacdf30-a524-4c81-8caf-8d8f1dd4f918.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a58",
-							"url": "http://localhost:8080/mock-bb-storage/bts/f13bcb64-7a1f-4991-be67-a5760b38d498C2D0E1C2-0C81-4718-83A1-D713EF50CDBD.jpeg",
+							"_id": "4ca44609-7cc2-4ee7-aaf0-d176a0ec15a0",
+							"name": "4abfeecf-5d0b-40c6-9d74-678d46833203c05340b0-4109-47d8-82bb-ae53b9509788.jpg",
 							"order": 35,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/f13bcb64-7a1f-4991-be67-a5760b38d498C2D0E1C2-0C81-4718-83A1-D713EF50CDBD.jpeg"
+							"url": "4abfeecf-5d0b-40c6-9d74-678d46833203c05340b0-4109-47d8-82bb-ae53b9509788.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a59",
-							"url": "http://localhost:8080/mock-bb-storage/bts/672659b7-8d9d-4e11-9d32-8810841a929aC7E23051-FA1B-4383-A217-4984F0ACD3AC.jpeg",
+							"_id": "85bbb34e-4654-44c8-acc0-969f7c52c9d3",
+							"name": "235c06d9-569c-4583-b8c7-898e831efe73c2d0e1c2-0c81-4718-83a1-d713ef50cdbd.jpg",
 							"order": 36,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/672659b7-8d9d-4e11-9d32-8810841a929aC7E23051-FA1B-4383-A217-4984F0ACD3AC.jpeg"
+							"url": "235c06d9-569c-4583-b8c7-898e831efe73c2d0e1c2-0c81-4718-83a1-d713ef50cdbd.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/42ae2d64-a8c5-43f8-b4d0-95d4c6d9c3dfC406C9A9-719F-47B7-A02B-0028728E4C19.jpeg",
+							"_id": "019e51a8-bc65-4e47-89e1-7c89ff8882e2",
+							"name": "40fd0b88-792d-4e66-b7ea-7015bc174a8cc406c9a9-719f-47b7-a02b-0028728e4c19.jpg",
 							"order": 37,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/42ae2d64-a8c5-43f8-b4d0-95d4c6d9c3dfC406C9A9-719F-47B7-A02B-0028728E4C19.jpeg"
+							"url": "40fd0b88-792d-4e66-b7ea-7015bc174a8cc406c9a9-719f-47b7-a02b-0028728e4c19.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b8586f9c-e461-40a2-8a4d-663614a5a5e2C05340B0-4109-47D8-82BB-AE53B9509788.jpeg",
+							"_id": "604af021-a64f-42a8-b374-d83356eb850b",
+							"name": "65f2f102-259f-4c9c-a616-d70df21f4c0dc5866395-3bc4-4934-bc5d-08789836812e.jpg",
 							"order": 38,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b8586f9c-e461-40a2-8a4d-663614a5a5e2C05340B0-4109-47D8-82BB-AE53B9509788.jpeg"
+							"url": "65f2f102-259f-4c9c-a616-d70df21f4c0dc5866395-3bc4-4934-bc5d-08789836812e.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/b5d54e33-5ed5-4ac8-91ba-2de538ca020dC5866395-3BC4-4934-BC5D-08789836812E.jpeg",
+							"_id": "22890645-182f-41c1-abc3-ba16f82d854c",
+							"name": "3dcc3914-8423-4672-a3cf-dceef7c01ed1c7e23051-fa1b-4383-a217-4984f0acd3ac.jpg",
 							"order": 39,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/b5d54e33-5ed5-4ac8-91ba-2de538ca020dC5866395-3BC4-4934-BC5D-08789836812E.jpeg"
+							"url": "3dcc3914-8423-4672-a3cf-dceef7c01ed1c7e23051-fa1b-4383-a217-4984f0acd3ac.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5d",
-							"url": "http://localhost:8080/mock-bb-storage/bts/6d3a9a44-f8bd-45d3-af70-9f605a00ad4bCDFCB18A-8B11-49BD-B398-54CAC94F4D75.jpeg",
+							"_id": "5ac67841-764f-4172-a6be-3fe2a0645a7f",
+							"name": "85b93412-feb7-48c2-bcea-84ac3acf9650cdfcb18a-8b11-49bd-b398-54cac94f4d75.jpg",
 							"order": 40,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/6d3a9a44-f8bd-45d3-af70-9f605a00ad4bCDFCB18A-8B11-49BD-B398-54CAC94F4D75.jpeg"
+							"url": "85b93412-feb7-48c2-bcea-84ac3acf9650cdfcb18a-8b11-49bd-b398-54cac94f4d75.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5e",
-							"url": "http://localhost:8080/mock-bb-storage/bts/d72459a7-6976-44c9-bddf-2fa6ff570bd5D1A801FD-182B-4069-B582-FFC41A22E49F.jpeg",
+							"_id": "8cccbdf8-5428-4047-8ccb-109af0009e0e",
+							"name": "6ecdfe71-5606-40bd-845b-5ceefef35c43d147941f-3536-445c-88d4-20a9a61354cc.jpg",
 							"order": 41,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/d72459a7-6976-44c9-bddf-2fa6ff570bd5D1A801FD-182B-4069-B582-FFC41A22E49F.jpeg"
+							"url": "6ecdfe71-5606-40bd-845b-5ceefef35c43d147941f-3536-445c-88d4-20a9a61354cc.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a5f",
-							"url": "http://localhost:8080/mock-bb-storage/bts/201c9ea6-a4a1-426a-bf09-37fd19cbea8dD2B223B3-4C2E-4F0B-94E3-06C02C48CEC9.jpeg",
+							"_id": "a19a3a63-32dc-4d24-965a-ae0d99d00a81",
+							"name": "7b4d4480-b41e-4199-8e84-ece34623461cd1a801fd-182b-4069-b582-ffc41a22e49f.jpg",
 							"order": 42,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/201c9ea6-a4a1-426a-bf09-37fd19cbea8dD2B223B3-4C2E-4F0B-94E3-06C02C48CEC9.jpeg"
+							"url": "7b4d4480-b41e-4199-8e84-ece34623461cd1a801fd-182b-4069-b582-ffc41a22e49f.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a60",
-							"url": "http://localhost:8080/mock-bb-storage/bts/f6df233e-c93c-4ab6-a81a-81ec907d728fD2D5B636-568F-4AFA-A2E1-D6981686F20D.jpeg",
+							"_id": "1d24f1b6-0d63-4c63-999e-cc00d992852d",
+							"name": "7121ac3a-047b-4cb3-8bf1-3f9ee9e8863cd2b223b3-4c2e-4f0b-94e3-06c02c48cec9.jpg",
 							"order": 43,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/f6df233e-c93c-4ab6-a81a-81ec907d728fD2D5B636-568F-4AFA-A2E1-D6981686F20D.jpeg"
+							"url": "7121ac3a-047b-4cb3-8bf1-3f9ee9e8863cd2b223b3-4c2e-4f0b-94e3-06c02c48cec9.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a61",
-							"url": "http://localhost:8080/mock-bb-storage/bts/d28fe9f4-a921-4499-a447-9f121cb43db5D147941F-3536-445C-88D4-20A9A61354CC.jpeg",
+							"_id": "be02b47b-7287-47bd-a928-a28dd4bb193a",
+							"name": "d83384f6-f1ef-4e9a-84e9-86609ea25008d2d5b636-568f-4afa-a2e1-d6981686f20d.jpg",
 							"order": 44,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/d28fe9f4-a921-4499-a447-9f121cb43db5D147941F-3536-445C-88D4-20A9A61354CC.jpeg"
+							"url": "d83384f6-f1ef-4e9a-84e9-86609ea25008d2d5b636-568f-4afa-a2e1-d6981686f20d.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a62",
-							"url": "http://localhost:8080/mock-bb-storage/bts/acf7e4df-2ef9-475e-a744-d3a56fe15730DA4EADA4-F9BF-4509-BBD5-EDCA24C12A07.jpeg",
+							"_id": "c8149157-ecca-4282-9a5e-4d967bbb5b87",
+							"name": "81ea2844-fe9f-4df7-b2d6-483b2e7c0be5da4eada4-f9bf-4509-bbd5-edca24c12a07.jpg",
 							"order": 45,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/acf7e4df-2ef9-475e-a744-d3a56fe15730DA4EADA4-F9BF-4509-BBD5-EDCA24C12A07.jpeg"
+							"url": "81ea2844-fe9f-4df7-b2d6-483b2e7c0be5da4eada4-f9bf-4509-bbd5-edca24c12a07.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a63",
-							"url": "http://localhost:8080/mock-bb-storage/bts/7ac567fc-f60a-4b1e-9e0e-8fba6a8c6ad9E5B1E21D-752B-4399-B260-A5B7D35DD5C4.jpeg",
+							"_id": "65d7f2c4-cc2c-4399-8f2e-d615768a950b",
+							"name": "18fe18eb-637a-48e3-9083-57f119b81acee5b1e21d-752b-4399-b260-a5b7d35dd5c4.jpg",
 							"order": 46,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/7ac567fc-f60a-4b1e-9e0e-8fba6a8c6ad9E5B1E21D-752B-4399-B260-A5B7D35DD5C4.jpeg"
+							"url": "18fe18eb-637a-48e3-9083-57f119b81acee5b1e21d-752b-4399-b260-a5b7d35dd5c4.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a64",
-							"url": "http://localhost:8080/mock-bb-storage/bts/d40d7163-1424-4c03-ae8a-c866c900c09dE6AAA065-2A45-4E7C-906E-F312DD25FA1D.jpeg",
+							"_id": "a339c4b8-7a97-4acc-8df6-fea4958b3f00",
+							"name": "472151af-aebe-4913-b2cf-289038f51aede6aaa065-2a45-4e7c-906e-f312dd25fa1d.jpg",
 							"order": 47,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/d40d7163-1424-4c03-ae8a-c866c900c09dE6AAA065-2A45-4E7C-906E-F312DD25FA1D.jpeg"
+							"url": "472151af-aebe-4913-b2cf-289038f51aede6aaa065-2a45-4e7c-906e-f312dd25fa1d.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a65",
-							"url": "http://localhost:8080/mock-bb-storage/bts/0039efe4-0ea2-4301-830f-5507b90a6634E6DED431-BA21-40A7-961F-F5025E95EF29.jpeg",
+							"_id": "e78c481a-bd4e-471e-b145-2892015a8e3d",
+							"name": "934bbf7d-0d35-461a-b7c0-eab7f78ee776e6ded431-ba21-40a7-961f-f5025e95ef29.jpg",
 							"order": 48,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/0039efe4-0ea2-4301-830f-5507b90a6634E6DED431-BA21-40A7-961F-F5025E95EF29.jpeg"
+							"url": "934bbf7d-0d35-461a-b7c0-eab7f78ee776e6ded431-ba21-40a7-961f-f5025e95ef29.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a66",
-							"url": "http://localhost:8080/mock-bb-storage/bts/fd59cac1-0f89-4b55-9057-945b3efa02acE8351BE2-2678-43AC-803F-A6A24DC2C9AB.jpeg",
+							"_id": "d80dcdd6-6599-48e6-9204-e60ebafdd5ad",
+							"name": "6be3cc8e-0920-421e-896c-ff1884d80c7ee8351be2-2678-43ac-803f-a6a24dc2c9ab.jpg",
 							"order": 49,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/fd59cac1-0f89-4b55-9057-945b3efa02acE8351BE2-2678-43AC-803F-A6A24DC2C9AB.jpeg"
+							"url": "6be3cc8e-0920-421e-896c-ff1884d80c7ee8351be2-2678-43ac-803f-a6a24dc2c9ab.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a67",
-							"url": "http://localhost:8080/mock-bb-storage/bts/0cac4c7d-a07a-4418-b14e-639a35e4e3a2EC36E289-2BE0-49EA-A2A1-722196B07B4E.jpeg",
+							"_id": "2cce2e2e-17af-4e45-9d7f-9fc053b3f01b",
+							"name": "2f762215-4623-4c99-862f-138e8202c146ec36e289-2be0-49ea-a2a1-722196b07b4e.jpg",
 							"order": 50,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/0cac4c7d-a07a-4418-b14e-639a35e4e3a2EC36E289-2BE0-49EA-A2A1-722196B07B4E.jpeg"
+							"url": "2f762215-4623-4c99-862f-138e8202c146ec36e289-2be0-49ea-a2a1-722196b07b4e.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a68",
-							"url": "http://localhost:8080/mock-bb-storage/bts/f87e323e-00fa-457c-87c8-401b152809f4EE81C487-9856-4DD6-ACB2-E872C6C92BD1.jpeg",
+							"_id": "79ace323-3bfd-4bd2-bb3e-10395ee76184",
+							"name": "4df69a83-9bec-4e5a-953c-ad916956a70aee81c487-9856-4dd6-acb2-e872c6c92bd1.jpg",
 							"order": 51,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/f87e323e-00fa-457c-87c8-401b152809f4EE81C487-9856-4DD6-ACB2-E872C6C92BD1.jpeg"
+							"url": "4df69a83-9bec-4e5a-953c-ad916956a70aee81c487-9856-4dd6-acb2-e872c6c92bd1.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a69",
-							"url": "http://localhost:8080/mock-bb-storage/bts/ace1e76b-24ae-46cc-9411-ddb6266b7229EF6CE42C-FD2D-4432-8A47-8A6B7E4AC161.jpeg",
+							"_id": "36ec07dd-1526-4cfc-bc95-9330f81f8019",
+							"name": "0c84fa66-d881-4ed9-9367-a270d9625405ef034429-23c4-4f67-a69c-b8f8027d7ff3.jpg",
 							"order": 52,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/ace1e76b-24ae-46cc-9411-ddb6266b7229EF6CE42C-FD2D-4432-8A47-8A6B7E4AC161.jpeg"
+							"url": "0c84fa66-d881-4ed9-9367-a270d9625405ef034429-23c4-4f67-a69c-b8f8027d7ff3.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a6a",
-							"url": "http://localhost:8080/mock-bb-storage/bts/477c7e22-438f-4b6a-8765-ffca5711e5adEF034429-23C4-4F67-A69C-B8F8027D7FF3.jpeg",
+							"_id": "72f2ded2-99d1-4e92-ab32-88b4bb6ee6ec",
+							"name": "28318bd1-2360-4501-8f10-b16fd58628f3ef6ce42c-fd2d-4432-8a47-8a6b7e4ac161.jpg",
 							"order": 53,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/477c7e22-438f-4b6a-8765-ffca5711e5adEF034429-23C4-4F67-A69C-B8F8027D7FF3.jpeg"
+							"url": "28318bd1-2360-4501-8f10-b16fd58628f3ef6ce42c-fd2d-4432-8a47-8a6b7e4ac161.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a6b",
-							"url": "http://localhost:8080/mock-bb-storage/bts/1f645135-8d9c-45a1-8471-d19d355b8a1fF64B4241-1107-402D-94B5-4F3C5309DD76.jpeg",
+							"_id": "f23de205-a4c5-48ae-9ba0-bdc651e47c6e",
+							"name": "ff1d9d77-6cee-4356-9b0c-fbf6dc1a34a4f64b4241-1107-402d-94b5-4f3c5309dd76.jpg",
 							"order": 54,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/1f645135-8d9c-45a1-8471-d19d355b8a1fF64B4241-1107-402D-94B5-4F3C5309DD76.jpeg"
+							"url": "ff1d9d77-6cee-4356-9b0c-fbf6dc1a34a4f64b4241-1107-402d-94b5-4f3c5309dd76.jpg"
 						},
 						{
-							"_id": "627aecc7caa55ea72f6f8a6c",
-							"url": "http://localhost:8080/mock-bb-storage/bts/7cf460d6-8837-4567-afea-c00fd4e30c67F92CF5D4-7A93-4B71-A727-964FC1BB4511.jpeg",
+							"_id": "5d4c37c0-4f1d-4921-b1da-7e7835ac78bb",
+							"name": "3cd4452b-eed4-41e8-8331-781eda2fbe58f92cf5d4-7a93-4b71-a727-964fc1bb4511.jpg",
 							"order": 55,
-							"old_url": "http://localhost:8080/mock-bb-storage/bts/7cf460d6-8837-4567-afea-c00fd4e30c67F92CF5D4-7A93-4B71-A727-964FC1BB4511.jpeg"
+							"url": "3cd4452b-eed4-41e8-8331-781eda2fbe58f92cf5d4-7a93-4b71-a727-964fc1bb4511.jpg"
 						}
 					],
 					"phase": 3
@@ -2261,11 +2165,10 @@
 			"category": "621ae8462b5171ada3bf1987",
 			"images": [
 				{
-					"_id": "622ea5e82ffdd2dd79eee6a6",
-					"url": "c86ffa3d-31c1-4705-b306-075d3e769296drone.jpg",
+					"_id": "5e09919a-9a54-41cd-8a0b-937a018b7fd3",
+					"name": "bee6b947-4540-4141-b38e-79e6d27ed6f9drone.jpg",
 					"order": 0,
-					"old_url": "http://localhost:8080/mock-bb-storage/bg-image-page/c86ffa3d-31c1-4705-b306-075d3e769296drone.jpg",
-					"filePath": "c86ffa3d-31c1-4705-b306-075d3e769296drone.jpg"
+					"url": "bee6b947-4540-4141-b38e-79e6d27ed6f9drone.jpg"
 				}
 			],
 			"video_url": "https://youtu.be/l7h2P07cSbc",
