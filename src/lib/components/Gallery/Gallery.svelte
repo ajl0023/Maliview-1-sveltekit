@@ -11,7 +11,7 @@
 			return s;
 		});
 	};
-	export let images;
+	export let phases;
 </script>
 
 <div
@@ -22,7 +22,7 @@
 >
 	<div class="wrapper">
 		<div class="phase-label-container">
-			{#each images as phase, i}
+			{#each phases as phase, i}
 				<h5
 					on:click="{() => {
 						galleryImg.update((s) => {
@@ -38,7 +38,7 @@
 			{/each}
 		</div>
 		<div class="flex-container {$galleryImg.currPhase}">
-			{#each images[$galleryImg.currPhase].images as img, i}
+			{#each phases[$galleryImg.currPhase].images as img, i}
 				<GallerySelected img="{img}" selected="{selected}" index="{i}" />
 			{/each}
 			{#if $galleryImg.currPhase === 'phase-1'}

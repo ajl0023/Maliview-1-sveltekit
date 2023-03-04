@@ -4,9 +4,10 @@
 	export let bgColor;
 	export let text_content;
 	let scrollContainer;
+
 </script>
 
-<div style="background-color: {bgColor ? '' : '#2c2a2b'};" class="page container">
+<div style="background-color: {bgColor ? '#a4632e' : 'unset'};" class="page container">
 	<div class="text-content">
 		<div class="bu-content bu-is-large">
 			<h3 class="header bu-content-header ">

@@ -1,25 +1,17 @@
 ﻿<script>
-	import { onMount } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 
 	import { lazyLoadInstance } from '$lib/lazy';
 
-	import { currentPage, pageLayout } from '$lib/stores';
+	import { currentPage } from '$lib/stores';
 	import { createEventDispatcher } from 'svelte';
-	export let page;
+	export let images;
+	export let glideEle;
+	let page_side = getContext('page_side');
+
 	const dispatch = createEventDispatcher();
-	const images = pageLayout['carousel-renders'][0].thumbs;
-	let imagesToDisplay = images
-		.map((img, i) => {
-			const obj = {
-				url: img.url,
-				page: i < 7 ? 'left' : 'right',
-				index: i
-			};
-			return obj;
-		})
-		.filter((img) => {
-			return img.page === page;
-		});
+
+	let imagesToDisplay = images;
 
 	onMount(() => {
 		lazyLoadInstance();
@@ -27,8 +19,8 @@
 </script>
 
 <div
-	style="padding:{page === 'left' ? '25px 7.5px 0px 0px' : '25px 0px 0px 7.5px'};
-    float:{page === 'left' ? 'right' : 'left'};
+	style="padding:{page_side === 'left' ? '25px 7.5px 0px 0px' : '25px 0px 0px 7.5px'};
+    float:{page_side === 'left' ? 'right' : 'left'};
     "
 	class="container"
 >
@@ -36,12 +28,12 @@
 		{#if img}
 			<div
 				on:click="{() => {
-					dispatch('carousel-page', page === 'left' ? i : i + 7);
+					dispatch('carousel-page', img.order);
 				}}"
-				class:selected="{$currentPage.page === img.index}"
+				class:selected="{glideEle && glideEle.index === img.order}"
 				class="image-container"
 			>
-				<img class="lazy" width="200px" height="200px" data-src="{img.url}" alt="" />;
+				<img class="lazy" width="200px" height="200px" src="images/{img.url}" alt="" />;
 			</div>
 		{:else}
 			<div style="background-color:black" class="image-container"></div>
@@ -51,7 +43,7 @@
 
 <style lang="scss">
 	.selected {
-		border: 1px solid white;
+		border: 2px solid white;
 	}
 	.image-container {
 		width: 25px;

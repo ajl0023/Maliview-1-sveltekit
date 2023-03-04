@@ -1,34 +1,43 @@
 ﻿<script>
 	import CarouselFull from '$lib/components/CarouselFull/CarouselFull.svelte';
 	// import Credits from '$lib/components/Credits/Credits.svelte';
-	// import Gallery from '$lib/components/Gallery/Gallery.svelte';
+	import Gallery from '$lib/components/Gallery/Gallery.svelte';
 	import ImagePage from '$lib/components/ImagePage/ImagePage.svelte';
 	import TextPage from '$lib/components/TextPage/TextPage.svelte';
-	// import CarouselRenders from '$lib/components/CarouselRenders/CarouselRenders.svelte';
-	import { getContext } from 'svelte';
+	import CarouselRenders from '$lib/components/CarouselRenders/CarouselRenders.svelte';
+	import { getContext, setContext } from 'svelte';
 
 	export let rightPage;
 	export let carouselPage;
 	const pageLayout = getContext('pageLayout');
 	const pageContent = getContext('pageContent');
 
-	console.log(pageLayout);
+	setContext('page_side', 'right');
 </script>
 
 <div bind:this="{rightPage}" class="container">
-	<ImagePage image="{pageLayout['image-pages'][2]}" index="{5}" />
-	<!-- <Credits page="right" />
-	<ImagePage imageInd="{3}" index="{4}" />
-	<Gallery />
-	<ImagePage imageInd="{2}" index="{3}" />
+	<!-- <ImagePage image="{pageLayout['image-pages'][1]}" index="{5}" />
+	 <Credits page="right" />
+	<ImagePage imageInd="{3}" index="{4}" /> -->
+	<Gallery phases="{pageLayout['bts']}" />
+	<ImagePage image="{pageLayout['image-pages'][2]}" index="{3}" name="video-render" />
 
-	<TextPage index="{4}" />
-	<CarouselFull itemInd="{1}" orient="full" page="right" name="floorplans" />
-	<CarouselRenders itemIndex="{0}" carouselPage="{carouselPage}" page="right" /> -->
+	<TextPage name="equestrian" text_content="{pageContent.textPages[4]}" />
 
+	<CarouselFull orient="full" name="floorplans" data="{pageLayout['page-carousels'][1]}" />
+
+	<CarouselRenders
+		name="renders"
+		renders="{{
+			images: pageLayout['carousel-renders'][0].right,
+			thumbs: pageLayout['carousel-renders'][0].thumbs.slice(
+				pageLayout['carousel-renders'][0].thumbs.length / 2,
+				pageLayout['carousel-renders'][0].thumbs.length
+			)
+		}}"
+	/>
 	<CarouselFull
 		orient="full"
-		page="right"
 		name="discover"
 		index="{1}"
 		data="{pageLayout['page-carousels'][0]}"

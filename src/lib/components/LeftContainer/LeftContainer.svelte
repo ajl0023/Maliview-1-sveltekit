@@ -1,18 +1,22 @@
 ﻿<script>
 	import { getContext } from 'svelte';
-	// import CarouselRenders from '../CarouselRenders/CarouselRenders.svelte';
+	import CarouselRenders from '../CarouselRenders/CarouselRenders.svelte';
 	// import ContactUs from '../ContactUs/ContactUs.svelte';
 	// import Credits from '../Credits/Credits.svelte';
-	// import GalleryPreview from '../GalleryPreview/GalleryPreview.svelte';
+	import GalleryPreview from '../GalleryPreview/GalleryPreview.svelte';
 
-	// import TextPage from '../TextPage/TextPage.svelte';
+	import TextPage from '../TextPage/TextPage.svelte';
 
 	import ImagePage from '../ImagePage/ImagePage.svelte';
+	import { setContext } from 'svelte';
 
 	export let leftPage;
 	export let carouselPage;
 
-	const pageLayout = getContext('pageLayout');
+	const pageLayout = getContext('pageLayout'); //these are the pages that are being passed in from the parent component, and contain the data for the page
+	const pageContent = getContext('pageContent');
+
+	const page_side = setContext('page_side', 'left'); //this is the page side that is being passed in from the parent component, and is used to determine which page to display
 </script>
 
 <div bind:this="{leftPage}" class="container">
@@ -26,19 +30,25 @@
 	</div>
 
 	<ImagePage image="{pageLayout['image-pages'][0]}" name="malibu" />
-	<!-- <TextPage name="discover" bgColor="#a4632e" index="{1}" />
-	<CarouselRenders itemIndex="{0}" name="renders" carouselPage="{carouselPage}" page="left" />
+	<TextPage name="discover" bgColor="{true}" text_content="{pageContent.textPages[1]}" />
+	<CarouselRenders
+		name="renders"
+		renders="{{
+			images: pageLayout['carousel-renders'][0].left,
+			thumbs: pageLayout['carousel-renders'][0].thumbs.slice(
+				0,
+				pageLayout['carousel-renders'][0].thumbs.length / 2
+			)
+		}}"
+	/>
 
-	<TextPage name="floorplans" bgColor="#a4632e" index="{3}" />
-	<ImagePage imageInd="{1}" name="equestrian" index="{2}" />
-	<TextPage name="video render" bgColor="#a4632e" index="{5}" />
+	<TextPage name="floorplans" bgColor="{true}" text_content="{pageContent.textPages[2]}" />
+
+	<ImagePage image="{pageLayout['image-pages'][1]}" name="equestrian" index="{2}" />
+
+	<TextPage name="video render" bgColor="{true}" text_content="{pageContent.textPages[5]}" />
+
 	<GalleryPreview name="behind the scenes" />
-
-	<TextPage index="{7}" name="drone footage" />
-	<Credits page="left" />
-	<div class="page">
-		<ContactUs />
-	</div> -->
 </div>
 
 <style lang="scss">

@@ -1,14 +1,15 @@
-<!-- <script>
+<script>
 	import { galleryImg } from './../GalleryPreview/store.js';
 	import { createEventDispatcher, onMount } from 'svelte';
-	import { pageLayout } from '../../stores.js';
 
 	export let img;
 	export let index;
 
 	const dispatch = createEventDispatcher();
 	onMount(() => {
-		$galleryImg.imageToDisplay = pageLayout['bts'] ? pageLayout['bts'][pageLayout['bts'].length-1].images[0].url : null;
+		// $galleryImg.imageToDisplay = pageLayout['bts']
+		// 	? pageLayout['bts'][pageLayout['bts'].length - 1].images[0].url
+		// 	: null;
 	});
 </script>
 
@@ -21,13 +22,13 @@
 			galleryImg.update((s) => {
 				$galleryImg.selected = index;
 				$galleryImg.imageToDisplay = img.url;
-				// s.imageToDisplay = img.raw;
+				s.imageToDisplay = img.raw;
 				return s;
 			});
 			dispatch('select', img.index);
 		}}"
 		loading="lazy"
-		src="{img.url}"
+		src="images/{img.url}"
 		alt=""
 	/>
 </div>
@@ -58,4 +59,4 @@
 			background-color: rgba(0, 0, 0, 0.5);
 		}
 	}
-</style> -->
+</style>

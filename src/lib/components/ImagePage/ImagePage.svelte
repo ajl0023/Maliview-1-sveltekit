@@ -1,4 +1,5 @@
-﻿<!-- <script>
+﻿<script>
+	import { getImage } from '$lib/utils';
 	import { modal } from '../../stores';
 	export let image;
 </script>
@@ -15,10 +16,10 @@
 >
 	<div class="image-container {image.type === 'video' ? 'blur' : ''} ">
 		{#if image.type === 'video'}
-			<img alt="" src="playButton.png" class="play-button" />
+			<img alt="" src="$lib/images/playButton.png" class="play-button" />
 		{/if}
 
-		<img data-src="{image.image.url}" alt="" class="main-image lazy" />
+		<img src="/images/{image.image.url}" data-src="images/{image.image.url}" alt="" class="main-image lazy" />
 	</div>
 </div>
 
@@ -67,4 +68,4 @@
 		z-index: 5;
 		object-fit: cover;
 	}
-</style> -->
+</style>

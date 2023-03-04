@@ -3,6 +3,7 @@
 
 	import { onMount } from 'svelte';
 	import Arrow from '$lib/svgs/Arrow.svelte';
+	import { getImage } from '$lib/utils';
 
 	let glider;
 	export let name;
@@ -38,7 +39,7 @@
 					<li class="glide__slide">
 						<div class="image-container">
 							{#if img.url}
-								<img class="carousel-image lazy" src="{img.url}" alt="" />
+								<img class="carousel-image lazy" src="/images/{img.url}" alt="" />
 							{/if}
 						</div>
 					</li>

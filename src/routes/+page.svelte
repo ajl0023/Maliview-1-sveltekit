@@ -40,9 +40,9 @@
 
 {#if data_loaded}
 	<div>
-		<!-- <Navbar /> -->
+		<Navbar />
 
-		<!-- <ScrollContainer pageLayout="{pagesData}" pageContent="{pageContent}" /> -->
+		<ScrollContainer pageLayout="{pagesData}" pageContent="{pageContent}" />
 
 		<!-- <CardContainer />
 

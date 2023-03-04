@@ -1,20 +1,15 @@
 <script>
 	import Glide from '@glidejs/glide';
-	import { onMount } from 'svelte';
-	import { currentPage, pageLayout } from '../../stores';
+	import { getContext, onMount } from 'svelte';
+	import { currentPage } from '../../stores';
 	import Arrow from '$lib/svgs/Arrow.svelte';
 	import CarouselThumbs from '$lib/components/CarouselThumbs/CarouselThumbs.svelte';
 
 	export let page;
 	export let itemIndex;
-	const left = pageLayout['carousel-renders'][itemIndex].left.sort((a, b) => {
-		return a.order - b.order;
-	});
+	export let renders;
 
-	const right = pageLayout['carousel-renders'][itemIndex].right.sort((a, b) => {
-		return a.order - b.order;
-	});
-	const images = [...left, ...right];
+	let page_side = getContext('page_side');
 
 	let carousel;
 	let glide;
@@ -29,38 +24,42 @@
 	$: {
 		if (glide) {
 			glide.go(`=${$currentPage.page}`);
+			glide = glide;
 		}
 	}
 </script>
 
 <div class="page">
-	<div class="content-container content-container-{page}">
-		<div class="carousel-content-container carousel-content-container-{page}">
-			<div class="title-container title-{page}">
-				<h1>{page === 'left' ? 'ren' : 'ders'}</h1>
+	<div class="content-container content-container-{page_side}">
+		<div class="carousel-content-container carousel-content-container-{page_side}">
+			<div class="title-container title-{page_side}">
+				<h1>{page_side === 'left' ? 'ren' : 'ders'}</h1>
 				<p>
-					{page === 'left'
+					{page_side === 'left'
 						? 'Browse below for interior and ext'
 						: 'erior renders of Maliview Estates.'}
 				</p>
 			</div>
 			<div class="carousel-container">
-				{#if glide && page === 'right'}
+				{#if glide && page_side === 'right'}
 					<div class="indicator {page}">
-						{#if glide}
-							<p>
-								{$currentPage.page + 1}/{images.length / 2}
-							</p>
-						{/if}
+						<p>
+							{glide.index + 1}/{renders.images.length}
+						</p>
 					</div>
 				{/if}
-				<div bind:this="{carousel}" data-glide-dir="{`${$currentPage.page}`}" class="glide ">
+				<div bind:this="{carousel}" class="glide ">
 					<div class="glide__track" data-glide-el="track">
 						<ul class="glide__slides">
-							{#each page === 'left' ? left : right as img}
+							{#each renders.images as img}
 								<li class="glide__slide">
 									<div class="slide-image-container">
-										<img loading="lazy" class="carousel-image lazy" src="{img.url}" alt="" />
+										<img
+											loading="lazy"
+											class="carousel-image lazy"
+											src="/images/{img.url}"
+											alt=""
+										/>
 									</div>
 								</li>
 							{/each}
@@ -69,13 +68,13 @@
 				</div>
 				<button
 					on:click="{() => {
-						currentPage.setPage(page === 'left' ? -1 : 1);
+						currentPage.setPage(page_side === 'left' ? -1 : 1);
 					}}"
-					class="page-arrow-container page-arrow-container-{page}"
+					class="page-arrow-container page-arrow-container-{page_side}"
 				>
 					<div class="page-arrow-relative page-arrow-relative">
 						<Arrow
-							styleP="object-fit:cover;width:100%;fill:white; transform:rotate({page === 'left'
+							styleP="object-fit:cover;width:100%;fill:white; transform:rotate({page_side === 'left'
 								? '-90deg'
 								: '90deg'}); height:100%; "
 						/>
@@ -84,6 +83,7 @@
 			</div>
 
 			<CarouselThumbs
+				glideEle="{glide}"
 				on:carousel-page="{(e) => {
 					const page = e.detail;
 					currentPage.update((s) => {
@@ -91,7 +91,7 @@
 						return s;
 					});
 				}}"
-				page="{page}"
+				images="{renders.thumbs}"
 			/>
 		</div>
 	</div>
