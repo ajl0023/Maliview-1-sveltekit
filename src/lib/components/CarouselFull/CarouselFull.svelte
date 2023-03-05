@@ -9,7 +9,7 @@
 	export let name;
 	export let page;
 	export let orient;
-	export let itemInd;
+
 	export let data;
 	const images = data['images'];
 	const halfCarousel = {};

@@ -41,10 +41,7 @@
 		<div class="meet-text-container">
 			<a
 				class="meet-text"
-				on:click="{(e) => {
-					e.preventDefault();
-					window.open('https://www.apeldesign.com/');
-				}}"
+				target="_blank" rel="noreferrer"
 				href="https://www.apeldesign.com/"
 			>
 				Meet the architect
@@ -55,10 +52,7 @@
 		</div>
 		<div class="sidebar-logo-container">
 			<a
-				on:click="{(e) => {
-					e.preventDefault();
-					window.open('https://www.apeldesign.com/');
-				}}"
+			target="_blank" rel="noreferrer"
 				href="https://www.apeldesign.com/"
 			>
 				<img src="/images/By Apel Design Black.png" alt="" />

@@ -8,6 +8,8 @@
 
 	import Arrow from '$lib/svgs/Arrow.svelte';
 	import PinchZoom from '../PinchZoom.svelte';
+	import CardHeader from '../CardContainer/CardHeader.svelte';
+	import CardText from '../CardContainer/CardText.svelte';
 	export let index;
 	export let page;
 	export let images;
@@ -92,18 +94,7 @@
 		carouselWidth = carousel.offsetWidth;
 		slider.style.width = carousel.offsetWidth * (images.length + 1) * 5 + 'px';
 		carousel.style.width = xVal.set(-currInd * (carousel.offsetWidth + 10));
-		if (mainText.scrollHeight > mainText.clientHeight) {
-			overFlowing = true;
-		} else {
-			overFlowing = false;
-		}
 	}
-
-	onDestroy(() => {
-		if (browser) {
-			window.removeEventListener('resize', resize);
-		}
-	});
 
 	$: {
 		if (glide) {
@@ -185,49 +176,8 @@
 		</div>
 	</div>
 	<div class="card-content bu-card-content">
-		<div class="bu-media">
-			<div class="bu-media-left">
-				<figure class="bu-image bu-is-48x48">
-					<div class="square-place-holder" style=" height: 100%; width:100%;">
-						<img src="/images/mobile-logo.png" alt="" />
-					</div>
-				</figure>
-			</div>
-			{#if textPages[index]}
-				<h5 class="title is-4 font-white">
-					{textPages[index].header}
-				</h5>
-			{/if}
-		</div>
-		<div
-			bind:this="{mainText}"
-			class="content bu-is-clipped content font-white {showMore ? 'show-more' : ''}"
-		>
-			{#if textPages[index]}
-				{#each textPages[index].paragraphs as p}
-					<p>{p}</p>
-				{/each}
-			{/if}
-		</div>
-		<br />
-		{#if overFlowing}
-			<div
-				on:keydown="{() => {
-					showMore = !showMore;
-				}}"
-				on:click="{() => {
-					showMore = !showMore;
-				}}"
-				class="bu-level bu-is-mobile"
-			>
-				<div class="bu-level-left">
-					<p class="bu-level-left bu-level-item">Read More</p>
-					<span class="bu-level-left bu-level-item bu-icon bu-is-small show-more-button">
-						<Arrow styleP="height:16px; width:16px;" showMore="{showMore}" />
-					</span>
-				</div>
-			</div>
-		{/if}
+		<CardHeader header="{textPages[index].header}" />
+		<CardText text="{textPages[index].paragraphs}" />
 	</div>
 </div>
 

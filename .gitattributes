@@ -221,3 +221,4 @@ static/images/46c2adcc-b071-44d7-bfea-fb4158abb61f33340-mulholland-int-img-34a.j
 static/images/59a192be-f646-4342-a177-9ef2b9fe646833340-mulholland-int-img-34b.jpg filter=lfs diff=lfs merge=lfs -text
 static/images/b23d38c2-2069-483f-b9d9-ac63f9a16e9f33340-mulholland-int-img-24a.jpg filter=lfs diff=lfs merge=lfs -text
 static/images/cbce37d4-dbc2-494e-8833-c87343d506aebg2.jpg filter=lfs diff=lfs merge=lfs -text
+static/images filter=lfs diff=lfs merge=lfs -text

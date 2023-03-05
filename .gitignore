@@ -18,3 +18,4 @@ tests
 .prettierrc
 .prettierignore
 convert.cjs
+notes.txt
