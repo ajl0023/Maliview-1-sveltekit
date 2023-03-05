@@ -6,6 +6,13 @@
 
 <div class="bu-modal {$modal.visibility ? 'bu-is-active' : ''}">
 	<div
+		on:keydown="{(e) => {
+			if (e.key === 'Escape') {
+				$modal.content = null;
+
+				$modal.visibility = false;
+			}
+		}}"
 		on:click="{() => {
 			$modal.content = null;
 
@@ -38,7 +45,7 @@
 						allowFullScreen></iframe>
 				</div>
 			{:else if $modal.content}
-				<img src="{$modal.content.url}" alt="" />
+				<img src="/images/{$modal.content.url}" alt="" />
 			{/if}
 		</div>
 	</div>
@@ -65,6 +72,7 @@
 		}
 	}
 	img {
+
 		width: 100%;
 		object-fit: cover;
 		height: 100%;

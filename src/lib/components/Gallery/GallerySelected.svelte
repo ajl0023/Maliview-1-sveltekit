@@ -6,11 +6,6 @@
 	export let index;
 
 	const dispatch = createEventDispatcher();
-	onMount(() => {
-		// $galleryImg.imageToDisplay = pageLayout['bts']
-		// 	? pageLayout['bts'][pageLayout['bts'].length - 1].images[0].url
-		// 	: null;
-	});
 </script>
 
 <div
@@ -20,15 +15,28 @@
 	<img
 		on:click="{() => {
 			galleryImg.update((s) => {
-				$galleryImg.selected = index;
-				$galleryImg.imageToDisplay = img.url;
-				s.imageToDisplay = '/images/' + img.url;
-				return s;
+				const copy = { ...s };
+				copy.selected = index;
+				copy.imageToDisplay = img.url;
+
+				return copy;
 			});
 			dispatch('select', img.index);
 		}}"
-		loading="lazy"
-		src="images/{img.url}"
+		on:keydown="{(event) => {
+			if (event.key === 'Enter') {
+				galleryImg.update((s) => {
+					const copy = { ...s };
+					copy.selected = index;
+					copy.imageToDisplay = img.url;
+
+					return copy;
+				});
+				dispatch('select', img.index);
+			}
+		}}"
+		class="lazy"
+		data-src="images/{img.url}"
 		alt=""
 	/>
 </div>

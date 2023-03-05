@@ -12,6 +12,15 @@
 			$modal.visibility = true;
 		}
 	}}"
+	on:keydown="{(e) => {
+		if (e.key === 'Enter') {
+			if (image.type === 'video') {
+				$modal.content = image.video_url;
+				$modal.type = 'video';
+				$modal.visibility = true;
+			}
+		}
+	}}"
 	class="page"
 >
 	<div class="image-container {image.type === 'video' ? 'blur' : ''} ">
@@ -19,7 +28,7 @@
 			<img alt="" src="/images/playButton.png" class="play-button" />
 		{/if}
 
-		<img src="/images/{image.image.url}" data-src="images/{image.image.url}" alt="" class="main-image lazy" />
+		<img data-src="images/{image.image.url}" alt="" class="main-image lazy" />
 	</div>
 </div>
 

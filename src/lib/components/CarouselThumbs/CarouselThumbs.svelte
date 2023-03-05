@@ -1,8 +1,6 @@
 ﻿<script>
 	import { getContext, onMount } from 'svelte';
 
-	import { lazyLoadInstance } from '$lib/lazy';
-
 	import { currentPage } from '$lib/stores';
 	import { createEventDispatcher } from 'svelte';
 	export let images;
@@ -12,10 +10,6 @@
 	const dispatch = createEventDispatcher();
 
 	let imagesToDisplay = images;
-
-	onMount(() => {
-		lazyLoadInstance();
-	});
 </script>
 
 <div
@@ -50,7 +44,7 @@
 		height: 25px;
 		border-radius: 50%;
 		overflow: hidden;
-
+		cursor: pointer;
 		img {
 			width: 100%;
 			height: 100%;
@@ -60,7 +54,7 @@
 	}
 	.container {
 		display: flex;
-
+	
 		margin: -7.5px;
 		.image-container {
 			margin: 7.5px;

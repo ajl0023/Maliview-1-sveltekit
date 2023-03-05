@@ -61,10 +61,10 @@
 			"order": 4,
 			"category": "62198acfee737dc5b139ea71",
 			"image": {
-				"_id": "fa037b0e-8227-4df1-aa5a-fb4a8737a727",
-				"name": "ed5f433a-e656-4139-a8c8-6100b513a86333340-mulholland-hwy-img-3b.jpg",
+				"_id": "387bf1be-1c1f-4849-a30f-789583e44d69",
+				"name": "9e57b9b1-e726-4d9e-8c20-5c0ed20337be33340-mulholland-hwy-img-3b.jpg",
 				"order": 0,
-				"url": "ed5f433a-e656-4139-a8c8-6100b513a86333340-mulholland-hwy-img-3b.jpg"
+				"url": "9e57b9b1-e726-4d9e-8c20-5c0ed20337be33340-mulholland-hwy-img-3b.jpg"
 			}
 		}
 	],
@@ -2169,7 +2169,6 @@
 			"_id": "622bd11b1b53e759b3dc13eb",
 			"page": "drone footage",
 			"order": 7,
-
 			"slug": "drone-footage",
 			"category": "621ae8462b5171ada3bf1987",
 			"images": [

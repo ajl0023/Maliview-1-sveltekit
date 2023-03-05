@@ -39,7 +39,7 @@
 					<li class="glide__slide">
 						<div class="image-container">
 							{#if img.url}
-								<img class="carousel-image lazy" src="/images/{img.url}" alt="" />
+								<img class="carousel-image lazy" data-src="/images/{img.url}" alt="" />
 							{/if}
 						</div>
 					</li>
@@ -105,7 +105,7 @@
 		width: 30px;
 		height: 30px;
 		position: absolute;
-
+		cursor: pointer;
 		bottom: 0;
 		top: 50%;
 		border-radius: 50%;

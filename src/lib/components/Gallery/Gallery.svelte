@@ -2,7 +2,8 @@
 	import GallerySelected from './GallerySelected.svelte';
 	import { galleryImg } from '../GalleryPreview/store';
 	import GalleryImage from '../GalleryImage/GalleryImage.svelte';
-
+	import { createLazyStore } from '$lib/lazy';
+	import { tick } from 'svelte';
 	let selected;
 
 	const selectImage = (i) => {
@@ -12,6 +13,8 @@
 		});
 	};
 	export let phases;
+
+	$galleryImg.imageToDisplay = phases[$galleryImg.currPhase].images[$galleryImg.index].url;
 </script>
 
 <div
@@ -24,12 +27,26 @@
 		<div class="phase-label-container">
 			{#each phases as phase, i}
 				<h5
-					on:click="{() => {
+					on:keydown="{async (event) => {
+						if (event.key === 'Enter') {
+							galleryImg.update((s) => {
+								s.currPhase = i;
+								s.index = 0;
+								return s;
+							});
+						}
+						await tick();
+						createLazyStore.update_lazy();
+					}}"
+					on:click="{async () => {
 						galleryImg.update((s) => {
 							s.currPhase = i;
 							s.index = 0;
 							return s;
 						});
+
+						await tick();
+						createLazyStore.update_lazy();
 					}}"
 					class:phase-label="{i === $galleryImg.currPhase}"
 				>
@@ -38,7 +55,7 @@
 			{/each}
 		</div>
 		<div class="flex-container {$galleryImg.currPhase}">
-			{#each phases[$galleryImg.currPhase].images as img, i}
+			{#each phases[$galleryImg.currPhase].images as img, i (img._id)}
 				<GallerySelected img="{img}" selected="{selected}" index="{i}" />
 			{/each}
 			{#if $galleryImg.currPhase === 'phase-1'}

@@ -4,11 +4,12 @@
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import { browser, dev } from '$app/environment';
 	import Socials from '$lib/components/Socials/Socials.svelte';
-
+	import { createLazyStore } from '$lib/lazy';
 	import ScrollContainer from '$lib/components/ScrollContainer/ScrollContainer.svelte';
 	import CardContainer from '$lib/components/CardContainer/CardContainer.svelte';
 
 	import axios from 'axios';
+	import { modal } from '../lib/stores';
 
 	export let data;
 
@@ -36,6 +37,9 @@
 			window.removeEventListener('resize', handleResponsiveResize);
 		}
 	});
+	if (browser) {
+		createLazyStore.init();
+	}
 </script>
 
 {#if data_loaded}
@@ -45,12 +49,11 @@
 		<ScrollContainer pageLayout="{pagesData}" pageContent="{pageContent}" />
 
 		<CardContainer cardLayout="{pagesData['mobile']}" />
-		<!-- 
 
 		{#if $modal.visibility && $modal.content}
 			<Modal />
 		{/if}
-		<Socials /> -->
+		<Socials />
 	</div>
 {/if}
 

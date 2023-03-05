@@ -1,20 +1,29 @@
 ﻿<script>
+	import { tick } from 'svelte';
 	import { highResBts } from '../../pageContent';
 	import { modal } from '../../stores';
 	import { images } from '../Gallery/galleryImages';
 	import { galleryImg } from '../GalleryPreview/store';
+	import { createLazyStore } from '$lib/lazy';
 	export let data;
 </script>
 
 <div>
-	<div id="behind-the-scenes" class="container">
+	<div class="container">
 		<div><h5 class="bu-title bu-has-text-centered">behind the scenes</h5></div>
 		<div class="curr-phase-container">
 			{#each data.phases as phase, i}
 				<h5
 					class:phase-label="{$galleryImg.currPhase === i}"
-					on:click="{() => {
+					on:keydown="{(event) => {
+						if (event.key === 'Enter') {
+							$galleryImg.currPhase = i;
+						}
+					}}"
+					on:click="{async () => {
 						$galleryImg.currPhase = i;
+						await tick();
+						createLazyStore.update_lazy();
 					}}"
 				>
 					phase {i + 1}
@@ -22,16 +31,23 @@
 			{/each}
 		</div>
 		<div class="gallery-container">
-			{#each data.phases[$galleryImg.currPhase].images as image, i}
+			{#each data.phases[$galleryImg.currPhase].images as image, i(image._id)}
 				<div class="image-container">
 					<img
-						src="images/{image.url}"
+						data-src="images/{image.url}"
+						class="lazy"
 						on:click="{() => {
 							$modal.visibility = true;
-							$modal.content = image
+							$modal.content = image;
 							$modal.type = 'image';
 						}}"
-						loading="lazy"
+						on:keydown="{(event) => {
+							if (event.key === 'Enter') {
+								$modal.visibility = true;
+								$modal.content = image;
+								$modal.type = 'image';
+							}
+						}}"
 						alt=""
 					/>
 				</div>{/each}
@@ -94,6 +110,7 @@
 		position: relative;
 		padding-bottom: 100%;
 		img {
+			cursor: pointer;
 			height: 100%;
 			object-fit: cover;
 			width: 100%;

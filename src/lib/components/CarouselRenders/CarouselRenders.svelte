@@ -55,9 +55,9 @@
 								<li class="glide__slide">
 									<div class="slide-image-container">
 										<img
-											loading="lazy"
+							
 											class="carousel-image lazy"
-											src="/images/{img.url}"
+											data-src="/images/{img.url}"
 											alt=""
 										/>
 									</div>
@@ -185,6 +185,7 @@
 		left: 10px;
 		bottom: 0;
 		top: 50%;
+		cursor: pointer;
 		border-radius: 50%;
 		background-color: rgba(0 0 0 / 0.5);
 		border: none;

@@ -126,7 +126,7 @@
 	};
 </script>
 
-<div id="{navToLink[index + 2]}" class="bu-card card-container">
+<div class="bu-card card-container">
 	<div class="carousel-container">
 		<div bind:this="{carousel}" class="glide">
 			<div class="indicator">
@@ -212,6 +212,9 @@
 		<br />
 		{#if overFlowing}
 			<div
+				on:keydown="{() => {
+					showMore = !showMore;
+				}}"
 				on:click="{() => {
 					showMore = !showMore;
 				}}"
@@ -219,7 +222,7 @@
 			>
 				<div class="bu-level-left">
 					<p class="bu-level-left bu-level-item">Read More</p>
-					<span class="bu-level-left bu-level-item bu-icon bu-is-small">
+					<span class="bu-level-left bu-level-item bu-icon bu-is-small show-more-button">
 						<Arrow styleP="height:16px; width:16px;" showMore="{showMore}" />
 					</span>
 				</div>
@@ -308,6 +311,7 @@
 		width: 30px;
 		border-radius: 50%;
 		position: absolute;
+		cursor: pointer;
 		border: none;
 		overflow: hidden;
 		height: 30px;
@@ -322,6 +326,7 @@
 		display: block;
 		max-height: 100%;
 	}
+
 	.arrow-right {
 		transform: rotate(180deg);
 		right: 5px;

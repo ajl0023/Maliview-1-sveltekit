@@ -42,7 +42,7 @@
 		}}"
 	/>
 
-	<TextPage name="floorplans" bgColor="{true}" text_content="{pageContent.textPages[2]}" />
+	<TextPage name="floorplans" bgColor="{true}" text_content="{pageContent.textPages[3]}" />
 
 	<ImagePage image="{pageLayout['image-pages'][1]}" name="equestrian" index="{2}" />
 

@@ -1,11 +1,20 @@
+import { writable } from 'svelte/store';
 import LazyLoad from 'vanilla-lazyload';
-export let lazy;
-// export const lazyLoadInstance = () => {
-// 	if (!lazy) {
-// 		lazy = new LazyLoad();
-// 	}
-// 	return lazy;
-// };
-export const lazyLoadInstance = function () {
-	return new LazyLoad();
-};
+function createLazy() {
+	const state = {
+		lazy: null
+	};
+	const { subscribe, set, update } = writable(state);
+
+	const methods = {
+		init: () => {
+			state.lazy = new LazyLoad({});
+		},
+		update_lazy: () => {
+			state.lazy.update();
+		}
+	};
+	return { ...methods, subscribe };
+}
+
+export const createLazyStore = createLazy();

@@ -36,7 +36,7 @@
 	});
 </script>
 
-<div class="bu-card card-container" id="{navToLink[index + 1]}">
+<div class="bu-card card-container">
 	<div class="bu-card-image" class:video="{type === 'video'}">
 		<figure
 			on:click="{() => {
@@ -44,6 +44,15 @@
 					$modal.visibility = true;
 					$modal.content = page.video_url;
 					$modal.type = 'video';
+				}
+			}}"
+			on:keydown="{(event) => {
+				if (event.key === 'Enter') {
+					if (type === 'video') {
+						$modal.visibility = true;
+						$modal.content = page.video_url;
+						$modal.type = 'video';
+					}
 				}
 			}}"
 			class="bu-image bu-is-4by3 {type === 'video' ? 'blur' : ''}"
@@ -55,7 +64,7 @@
 					</figure>
 				</div>
 			{/if}
-			<img loading="lazy" class="main-image" src="/images/{image.url}" alt="" />
+			<img class="main-image lazy" data-src="/images/{image.url}" alt="" />
 		</figure>
 	</div>
 	<div class="card-content bu-card-content">
@@ -89,11 +98,16 @@
 				on:click="{() => {
 					showMore = !showMore;
 				}}"
+				on:keydown="{(event) => {
+					if (event.key === 'Enter') {
+						showMore = !showMore;
+					}
+				}}"
 				class="bu-level bu-is-mobile"
 			>
 				<div class="bu-level-left">
 					<p class="bu-level-left bu-level-item">Read More</p>
-					<span class="bu-level-left bu-level-item bu-icon bu-is-small">
+					<span class="show-more-button bu-level-left bu-level-item bu-icon bu-is-small">
 						<Arrow styleP="height:16px; width:16px;" showMore="{showMore}" />
 					</span>
 				</div>
@@ -103,6 +117,10 @@
 </div>
 
 <style lang="scss">
+	.show-more-button {
+		cursor: pointer;
+	}
+
 	.bu-card-image.video {
 		cursor: pointer;
 	}

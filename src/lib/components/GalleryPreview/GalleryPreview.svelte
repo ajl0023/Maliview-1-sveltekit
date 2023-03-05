@@ -1,11 +1,14 @@
 ﻿<script>
+	import { onMount } from 'svelte';
 	import { highResBts } from '../../pageContent';
 	import { galleryImg } from './store';
 </script>
 
 <div class="page">
 	<div class="image-container">
-		<img loading="lazy" src="{$galleryImg.imageToDisplay}" alt="" />
+		{#if $galleryImg.imageToDisplay}
+			<img src="/images/{$galleryImg.imageToDisplay}" alt="" />
+		{/if}
 	</div>
 </div>
 

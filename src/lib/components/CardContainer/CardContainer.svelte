@@ -7,9 +7,10 @@
 	import CardGallery from '../CardGallery/CardGallery.svelte';
 	import ContactUs from '../ContactUs/ContactUs.svelte';
 	import _ from 'lodash';
+	import { navToLink } from '../../pageContent';
 
 	export let cardLayout;
-	console.log(cardLayout)
+
 	onMount(async () => {
 		cardLayout = cardLayout.sort((a, b) => {
 			return a.order - b.order;
@@ -28,28 +29,33 @@
 	</div>
 	<div class="card-container">
 		{#each cardLayout as card, i}
-			{#if cardLayout[i].type === 'bg-pages' || cardLayout[i].type === 'video'}
-				<Card
-					type="{card.type}"
-					image="{card.images.filter((item) => {
-						return item.url;
-					})[0]}"
-					page="{card}"
-					index="{i}"
-				/>
-			{:else if cardLayout[i].type === 'behind-the-scenes'}
-				<CardGallery data="{card}" />
-			{:else}
-				<CardCarousel
-					images="{card.images.filter((item) => {
-						return item.url;
-					})}"
-					page="{card}"
-					index="{i}"
-				/>
-			{/if}
+			<div id="{card['slug']}">
+				{#if cardLayout[i].type === 'bg-pages' || cardLayout[i].type === 'video'}
+					<Card
+						type="{card.type}"
+						image="{card.images.filter((item) => {
+							return item.url;
+						})[0]}"
+						page="{card}"
+						index="{i}"
+					/>
+				{:else if cardLayout[i].type === 'behind-the-scenes'}
+					<CardGallery data="{card}" />
+				{:else}
+					<CardCarousel
+						images="{card.images.filter((item) => {
+							return item.url;
+						})}"
+						page="{card}"
+						index="{i}"
+					/>
+				{/if}
+			</div>
 		{/each}
-		<CardCredits />
+
+		<div id="card-credits">
+			<CardCredits />
+		</div>
 		<div id="contact" class="contact-us-container">
 			<ContactUs />
 		</div>

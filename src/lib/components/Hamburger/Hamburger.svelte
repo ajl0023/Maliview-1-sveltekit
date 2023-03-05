@@ -23,6 +23,12 @@
 		<ul name="list-container" class="side-menu-item-container">
 			{#each navButtons as label, i}
 				<li
+					on:keydown="{(e) => {
+						if (e.key === 'Enter') {
+							triggerScroll(i);
+							window.location.href = '#' + navToLink[i];
+						}
+					}}"
 					on:click="{() => {
 						triggerScroll(i);
 						window.location.href = '#' + navToLink[i];
@@ -63,6 +69,11 @@
 	<div
 		on:click="{() => {
 			mainInput.checked = false;
+		}}"
+		on:keydown="{(e) => {
+			if (e.key === 'Enter') {
+				mainInput.checked = false;
+			}
 		}}"
 		data-id="header-mask"
 		class="header-mask"
